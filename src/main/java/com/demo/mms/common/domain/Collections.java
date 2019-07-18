@@ -1,6 +1,6 @@
 package com.demo.mms.common.domain;
 
-public class Collection {
+public class Collections {
     private String id;
 
     private String customerId;

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.demo.mms.dao.CollectionMapper">
-  <resultMap id="BaseResultMap" type="com.demo.mms.common.domain.Collection">
+<mapper namespace="com.demo.mms.dao.CollectionsMapper">
+  <resultMap id="BaseResultMap" type="com.demo.mms.common.domain.Collections">
     <id column="id" jdbcType="VARCHAR" property="id" />
     <result column="customer_id" jdbcType="VARCHAR" property="customerId" />
     <result column="goods_id" jdbcType="VARCHAR" property="goodsId" />
@@ -12,21 +12,21 @@
   <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="BaseResultMap">
     select 
     <include refid="Base_Column_List" />
-    from collection
+    from collections
     where id = #{id,jdbcType=VARCHAR}
   </select>
   <delete id="deleteByPrimaryKey" parameterType="java.lang.String">
-    delete from collection
+    delete from collections
     where id = #{id,jdbcType=VARCHAR}
   </delete>
-  <insert id="insert" parameterType="com.demo.mms.common.domain.Collection">
-    insert into collection (id, customer_id, goods_id
+  <insert id="insert" parameterType="com.demo.mms.common.domain.Collections">
+    insert into collections (id, customer_id, goods_id
       )
     values (#{id,jdbcType=VARCHAR}, #{customerId,jdbcType=VARCHAR}, #{goodsId,jdbcType=VARCHAR}
       )
   </insert>
-  <insert id="insertSelective" parameterType="com.demo.mms.common.domain.Collection">
-    insert into collection
+  <insert id="insertSelective" parameterType="com.demo.mms.common.domain.Collections">
+    insert into collections
     <trim prefix="(" suffix=")" suffixOverrides=",">
       <if test="id != null">
         id,
@@ -50,8 +50,8 @@
       </if>
     </trim>
   </insert>
-  <update id="updateByPrimaryKeySelective" parameterType="com.demo.mms.common.domain.Collection">
-    update collection
+  <update id="updateByPrimaryKeySelective" parameterType="com.demo.mms.common.domain.Collections">
+    update collections
     <set>
       <if test="customerId != null">
         customer_id = #{customerId,jdbcType=VARCHAR},
@@ -62,8 +62,8 @@
     </set>
     where id = #{id,jdbcType=VARCHAR}
   </update>
-  <update id="updateByPrimaryKey" parameterType="com.demo.mms.common.domain.Collection">
-    update collection
+  <update id="updateByPrimaryKey" parameterType="com.demo.mms.common.domain.Collections">
+    update collections
     set customer_id = #{customerId,jdbcType=VARCHAR},
       goods_id = #{goodsId,jdbcType=VARCHAR}
     where id = #{id,jdbcType=VARCHAR}
