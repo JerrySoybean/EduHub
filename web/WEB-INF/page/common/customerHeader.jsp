@@ -13,8 +13,8 @@
             <div class="col-sm-5 col-md-offset-2  header-login">
                 <ul >
                     <li><a href="${pageContext.request.contextPath}/customer/tologin">Login</a></li>
-                    <li><a href="${pageContext.request.contextPath}/register">Register</a></li>
-                    <li><a href="${pageContext.request.contextPath}/checkout">Checkout</a></li>
+                    <li><a href="${pageContext.request.contextPath}/customer/register">Register</a></li>
+                    <li><a href="${pageContext.request.contextPath}/customer/cart">Checkout</a></li>
                 </ul>
             </div>
 

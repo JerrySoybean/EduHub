@@ -4,6 +4,7 @@ import com.demo.mms.common.domain.Customer;
 import com.demo.mms.service.CustomerService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
 
@@ -38,5 +39,14 @@ public class CustomerController {
                 return "customerLogin";
             }
         }
+    }
+
+    @RequestMapping("/register")
+    public String register(ModelMap modelMap, Customer customer){
+        String msg = null;
+//        customerService.insertCustomer(customer);
+        System.out.println("register");
+
+        return "customerRegister";
     }
 }

@@ -13,4 +13,9 @@ public class CustomerServiceImpl implements CustomerService {
     public Customer findCustomerByName(String name) {
         return customerMapper.selectCustomerByName(name);
     }
+
+    @Override
+    public void insertCustomer(Customer customer) {
+        customerMapper.insertSelective(customer);
+    }
 }
