@@ -311,7 +311,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <div class="container">
     <div class="login">
 
-        <form action="/customer/tologin">
+        <form action="/customer/login">
             <div class="col-md-6 login-do">
                 <div class="login-mail">
                     <input type="text" placeholder="Username" name="name">
