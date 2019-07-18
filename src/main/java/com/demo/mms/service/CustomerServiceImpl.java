@@ -17,5 +17,6 @@ public class CustomerServiceImpl implements CustomerService {
     @Override
     public void insertCustomer(Customer customer) {
         customerMapper.insertSelective(customer);
+        System.out.println("hello");
     }
 }

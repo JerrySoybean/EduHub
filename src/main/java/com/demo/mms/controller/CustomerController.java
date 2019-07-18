@@ -44,4 +44,10 @@ public class CustomerController {
     public String toCart() {
         return "customerCart";
     }
+
+    @RequestMapping("/toregister")
+    public String register(ModelMap modelMap, Customer customer){
+//        customerService.insertCustomer(customer);
+        return "customerRegister";
+    }
 }
