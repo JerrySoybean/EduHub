@@ -2,17 +2,17 @@
   Created by IntelliJ IDEA.
   User: mxdwa
   Date: 2019/7/18
-  Time: 11:34
+  Time: 11:38
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>Contact</title>
-    <link href="../css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+    <title>Single</title>
+    <link href="../template/css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
     <!-- Custom Theme files -->
     <!--theme-style-->
-    <link href="../css/style.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="../template/css/style.css" rel="stylesheet" type="text/css" media="all" />
     <!--//theme-style-->
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -20,12 +20,12 @@
 Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
 
     <!--theme-style-->
-    <link href="../css/style4.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="../template/css/style4.css" rel="stylesheet" type="text/css" media="all" />
     <!--//theme-style-->
     <script src="http://apps.bdimg.com/libs/jquery/1.11.1/jquery.min.js"></script>
     <!--- start-rate---->
-    <script src="../js/jstarbox.js"></script>
-    <link rel="stylesheet" href="../css/jstarbox.css" type="text/css" media="screen" charset="utf-8" />
+    <script src="../template/js/jstarbox.js"></script>
+    <link rel="stylesheet" href="../template/css/jstarbox.css" type="text/css" media="screen" charset="utf-8" />
     <script type="text/javascript">
         jQuery(function() {
             jQuery('.starbox').each(function() {
@@ -48,6 +48,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
         });
     </script>
     <!---//End-rate---->
+    <link href="../template/css/form.css" rel="stylesheet" type="text/css" media="all" />
 </head>
 <body>
 <!--header-->
@@ -55,7 +56,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     <div class="container">
         <div class="head">
             <div class=" logo">
-                <a href="../../../index.jsp"><img src="../images/logo.png" alt=""></a>
+                <a href="../../index.jsp"><img src="../template/images/logo.png" alt=""></a>
             </div>
         </div>
     </div>
@@ -103,7 +104,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                     <!-- Collect the nav links, forms, and other content for toggling -->
                     <div class="collapse navbar-collapse" id="bs-megadropdown-tabs">
                         <ul class="nav navbar-nav nav_1">
-                            <li><a class="color" href="../../../index.jsp">Home</a></li>
+                            <li><a class="color" href="../../index.jsp">Home</a></li>
                             <li class="dropdown mega-dropdown active">
                                 <a class="color1" href="#" class="dropdown-toggle" data-toggle="dropdown">Women<span class="caret"></span></a>
                                 <div class="dropdown-menu ">
@@ -162,7 +163,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                             </div>
                                         </div>
                                         <div class="col1 col5">
-                                            <img src="../images/me.png" class="img-responsive" alt="">
+                                            <img src="../template/images/me.png" class="img-responsive" alt="">
                                         </div>
                                         <div class="clearfix"></div>
                                     </div>
@@ -227,7 +228,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                             </div>
                                         </div>
                                         <div class="col1 col5">
-                                            <img src="../images/me1.png" class="img-responsive" alt="">
+                                            <img src="../template/images/me1.png" class="img-responsive" alt="">
                                         </div>
                                         <div class="clearfix"></div>
                                     </div>
@@ -254,7 +255,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                     <a href="checkout.jsp">
                         <h3> <div class="total">
                             <span class="simpleCart_total"></span></div>
-                            <img src="../images/cart.png" alt=""/></h3>
+                            <img src="../template/images/cart.png" alt=""/></h3>
                     </a>
                     <p><a href="javascript:;" class="simpleCart_empty">Empty Cart</a></p>
 
@@ -264,8 +265,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                 <!----->
 
                 <!---pop-up-box---->
-                <link href="../css/popuo-box.css" rel="stylesheet" type="text/css" media="all"/>
-                <script src="../js/jquery.magnific-popup.js" type="text/javascript"></script>
+                <link href="../template/css/popuo-box.css" rel="stylesheet" type="text/css" media="all"/>
+                <script src="../template/js/jquery.magnific-popup.js" type="text/javascript"></script>
                 <!---//pop-up-box---->
                 <div id="small-dialog" class="mfp-hide">
                     <div class="search-top">
@@ -301,105 +302,266 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <!--banner-->
 <div class="banner-top">
     <div class="container">
-        <h1>Contact</h1>
+        <h1>Single</h1>
         <em></em>
-        <h2><a href="../../../index.jsp">Home<label>/</label>Contact</a></h2>
+        <h2><a href="../../index.jsp">Home<label>/</label>Single</a></h2>
     </div>
 </div>
+<div class="single">
 
-<div class="contact">
-
-    <div class="contact-form">
-        <div class="container">
-            <div class="col-md-6 contact-left">
-                <h3>At vero eos et accusamus et iusto odio dignissimos ducimus qui </h3>
-                <p>Blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas.
-                    At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas.At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas. </p>
-
-
-                <div class="address">
-                    <div class=" address-grid">
-                        <i class="glyphicon glyphicon-map-marker"></i>
-                        <div class="address1">
-                            <h3>Address</h3>
-                            <p>Lorem ipsum dolor,
-                                TL 19034-88974</p>
-                        </div>
-                        <div class="clearfix"> </div>
-                    </div>
-                    <div class=" address-grid ">
-                        <i class="glyphicon glyphicon-phone"></i>
-                        <div class="address1">
-                            <h3>Our Phone:</h3>
-                                <p>+123456789</p>
-                        </div>
-                        <div class="clearfix"> </div>
-                    </div>
-                    <div class=" address-grid ">
-                        <i class="glyphicon glyphicon-envelope"></i>
-                        <div class="address1">
-                            <h3>Email:</h3>
-                            <p><a href="mailto:info@example.com"> Lorem@example.com</a></p>
-                        </div>
-                        <div class="clearfix"> </div>
-                    </div>
-                    <div class=" address-grid ">
-                        <i class="glyphicon glyphicon-bell"></i>
-                        <div class="address1">
-                            <h3>Open Hours:</h3>
-                            <p>Monday-Friday, 7AM-5PM</p>
-                        </div>
-                        <div class="clearfix"> </div>
-                    </div>
+    <div class="container">
+        <div class="col-md-9">
+            <div class="col-md-5 grid">
+                <div class="flexslider">
+                    <ul class="slides">
+                        <li data-thumb="images/si.jpg">
+                            <div class="thumb-image"> <img src="../template/images/si.jpg" data-imagezoom="true" class="img-responsive"> </div>
+                        </li>
+                        <li data-thumb="images/si1.jpg">
+                            <div class="thumb-image"> <img src="../template/images/si1.jpg" data-imagezoom="true" class="img-responsive"> </div>
+                        </li>
+                        <li data-thumb="images/si2.jpg">
+                            <div class="thumb-image"> <img src="../template/images/si2.jpg" data-imagezoom="true" class="img-responsive"> </div>
+                        </li>
+                    </ul>
                 </div>
             </div>
-            <div class="col-md-6 contact-top">
-                <h3>Want to work with me?</h3>
-                <form>
-                    <div>
-                        <span>Your Name </span>
-                        <input type="text" value="" >
+            <div class="col-md-7 single-top-in">
+                <div class="span_2_of_a1 simpleCart_shelfItem">
+                    <h3>Nam liber tempor cum</h3>
+                    <p class="in-para"> There are many variations of passages of Lorem Ipsum.</p>
+                    <div class="price_single">
+                        <span class="reducedfrom item_price">$140.00</span>
+                        <a href="#">click for offer</a>
+                        <div class="clearfix"></div>
                     </div>
-                    <div>
-                        <span>Your Email </span>
-                        <input type="text" value="" >
+                    <h4 class="quick">Quick Overview:</h4>
+                    <p class="quick_desc"> Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Typi non habent claritatem insitam; es</p>
+                    <div class="wish-list">
+                        <ul>
+                            <li class="wish"><a href="#"><span class="glyphicon glyphicon-check" aria-hidden="true"></span>Add to Wishlist</a></li>
+                            <li class="compare"><a href="#"><span class="glyphicon glyphicon-resize-horizontal" aria-hidden="true"></span>Add to Compare</a></li>
+                        </ul>
                     </div>
-                    <div>
-                        <span>Subject</span>
-                        <input type="text" value="" >
+                    <div class="quantity">
+                        <div class="quantity-select">
+                            <div class="entry value-minus">&nbsp;</div>
+                            <div class="entry value"><span>1</span></div>
+                            <div class="entry value-plus active">&nbsp;</div>
+                        </div>
                     </div>
-                    <div>
-                        <span>Your Message</span>
-                        <textarea> </textarea>
-                    </div>
-                    <label class="hvr-skew-backward">
-                        <input type="submit" value="Send" >
-                    </label>
-                </form>
+                    <!--quantity-->
+                    <script>
+                        $('.value-plus').on('click', function(){
+                            var divUpd = $(this).parent().find('.value'), newVal = parseInt(divUpd.text(), 10)+1;
+                            divUpd.text(newVal);
+                        });
+
+                        $('.value-minus').on('click', function(){
+                            var divUpd = $(this).parent().find('.value'), newVal = parseInt(divUpd.text(), 10)-1;
+                            if(newVal>=1) divUpd.text(newVal);
+                        });
+                    </script>
+                    <!--quantity-->
+
+                    <a href="#" class="add-to item_add hvr-skew-backward">Add to cart</a>
+                    <div class="clearfix"> </div>
+                </div>
+
             </div>
-            <div class="clearfix"></div>
+            <div class="clearfix"> </div>
+            <!---->
+            <div class="tab-head">
+                <nav class="nav-sidebar">
+                    <ul class="nav tabs">
+                        <li class="active"><a href="#tab1" data-toggle="tab">Product Description</a></li>
+                        <li class=""><a href="#tab2" data-toggle="tab">Additional Information</a></li>
+                        <li class=""><a href="#tab3" data-toggle="tab">Reviews</a></li>
+                    </ul>
+                </nav>
+                <div class="tab-content one">
+                    <div class="tab-pane active text-style" id="tab1">
+                        <div class="facts">
+                            <p > There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined </p>
+                            <ul>
+                                <li><span class="glyphicon glyphicon-ok" aria-hidden="true"></span>Research</li>
+                                <li><span class="glyphicon glyphicon-ok" aria-hidden="true"></span>Design and Development</li>
+                                <li><span class="glyphicon glyphicon-ok" aria-hidden="true"></span>Porting and Optimization</li>
+                                <li><span class="glyphicon glyphicon-ok" aria-hidden="true"></span>System integration</li>
+                                <li><span class="glyphicon glyphicon-ok" aria-hidden="true"></span>Verification, Validation and Testing</li>
+                                <li><span class="glyphicon glyphicon-ok" aria-hidden="true"></span>Maintenance and Support</li>
+                            </ul>
+                        </div>
+
+                    </div>
+                    <div class="tab-pane text-style" id="tab2">
+
+                        <div class="facts">
+                            <p > Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections </p>
+                            <ul >
+                                <li><span class="glyphicon glyphicon-ok" aria-hidden="true"></span>Multimedia Systems</li>
+                                <li><span class="glyphicon glyphicon-ok" aria-hidden="true"></span>Digital media adapters</li>
+                                <li><span class="glyphicon glyphicon-ok" aria-hidden="true"></span>Set top boxes for HDTV and IPTV Player  </li>
+                            </ul>
+                        </div>
+
+                    </div>
+                    <div class="tab-pane text-style" id="tab3">
+
+                        <div class="facts">
+                            <p > There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined </p>
+                            <ul>
+                                <li><span class="glyphicon glyphicon-ok" aria-hidden="true"></span>Research</li>
+                                <li><span class="glyphicon glyphicon-ok" aria-hidden="true"></span>Design and Development</li>
+                                <li><span class="glyphicon glyphicon-ok" aria-hidden="true"></span>Porting and Optimization</li>
+                                <li><span class="glyphicon glyphicon-ok" aria-hidden="true"></span>System integration</li>
+                                <li><span class="glyphicon glyphicon-ok" aria-hidden="true"></span>Verification, Validation and Testing</li>
+                                <li><span class="glyphicon glyphicon-ok" aria-hidden="true"></span>Maintenance and Support</li>
+                            </ul>
+                        </div>
+
+                    </div>
+
+                </div>
+                <div class="clearfix"></div>
+            </div>
+            <!---->
         </div>
-    </div>
-    <div class="map">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d37494223.23909492!2d103!3d55!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x453c569a896724fb%3A0x1409fdf86611f613!2sRussia!5e0!3m2!1sen!2sin!4v1415776049771"></iframe>
+        <!----->
+
+        <div class="col-md-3 product-bottom product-at">
+            <!--categories-->
+            <div class=" rsidebar span_1_of_left">
+                <h4 class="cate">Categories</h4>
+                <ul class="menu-drop">
+                    <li class="item1"><a href="#">Men </a>
+                        <ul class="cute">
+                            <li class="subitem1"><a href="product.jsp">Cute Kittens </a></li>
+                            <li class="subitem2"><a href="product.jsp">Strange Stuff </a></li>
+                            <li class="subitem3"><a href="product.jsp">Automatic Fails </a></li>
+                        </ul>
+                    </li>
+                    <li class="item2"><a href="#">Women </a>
+                        <ul class="cute">
+                            <li class="subitem1"><a href="product.jsp">Cute Kittens </a></li>
+                            <li class="subitem2"><a href="product.jsp">Strange Stuff </a></li>
+                            <li class="subitem3"><a href="product.jsp">Automatic Fails </a></li>
+                        </ul>
+                    </li>
+                    <li class="item3"><a href="#">Kids</a>
+                        <ul class="cute">
+                            <li class="subitem1"><a href="product.jsp">Cute Kittens </a></li>
+                            <li class="subitem2"><a href="product.jsp">Strange Stuff </a></li>
+                            <li class="subitem3"><a href="product.jsp">Automatic Fails</a></li>
+                        </ul>
+                    </li>
+                    <li class="item4"><a href="#">Accessories</a>
+                        <ul class="cute">
+                            <li class="subitem1"><a href="product.jsp">Cute Kittens </a></li>
+                            <li class="subitem2"><a href="product.jsp">Strange Stuff </a></li>
+                            <li class="subitem3"><a href="product.jsp">Automatic Fails</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="item4"><a href="#">Shoes</a>
+                        <ul class="cute">
+                            <li class="subitem1"><a href="product.jsp">Cute Kittens </a></li>
+                            <li class="subitem2"><a href="product.jsp">Strange Stuff </a></li>
+                            <li class="subitem3"><a href="product.jsp">Automatic Fails </a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <!--initiate accordion-->
+            <script type="text/javascript">
+                $(function() {
+                    var menu_ul = $('.menu-drop > li > ul'),
+                        menu_a  = $('.menu-drop > li > a');
+                    menu_ul.hide();
+                    menu_a.click(function(e) {
+                        e.preventDefault();
+                        if(!$(this).hasClass('active')) {
+                            menu_a.removeClass('active');
+                            menu_ul.filter(':visible').slideUp('normal');
+                            $(this).addClass('active').next().stop(true,true).slideDown('normal');
+                        } else {
+                            $(this).removeClass('active');
+                            $(this).next().stop(true,true).slideUp('normal');
+                        }
+                    });
+
+                });
+            </script>
+            <!--//menu-->
+            <section  class="sky-form">
+                <h4 class="cate">Discounts</h4>
+                <div class="row row1 scroll-pane">
+                    <div class="col col-4">
+                        <label class="checkbox"><input type="checkbox" name="checkbox" checked=""><i></i>Upto - 10% (20)</label>
+                    </div>
+                    <div class="col col-4">
+                        <label class="checkbox"><input type="checkbox" name="checkbox"><i></i>40% - 50% (5)</label>
+                        <label class="checkbox"><input type="checkbox" name="checkbox"><i></i>30% - 20% (7)</label>
+                        <label class="checkbox"><input type="checkbox" name="checkbox"><i></i>10% - 5% (2)</label>
+                        <label class="checkbox"><input type="checkbox" name="checkbox"><i></i>Other(50)</label>
+                    </div>
+                </div>
+            </section>
+
+
+            <!---->
+            <section  class="sky-form">
+                <h4 class="cate">Type</h4>
+                <div class="row row1 scroll-pane">
+                    <div class="col col-4">
+                        <label class="checkbox"><input type="checkbox" name="checkbox" checked=""><i></i>Sofa Cum Beds (30)</label>
+                    </div>
+                    <div class="col col-4">
+                        <label class="checkbox"><input type="checkbox" name="checkbox"><i></i>Bags  (30)</label>
+                        <label class="checkbox"><input type="checkbox" name="checkbox"><i></i>Caps & Hats (30)</label>
+                        <label class="checkbox"><input type="checkbox" name="checkbox"><i></i>Jackets & Coats   (30)</label>
+                        <label class="checkbox"><input type="checkbox" name="checkbox"><i></i>Jeans  (30)</label>
+                        <label class="checkbox"><input type="checkbox" name="checkbox"><i></i>Shirts   (30)</label>
+                        <label class="checkbox"><input type="checkbox" name="checkbox"><i></i>Sunglasses  (30)</label>
+                        <label class="checkbox"><input type="checkbox" name="checkbox"><i></i>Swimwear  (30)</label>
+                    </div>
+                </div>
+            </section>
+            <section  class="sky-form">
+                <h4 class="cate">Brand</h4>
+                <div class="row row1 scroll-pane">
+                    <div class="col col-4">
+                        <label class="checkbox"><input type="checkbox" name="checkbox" checked=""><i></i>Roadstar</label>
+                    </div>
+                    <div class="col col-4">
+                        <label class="checkbox"><input type="checkbox" name="checkbox"><i></i>Levis</label>
+                        <label class="checkbox"><input type="checkbox" name="checkbox"><i></i>Persol</label>
+                        <label class="checkbox"><input type="checkbox" name="checkbox"><i></i>Nike</label>
+                        <label class="checkbox"><input type="checkbox" name="checkbox"><i></i>Edwin</label>
+                        <label class="checkbox"><input type="checkbox" name="checkbox" ><i></i>New Balance</label>
+                        <label class="checkbox"><input type="checkbox" name="checkbox"><i></i>Paul Smith</label>
+                        <label class="checkbox"><input type="checkbox" name="checkbox"><i></i>Ray-Ban</label>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <div class="clearfix"> </div>
     </div>
 </div>
-
-<!--//contact-->
 <!--brand-->
 <div class="container">
     <div class="brand">
         <div class="col-md-3 brand-grid">
-            <img src="../images/ic.png" class="img-responsive" alt="">
+            <img src="../template/images/ic.png" class="img-responsive" alt="">
         </div>
         <div class="col-md-3 brand-grid">
-            <img src="../images/ic1.png" class="img-responsive" alt="">
+            <img src="../template/images/ic1.png" class="img-responsive" alt="">
         </div>
         <div class="col-md-3 brand-grid">
-            <img src="../images/ic2.png" class="img-responsive" alt="">
+            <img src="../template/images/ic2.png" class="img-responsive" alt="">
         </div>
         <div class="col-md-3 brand-grid">
-            <img src="../images/ic3.png" class="img-responsive" alt="">
+            <img src="../template/images/ic3.png" class="img-responsive" alt="">
         </div>
         <div class="clearfix"></div>
     </div>
@@ -414,7 +576,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     <div class="footer-middle">
         <div class="container">
             <div class="col-md-3 footer-middle-in">
-                <a href="../../../index.jsp"><img src="../images/log.png" alt=""></a>
+                <a href="../../index.jsp"><img src="../template/images/log.png" alt=""></a>
                 <p>Suspendisse sed accumsan risus. Curabitur rhoncus, elit vel tincidunt elementum, nunc urna tristique nisi, in interdum libero magna tristique ante. adipiscing varius. Vestibulum dolor lorem.</p>
             </div>
 
@@ -459,9 +621,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     <div class="footer-bottom">
         <div class="container">
             <ul class="footer-bottom-top">
-                <li><a href="#"><img src="../images/f1.png" class="img-responsive" alt=""></a></li>
-                <li><a href="#"><img src="../images/f2.png" class="img-responsive" alt=""></a></li>
-                <li><a href="#"><img src="../images/f3.png" class="img-responsive" alt=""></a></li>
+                <li><a href="#"><img src="../template/images/f1.png" class="img-responsive" alt=""></a></li>
+                <li><a href="#"><img src="../template/images/f2.png" class="img-responsive" alt=""></a></li>
+                <li><a href="#"><img src="../template/images/f3.png" class="img-responsive" alt=""></a></li>
             </ul>
             <p class="footer-class">Copyright &copy; 2016.Company name All rights reserved.</p>
             <div class="clearfix"> </div>
@@ -469,11 +631,26 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     </div>
 </div>
 <!--//footer-->
-<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="../template/js/imagezoom.js"></script>
 
-<script src="../js/simpleCart.min.js"> </script>
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script defer src="../template/js/jquery.flexslider.js"></script>
+<link rel="stylesheet" href="../template/css/flexslider.css" type="text/css" media="screen" />
+
+<script>
+    // Can also be used with $(document).ready()
+    $(window).load(function() {
+        $('.flexslider').flexslider({
+            animation: "slide",
+            controlNav: "thumbnails"
+        });
+    });
+</script>
+
+<script src="../template/js/simpleCart.min.js"> </script>
 <!-- slide -->
-<script src="../js/bootstrap.min.js"></script>
+<script src="../template/js/bootstrap.min.js"></script>
+
 
 </body>
 </html>

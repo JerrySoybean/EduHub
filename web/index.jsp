@@ -9,10 +9,10 @@
 <html>
 <head>
     <title>Home</title>
-    <link href="WEB-INF/template/css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="${pageContext.request.contextPath}/template/css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
     <!-- Custom Theme files -->
     <!--theme-style-->
-    <link href="WEB-INF/template/css/style.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="${pageContext.request.contextPath}/template/css/style.css" rel="stylesheet" type="text/css" media="all" />
     <!--//theme-style-->
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -20,12 +20,12 @@
 Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
 
     <!--theme-style-->
-    <link href="WEB-INF/template/css/style4.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="${pageContext.request.contextPath}/template/css/style4.css" rel="stylesheet" type="text/css" media="all" />
     <!--//theme-style-->
     <script src="http://apps.bdimg.com/libs/jquery/1.11.1/jquery.min.js"></script>
     <!--- start-rate---->
-    <script src="WEB-INF/template/js/jstarbox.js"></script>
-    <link rel="stylesheet" href="WEB-INF/template/css/jstarbox.css" type="text/css" media="screen" charset="utf-8" />
+    <script src="${pageContext.request.contextPath}/template/js/jstarbox.js"></script>
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/template/css/jstarbox.css" type="text/css" media="screen" charset="utf-8" />
     <script type="text/javascript">
         jQuery(function() {
             jQuery('.starbox').each(function() {
@@ -64,7 +64,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
         <div class="container">
             <div class="col-sm-5 col-md-offset-2  header-login">
                 <ul >
-                    <li><a href="WEB-INF/template/page/login.jsp">Login</a></li>
+                    <li><a href="${pageContext.request.contextPath}/home/tologin">Login</a></li>
                     <li><a href="WEB-INF/template/page/register.jsp">Register</a></li>
                     <li><a href="WEB-INF/template/page/checkout.jsp">Checkout</a></li>
                 </ul>
@@ -267,8 +267,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                 <!----->
 
                 <!---pop-up-box---->
-                <link href="WEB-INF/template/css/popuo-box.css" rel="stylesheet" type="text/css" media="all"/>
-                <script src="WEB-INF/template/js/jquery.magnific-popup.js" type="text/javascript"></script>
+                <link href="${pageContext.request.contextPath}/template/css/popuo-box.css" rel="stylesheet" type="text/css" media="all"/>
+                <script src="${pageContext.request.contextPath}/template/js/jquery.magnific-popup.js" type="text/javascript"></script>
                 <!---//pop-up-box---->
                 <div id="small-dialog" class="mfp-hide">
                     <div class="search-top">
@@ -735,12 +735,12 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 </div>
 <!--//footer-->
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-<script src="WEB-INF/template/js/simpleCart.min.js"> </script>
+<script src="${pageContext.request.contextPath}/template/js/simpleCart.min.js"> </script>
 <!-- slide -->
-<script src="WEB-INF/template/js/bootstrap.min.js"></script>
+<script src="${pageContext.request.contextPath}/template/js/bootstrap.min.js"></script>
 <!--light-box-files -->
-<script src="WEB-INF/template/js/jquery.chocolat.js"></script>
-<link rel="stylesheet" href="WEB-INF/template/css/chocolat.css" type="text/css" media="screen" charset="utf-8">
+<script src="${pageContext.request.contextPath}/template/js/jquery.chocolat.js"></script>
+<link rel="stylesheet" href="${pageContext.request.contextPath}/template/css/chocolat.css" type="text/css" media="screen" charset="utf-8">
 <!--light-box-files -->
 <script type="text/javascript" charset="utf-8">
     $(function() {

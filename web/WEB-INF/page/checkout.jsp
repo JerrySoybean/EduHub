@@ -2,17 +2,17 @@
   Created by IntelliJ IDEA.
   User: mxdwa
   Date: 2019/7/18
-  Time: 11:37
+  Time: 11:33
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>Register</title>
-    <link href="../css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+    <title>Checkout</title>
+    <link href="../template/css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
     <!-- Custom Theme files -->
     <!--theme-style-->
-    <link href="../css/style.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="../template/css/style.css" rel="stylesheet" type="text/css" media="all" />
     <!--//theme-style-->
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -20,12 +20,12 @@
 Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
 
     <!--theme-style-->
-    <link href="../css/style4.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="../template/css/style4.css" rel="stylesheet" type="text/css" media="all" />
     <!--//theme-style-->
     <script src="http://apps.bdimg.com/libs/jquery/1.11.1/jquery.min.js"></script>
     <!--- start-rate---->
-    <script src="../js/jstarbox.js"></script>
-    <link rel="stylesheet" href="../css/jstarbox.css" type="text/css" media="screen" charset="utf-8" />
+    <script src="../template/js/jstarbox.js"></script>
+    <link rel="stylesheet" href="../template/css/jstarbox.css" type="text/css" media="screen" charset="utf-8" />
     <script type="text/javascript">
         jQuery(function() {
             jQuery('.starbox').each(function() {
@@ -55,7 +55,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     <div class="container">
         <div class="head">
             <div class=" logo">
-                <a href="../../../index.jsp"><img src="../images/logo.png" alt=""></a>
+                <a href="../../index.jsp"><img src="../template/images/logo.png" alt=""></a>
             </div>
         </div>
     </div>
@@ -103,11 +103,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                     <!-- Collect the nav links, forms, and other content for toggling -->
                     <div class="collapse navbar-collapse" id="bs-megadropdown-tabs">
                         <ul class="nav navbar-nav nav_1">
-                            <li><a class="color" href="../../../index.jsp">Home</a></li>
-
+                            <li><a class="color" href="../../index.jsp">Home</a></li>
                             <li class="dropdown mega-dropdown active">
                                 <a class="color1" href="#" class="dropdown-toggle" data-toggle="dropdown">Women<span class="caret"></span></a>
-                                <div class="dropdown-menu">
+                                <div class="dropdown-menu ">
                                     <div class="menu-top">
                                         <div class="col1">
                                             <div class="h_nav">
@@ -163,7 +162,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                             </div>
                                         </div>
                                         <div class="col1 col5">
-                                            <img src="../images/me.png" class="img-responsive" alt="">
+                                            <img src="../template/images/me.png" class="img-responsive" alt="">
                                         </div>
                                         <div class="clearfix"></div>
                                     </div>
@@ -228,7 +227,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                             </div>
                                         </div>
                                         <div class="col1 col5">
-                                            <img src="../images/me1.png" class="img-responsive" alt="">
+                                            <img src="../template/images/me1.png" class="img-responsive" alt="">
                                         </div>
                                         <div class="clearfix"></div>
                                     </div>
@@ -255,7 +254,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                     <a href="checkout.jsp">
                         <h3> <div class="total">
                             <span class="simpleCart_total"></span></div>
-                            <img src="../images/cart.png" alt=""/></h3>
+                            <img src="../template/images/cart.png" alt=""/></h3>
                     </a>
                     <p><a href="javascript:;" class="simpleCart_empty">Empty Cart</a></p>
 
@@ -265,12 +264,12 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                 <!----->
 
                 <!---pop-up-box---->
-                <link href="../css/popuo-box.css" rel="stylesheet" type="text/css" media="all"/>
-                <script src="../js/jquery.magnific-popup.js" type="text/javascript"></script>
+                <link href="../template/css/popuo-box.css" rel="stylesheet" type="text/css" media="all"/>
+                <script src="../template/js/jquery.magnific-popup.js" type="text/javascript"></script>
                 <!---//pop-up-box---->
                 <div id="small-dialog" class="mfp-hide">
-                    <div class="login-search">
-                        <div class="login">
+                    <div class="search-top">
+                        <div class="login-search">
                             <input type="submit" value="">
                             <input type="text" value="Search.." onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Search..';}">
                         </div>
@@ -302,71 +301,114 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <!--banner-->
 <div class="banner-top">
     <div class="container">
-        <h1>Register</h1>
+        <h1>Checkout</h1>
         <em></em>
-        <h2><a href="../../../index.jsp">Home<label>/</label>Register</a></h2>
+        <h2><a href="../../index.jsp">Home<label>/</label>Checkout</a></h2>
     </div>
 </div>
 <!--login-->
+<script>$(document).ready(function(c) {
+    $('.close1').on('click', function(c){
+        $('.cart-header').fadeOut('slow', function(c){
+            $('.cart-header').remove();
+        });
+    });
+});
+</script>
+<script>$(document).ready(function(c) {
+    $('.close2').on('click', function(c){
+        $('.cart-header1').fadeOut('slow', function(c){
+            $('.cart-header1').remove();
+        });
+    });
+});
+</script>
+<script>$(document).ready(function(c) {
+    $('.close3').on('click', function(c){
+        $('.cart-header2').fadeOut('slow', function(c){
+            $('.cart-header2').remove();
+        });
+    });
+});
+</script>
 <div class="container">
-    <div class="login">
-        <form>
-            <div class="col-md-6 login-do">
-                <div class="login-mail">
-                    <input type="text" placeholder="Name" required="">
-                    <i  class="glyphicon glyphicon-user"></i>
-                </div>
-                <div class="login-mail">
-                    <input type="text" placeholder="Phone Number" required="">
-                    <i  class="glyphicon glyphicon-phone"></i>
-                </div>
-                <div class="login-mail">
-                    <input type="text" placeholder="Email" required="">
-                    <i  class="glyphicon glyphicon-envelope"></i>
-                </div>
-                <div class="login-mail">
-                    <input type="password" placeholder="Password" required="">
-                    <i class="glyphicon glyphicon-lock"></i>
-                </div>
-                <a class="news-letter " href="#">
-                    <label class="checkbox1"><input type="checkbox" name="checkbox" ><i> </i>Forget Password</label>
-                </a>
-                <label class="hvr-skew-backward">
-                    <input type="submit" value="Submit">
-                </label>
+    <div class="check-out">
+        <div class="bs-example4" data-example-id="simple-responsive-table">
+            <div class="table-responsive">
+                <table class="table-heading simpleCart_shelfItem">
+                    <tr>
+                        <th class="table-grid">Item</th>
 
+                        <th>Prices</th>
+                        <th >Delivery </th>
+                        <th>Subtotal</th>
+                    </tr>
+                    <tr class="cart-header">
+
+                        <td class="ring-in"><a href="single.jsp" class="at-in"><img src="../template/images/ch.jpg" class="img-responsive" alt=""></a>
+                            <div class="sed">
+                                <h5><a href="single.jsp">Sed ut perspiciatis unde</a></h5>
+                                <p>(At vero eos et accusamus et iusto odio dignissimos ducimus ) </p>
+
+                            </div>
+                            <div class="clearfix"> </div>
+                            <div class="close1"> </div></td>
+                        <td>$100.00</td>
+                        <td>FREE SHIPPING</td>
+                        <td class="item_price">$100.00</td>
+                        <td class="add-check"><a class="item_add hvr-skew-backward" href="#">Add To Cart</a></td>
+                    </tr>
+                    <tr class="cart-header1">
+                        <td class="ring-in"><a href="single.jsp" class="at-in"><img src="../template/images/ch2.jpg" class="img-responsive" alt=""></a>
+                            <div class="sed">
+                                <h5><a href="single.jsp">Sed ut perspiciatis unde</a></h5>
+                                <p>(At vero eos et accusamus et iusto odio dignissimos ducimus ) </p>
+                            </div>
+                            <div class="clearfix"> </div>
+                            <div class="close2"> </div></td></td>
+                        <td>$100.00</td>
+                        <td>FREE SHIPPING</td>
+                        <td class="item_price">$100.00</td>
+                        <td class="add-check"><a class="item_add hvr-skew-backward" href="#">Add To Cart</a></td>
+                    </tr>
+                    <tr class="cart-header2">
+                        <td class="ring-in"><a href="single.jsp" class="at-in"><img src="../template/images/ch1.jpg" class="img-responsive" alt=""></a>
+                            <div class="sed">
+                                <h5><a href="single.jsp">Sed ut perspiciatis unde</a></h5>
+                                <p>(At vero eos et accusamus et iusto odio dignissimos ducimus ) </p>
+                            </div>
+                            <div class="clearfix"> </div>
+                            <div class="close3"> </div></td></td>
+                        <td>$100.00</td>
+                        <td>FREE SHIPPING</td>
+                        <td class="item_price">$100.00</td>
+                        <td class="add-check"><a class="item_add hvr-skew-backward" href="#">Add To Cart</a></td>
+                    </tr>
+
+                </table>
             </div>
-            <div class="col-md-6 login-right">
-                <h3>Completely Free Account</h3>
-
-                <p>Pellentesque neque leo, dictum sit amet accumsan non, dignissim ac mauris. Mauris rhoncus, lectus tincidunt tempus aliquam, odio
-                    libero tincidunt metus, sed euismod elit enim ut mi. Nulla porttitor et dolor sed condimentum. Praesent porttitor lorem dui, in pulvinar enim rhoncus vitae. Curabitur tincidunt, turpis ac lobortis hendrerit, ex elit vestibulum est, at faucibus erat ligula non neque.</p>
-                <a href="login.jsp" class="hvr-skew-backward">Login</a>
-
-            </div>
-
-            <div class="clearfix"> </div>
-        </form>
+        </div>
+        <div class="produced">
+            <a href="single.jsp" class="hvr-skew-backward">Produced To Buy</a>
+        </div>
     </div>
-
 </div>
 
 <!--//login-->
-
 <!--brand-->
 <div class="container">
     <div class="brand">
         <div class="col-md-3 brand-grid">
-            <img src="../images/ic.png" class="img-responsive" alt="">
+            <img src="../template/images/ic.png" class="img-responsive" alt="">
         </div>
         <div class="col-md-3 brand-grid">
-            <img src="../images/ic1.png" class="img-responsive" alt="">
+            <img src="../template/images/ic1.png" class="img-responsive" alt="">
         </div>
         <div class="col-md-3 brand-grid">
-            <img src="../images/ic2.png" class="img-responsive" alt="">
+            <img src="../template/images/ic2.png" class="img-responsive" alt="">
         </div>
         <div class="col-md-3 brand-grid">
-            <img src="../images/ic3.png" class="img-responsive" alt="">
+            <img src="../template/images/ic3.png" class="img-responsive" alt="">
         </div>
         <div class="clearfix"></div>
     </div>
@@ -381,7 +423,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     <div class="footer-middle">
         <div class="container">
             <div class="col-md-3 footer-middle-in">
-                <a href="../../../index.jsp"><img src="../images/log.png" alt=""></a>
+                <a href="../../index.jsp"><img src="../template/images/log.png" alt=""></a>
                 <p>Suspendisse sed accumsan risus. Curabitur rhoncus, elit vel tincidunt elementum, nunc urna tristique nisi, in interdum libero magna tristique ante. adipiscing varius. Vestibulum dolor lorem.</p>
             </div>
 
@@ -426,9 +468,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     <div class="footer-bottom">
         <div class="container">
             <ul class="footer-bottom-top">
-                <li><a href="#"><img src="../images/f1.png" class="img-responsive" alt=""></a></li>
-                <li><a href="#"><img src="../images/f2.png" class="img-responsive" alt=""></a></li>
-                <li><a href="#"><img src="../images/f3.png" class="img-responsive" alt=""></a></li>
+                <li><a href="#"><img src="../template/images/f1.png" class="img-responsive" alt=""></a></li>
+                <li><a href="#"><img src="../template/images/f2.png" class="img-responsive" alt=""></a></li>
+                <li><a href="#"><img src="../template/images/f3.png" class="img-responsive" alt=""></a></li>
             </ul>
             <p class="footer-class">Copyright &copy; 2016.Company name All rights reserved.</p>
             <div class="clearfix"> </div>
@@ -438,9 +480,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <!--//footer-->
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 
-<script src="../js/simpleCart.min.js"> </script>
+<script src="../template/js/simpleCart.min.js"> </script>
 <!-- slide -->
-<script src="../js/bootstrap.min.js"></script>
+<script src="../template/js/bootstrap.min.js"></script>
 
 </body>
 </html>

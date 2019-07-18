@@ -9,10 +9,10 @@
 <html>
 <head>
     <title>Products</title>
-    <link href="../css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="../template/css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
     <!-- Custom Theme files -->
     <!--theme-style-->
-    <link href="../css/style.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="../template/css/style.css" rel="stylesheet" type="text/css" media="all" />
     <!--//theme-style-->
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -20,12 +20,12 @@
 Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
 
     <!--theme-style-->
-    <link href="../css/style4.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="../template/css/style4.css" rel="stylesheet" type="text/css" media="all" />
     <!--//theme-style-->
     <script src="http://apps.bdimg.com/libs/jquery/1.11.1/jquery.min.js"></script>
     <!--- start-rate---->
-    <script src="../js/jstarbox.js"></script>
-    <link rel="stylesheet" href="../css/jstarbox.css" type="text/css" media="screen" charset="utf-8" />
+    <script src="../template/js/jstarbox.js"></script>
+    <link rel="stylesheet" href="../template/css/jstarbox.css" type="text/css" media="screen" charset="utf-8" />
     <script type="text/javascript">
         jQuery(function() {
             jQuery('.starbox').each(function() {
@@ -48,7 +48,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
         });
     </script>
     <!---//End-rate---->
-    <link href="../css/form.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="../template/css/form.css" rel="stylesheet" type="text/css" media="all" />
 </head>
 <body>
 <!--header-->
@@ -56,7 +56,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     <div class="container">
         <div class="head">
             <div class=" logo">
-                <a href="../../../index.jsp"><img src="../images/logo.png" alt=""></a>
+                <a href="../../index.jsp"><img src="../template/images/logo.png" alt=""></a>
             </div>
         </div>
     </div>
@@ -104,7 +104,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                     <!-- Collect the nav links, forms, and other content for toggling -->
                     <div class="collapse navbar-collapse" id="bs-megadropdown-tabs">
                         <ul class="nav navbar-nav nav_1">
-                            <li><a class="color" href="../../../index.jsp">Home</a></li>
+                            <li><a class="color" href="../../index.jsp">Home</a></li>
 
                             <li class="dropdown mega-dropdown active">
                                 <a class="color1" href="#" class="dropdown-toggle" data-toggle="dropdown">Women<span class="caret"></span></a>
@@ -164,7 +164,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                             </div>
                                         </div>
                                         <div class="col1 col5">
-                                            <img src="../images/me.png" class="img-responsive" alt="">
+                                            <img src="../template/images/me.png" class="img-responsive" alt="">
                                         </div>
                                         <div class="clearfix"></div>
                                     </div>
@@ -229,7 +229,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                             </div>
                                         </div>
                                         <div class="col1 col5">
-                                            <img src="../images/me1.png" class="img-responsive" alt="">
+                                            <img src="../template/images/me1.png" class="img-responsive" alt="">
                                         </div>
                                         <div class="clearfix"></div>
                                     </div>
@@ -256,7 +256,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                     <a href="checkout.jsp">
                         <h3> <div class="total">
                             <span class="simpleCart_total"></span></div>
-                            <img src="../images/cart.png" alt=""/></h3>
+                            <img src="../template/images/cart.png" alt=""/></h3>
                     </a>
                     <p><a href="javascript:;" class="simpleCart_empty">Empty Cart</a></p>
 
@@ -266,8 +266,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                 <!----->
 
                 <!---pop-up-box---->
-                <link href="../css/popuo-box.css" rel="stylesheet" type="text/css" media="all"/>
-                <script src="../js/jquery.magnific-popup.js" type="text/javascript"></script>
+                <link href="../template/css/popuo-box.css" rel="stylesheet" type="text/css" media="all"/>
+                <script src="../template/js/jquery.magnific-popup.js" type="text/javascript"></script>
                 <!---//pop-up-box---->
                 <div id="small-dialog" class="mfp-hide">
                     <div class="search-top">
@@ -305,7 +305,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     <div class="container">
         <h1>Products</h1>
         <em></em>
-        <h2><a href="../../../index.jsp">Home<label>/</label>Products</a></h2>
+        <h2><a href="../../index.jsp">Home<label>/</label>Products</a></h2>
     </div>
 </div>
 <!--content-->
@@ -316,9 +316,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                 <div class="col-md-4 item-grid1 simpleCart_shelfItem">
                     <div class=" mid-pop">
                         <div class="pro-img">
-                            <img src="../images/pc.jpg" class="img-responsive" alt="">
+                            <img src="../template/images/pc.jpg" class="img-responsive" alt="">
                             <div class="zoom-icon ">
-                                <a class="picture" href="../images/pc.jpg" rel="title" class="b-link-stripe b-animate-go  thickbox"><i class="glyphicon glyphicon-search icon "></i></a>
+                                <a class="picture" href="../template/images/pc.jpg" rel="title" class="b-link-stripe b-animate-go  thickbox"><i class="glyphicon glyphicon-search icon "></i></a>
                                 <a href="single.jsp"><i class="glyphicon glyphicon-menu-right icon"></i></a>
                             </div>
                         </div>
@@ -329,7 +329,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                     <h6><a href="single.jsp">Sed ut perspiciati</a></h6>
                                 </div>
                                 <div class="img item_add">
-                                    <a href="#"><img src="../images/ca.png" alt=""></a>
+                                    <a href="#"><img src="../template/images/ca.png" alt=""></a>
                                 </div>
                                 <div class="clearfix"></div>
                             </div>
@@ -348,9 +348,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                 <div class="col-md-4 item-grid1 simpleCart_shelfItem">
                     <div class=" mid-pop">
                         <div class="pro-img">
-                            <img src="../images/pc1.jpg" class="img-responsive" alt="">
+                            <img src="../template/images/pc1.jpg" class="img-responsive" alt="">
                             <div class="zoom-icon ">
-                                <a class="picture" href="../images/pc1.jpg" rel="title" class="b-link-stripe b-animate-go  thickbox"><i class="glyphicon glyphicon-search icon "></i></a>
+                                <a class="picture" href="../template/images/pc1.jpg" rel="title" class="b-link-stripe b-animate-go  thickbox"><i class="glyphicon glyphicon-search icon "></i></a>
                                 <a href="single.jsp"><i class="glyphicon glyphicon-menu-right icon"></i></a>
                             </div>
                         </div>
@@ -361,7 +361,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                     <h6><a href="single.jsp">At vero eos</a></h6>
                                 </div>
                                 <div class="img item_add">
-                                    <a href="#"><img src="../images/ca.png" alt=""></a>
+                                    <a href="#"><img src="../template/images/ca.png" alt=""></a>
                                 </div>
                                 <div class="clearfix"></div>
                             </div>
@@ -380,9 +380,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                 <div class="col-md-4 item-grid1 simpleCart_shelfItem">
                     <div class=" mid-pop">
                         <div class="pro-img">
-                            <img src="../images/pc2.jpg" class="img-responsive" alt="">
+                            <img src="../template/images/pc2.jpg" class="img-responsive" alt="">
                             <div class="zoom-icon ">
-                                <a class="picture" href="../images/pc2.jpg" rel="title" class="b-link-stripe b-animate-go  thickbox"><i class="glyphicon glyphicon-search icon "></i></a>
+                                <a class="picture" href="../template/images/pc2.jpg" rel="title" class="b-link-stripe b-animate-go  thickbox"><i class="glyphicon glyphicon-search icon "></i></a>
                                 <a href="single.jsp"><i class="glyphicon glyphicon-menu-right icon"></i></a>
                             </div>
                         </div>
@@ -393,7 +393,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                     <h6><a href="single.jsp">Sed ut perspiciati</a></h6>
                                 </div>
                                 <div class="img item_add">
-                                    <a href="#"><img src="../images/ca.png" alt=""></a>
+                                    <a href="#"><img src="../template/images/ca.png" alt=""></a>
                                 </div>
                                 <div class="clearfix"></div>
                             </div>
@@ -412,9 +412,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                 <div class="col-md-4 item-grid1 simpleCart_shelfItem">
                     <div class=" mid-pop">
                         <div class="pro-img">
-                            <img src="../images/pc3.jpg" class="img-responsive" alt="">
+                            <img src="../template/images/pc3.jpg" class="img-responsive" alt="">
                             <div class="zoom-icon ">
-                                <a class="picture" href="../images/pc3.jpg" rel="title" class="b-link-stripe b-animate-go  thickbox"><i class="glyphicon glyphicon-search icon "></i></a>
+                                <a class="picture" href="../template/images/pc3.jpg" rel="title" class="b-link-stripe b-animate-go  thickbox"><i class="glyphicon glyphicon-search icon "></i></a>
                                 <a href="single.jsp"><i class="glyphicon glyphicon-menu-right icon"></i></a>
                             </div>
                         </div>
@@ -425,7 +425,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                     <h6><a href="single.jsp">On the other</a></h6>
                                 </div>
                                 <div class="img item_add">
-                                    <a href="#"><img src="../images/ca.png" alt=""></a>
+                                    <a href="#"><img src="../template/images/ca.png" alt=""></a>
                                 </div>
                                 <div class="clearfix"></div>
                             </div>
@@ -444,9 +444,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                 <div class="col-md-4 item-grid1 simpleCart_shelfItem">
                     <div class=" mid-pop">
                         <div class="pro-img">
-                            <img src="../images/pc4.jpg" class="img-responsive" alt="">
+                            <img src="../template/images/pc4.jpg" class="img-responsive" alt="">
                             <div class="zoom-icon ">
-                                <a class="picture" href="../images/pc4.jpg" rel="title" class="b-link-stripe b-animate-go  thickbox"><i class="glyphicon glyphicon-search icon "></i></a>
+                                <a class="picture" href="../template/images/pc4.jpg" rel="title" class="b-link-stripe b-animate-go  thickbox"><i class="glyphicon glyphicon-search icon "></i></a>
                                 <a href="single.jsp"><i class="glyphicon glyphicon-menu-right icon"></i></a>
                             </div>
                         </div>
@@ -457,7 +457,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                     <h6><a href="single.jsp">On the other</a></h6>
                                 </div>
                                 <div class="img item_add">
-                                    <a href="#"><img src="../images/ca.png" alt=""></a>
+                                    <a href="#"><img src="../template/images/ca.png" alt=""></a>
                                 </div>
                                 <div class="clearfix"></div>
                             </div>
@@ -476,9 +476,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                 <div class="col-md-4 item-grid1 simpleCart_shelfItem">
                     <div class=" mid-pop">
                         <div class="pro-img">
-                            <img src="../images/pc5.jpg" class="img-responsive" alt="">
+                            <img src="../template/images/pc5.jpg" class="img-responsive" alt="">
                             <div class="zoom-icon ">
-                                <a class="picture" href="../images/pc5.jpg" rel="title" class="b-link-stripe b-animate-go  thickbox"><i class="glyphicon glyphicon-search icon "></i></a>
+                                <a class="picture" href="../template/images/pc5.jpg" rel="title" class="b-link-stripe b-animate-go  thickbox"><i class="glyphicon glyphicon-search icon "></i></a>
                                 <a href="single.jsp"><i class="glyphicon glyphicon-menu-right icon"></i></a>
                             </div>
                         </div>
@@ -489,7 +489,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                     <h6><a href="single.jsp">Sed ut perspiciati</a></h6>
                                 </div>
                                 <div class="img item_add">
-                                    <a href="#"><img src="../images/ca.png" alt=""></a>
+                                    <a href="#"><img src="../template/images/ca.png" alt=""></a>
                                 </div>
                                 <div class="clearfix"></div>
                             </div>
@@ -509,9 +509,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                 <div class="col-md-4 item-grid1 simpleCart_shelfItem">
                     <div class=" mid-pop">
                         <div class="pro-img">
-                            <img src="../images/pc6.jpg" class="img-responsive" alt="">
+                            <img src="../template/images/pc6.jpg" class="img-responsive" alt="">
                             <div class="zoom-icon ">
-                                <a class="picture" href="../images/pc6.jpg" rel="title" class="b-link-stripe b-animate-go  thickbox"><i class="glyphicon glyphicon-search icon "></i></a>
+                                <a class="picture" href="../template/images/pc6.jpg" rel="title" class="b-link-stripe b-animate-go  thickbox"><i class="glyphicon glyphicon-search icon "></i></a>
                                 <a href="single.jsp"><i class="glyphicon glyphicon-menu-right icon"></i></a>
                             </div>
                         </div>
@@ -522,7 +522,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                     <h6><a href="single.jsp">At vero eos</a></h6>
                                 </div>
                                 <div class="img item_add">
-                                    <a href="#"><img src="../images/ca.png" alt=""></a>
+                                    <a href="#"><img src="../template/images/ca.png" alt=""></a>
                                 </div>
                                 <div class="clearfix"></div>
                             </div>
@@ -541,9 +541,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                 <div class="col-md-4 item-grid1 simpleCart_shelfItem">
                     <div class=" mid-pop">
                         <div class="pro-img">
-                            <img src="../images/pc7.jpg" class="img-responsive" alt="">
+                            <img src="../template/images/pc7.jpg" class="img-responsive" alt="">
                             <div class="zoom-icon ">
-                                <a class="picture" href="../images/pc7.jpg" rel="title" class="b-link-stripe b-animate-go  thickbox"><i class="glyphicon glyphicon-search icon "></i></a>
+                                <a class="picture" href="../template/images/pc7.jpg" rel="title" class="b-link-stripe b-animate-go  thickbox"><i class="glyphicon glyphicon-search icon "></i></a>
                                 <a href="single.jsp"><i class="glyphicon glyphicon-menu-right icon"></i></a>
                             </div>
                         </div>
@@ -554,7 +554,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                     <h6><a href="single.jsp">Sed ut perspiciati</a></h6>
                                 </div>
                                 <div class="img item_add">
-                                    <a href="#"><img src="../images/ca.png" alt=""></a>
+                                    <a href="#"><img src="../template/images/ca.png" alt=""></a>
                                 </div>
                                 <div class="clearfix"></div>
                             </div>
@@ -573,9 +573,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                 <div class="col-md-4 item-grid1 simpleCart_shelfItem">
                     <div class=" mid-pop">
                         <div class="pro-img">
-                            <img src="../images/pc.jpg" class="img-responsive" alt="">
+                            <img src="../template/images/pc.jpg" class="img-responsive" alt="">
                             <div class="zoom-icon ">
-                                <a class="picture" href="../images/pc.jpg" rel="title" class="b-link-stripe b-animate-go  thickbox"><i class="glyphicon glyphicon-search icon "></i></a>
+                                <a class="picture" href="../template/images/pc.jpg" rel="title" class="b-link-stripe b-animate-go  thickbox"><i class="glyphicon glyphicon-search icon "></i></a>
                                 <a href="single.jsp"><i class="glyphicon glyphicon-menu-right icon"></i></a>
                             </div>
                         </div>
@@ -586,7 +586,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                     <h6><a href="single.jsp">At vero eos</a></h6>
                                 </div>
                                 <div class="img item_add">
-                                    <a href="#"><img src="../images/ca.png" alt=""></a>
+                                    <a href="#"><img src="../template/images/ca.png" alt=""></a>
                                 </div>
                                 <div class="clearfix"></div>
                             </div>
@@ -729,16 +729,16 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <div class="container">
     <div class="brand">
         <div class="col-md-3 brand-grid">
-            <img src="../images/ic.png" class="img-responsive" alt="">
+            <img src="../template/images/ic.png" class="img-responsive" alt="">
         </div>
         <div class="col-md-3 brand-grid">
-            <img src="../images/ic1.png" class="img-responsive" alt="">
+            <img src="../template/images/ic1.png" class="img-responsive" alt="">
         </div>
         <div class="col-md-3 brand-grid">
-            <img src="../images/ic2.png" class="img-responsive" alt="">
+            <img src="../template/images/ic2.png" class="img-responsive" alt="">
         </div>
         <div class="col-md-3 brand-grid">
-            <img src="../images/ic3.png" class="img-responsive" alt="">
+            <img src="../template/images/ic3.png" class="img-responsive" alt="">
         </div>
         <div class="clearfix"></div>
     </div>
@@ -753,7 +753,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     <div class="footer-middle">
         <div class="container">
             <div class="col-md-3 footer-middle-in">
-                <a href="../../../index.jsp"><img src="../images/log.png" alt=""></a>
+                <a href="../../index.jsp"><img src="../template/images/log.png" alt=""></a>
                 <p>Suspendisse sed accumsan risus. Curabitur rhoncus, elit vel tincidunt elementum, nunc urna tristique nisi, in interdum libero magna tristique ante. adipiscing varius. Vestibulum dolor lorem.</p>
             </div>
 
@@ -798,9 +798,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     <div class="footer-bottom">
         <div class="container">
             <ul class="footer-bottom-top">
-                <li><a href="#"><img src="../images/f1.png" class="img-responsive" alt=""></a></li>
-                <li><a href="#"><img src="../images/f2.png" class="img-responsive" alt=""></a></li>
-                <li><a href="#"><img src="../images/f3.png" class="img-responsive" alt=""></a></li>
+                <li><a href="#"><img src="../template/images/f1.png" class="img-responsive" alt=""></a></li>
+                <li><a href="#"><img src="../template/images/f2.png" class="img-responsive" alt=""></a></li>
+                <li><a href="#"><img src="../template/images/f3.png" class="img-responsive" alt=""></a></li>
             </ul>
             <p class="footer-class">Copyright &copy; 2016.Company name All rights reserved.</p>
             <div class="clearfix"> </div>
@@ -810,12 +810,12 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <!--//footer-->
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 
-<script src="../js/simpleCart.min.js"> </script>
+<script src="../template/js/simpleCart.min.js"> </script>
 <!-- slide -->
-<script src="../js/bootstrap.min.js"></script>
+<script src="../template/js/bootstrap.min.js"></script>
 <!--light-box-files -->
-<script src="../js/jquery.chocolat.js"></script>
-<link rel="stylesheet" href="../css/chocolat.css" type="text/css" media="screen" charset="utf-8">
+<script src="../template/js/jquery.chocolat.js"></script>
+<link rel="stylesheet" href="../template/css/chocolat.css" type="text/css" media="screen" charset="utf-8">
 <!--light-box-files -->
 <script type="text/javascript" charset="utf-8">
     $(function() {
