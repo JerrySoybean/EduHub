@@ -52,7 +52,7 @@
                     <!-- Collect the nav links, forms, and other content for toggling -->
                     <div class="collapse navbar-collapse" id="bs-megadropdown-tabs">
                         <ul class="nav navbar-nav nav_1">
-                            <li><a class="color" href="${pageContext.request.contextPath}/home">Home</a></li>
+                            <li><a class="header-button" href="${pageContext.request.contextPath}/home">Home</a></li>
 
                             <li class="dropdown mega-dropdown active">
                                 <a class="color1" href="#" class="dropdown-toggle" data-toggle="dropdown">Class<span class="caret"></span></a>
@@ -118,7 +118,8 @@
                                     </div>
                                 </div>
                             </li>
-                            <!-- <li class="dropdown mega-dropdown active">
+                            <%--导航栏--%>
+                            <%--<li class="dropdown mega-dropdown active">
                                 <a class="color2" href="#" class="dropdown-toggle" data-toggle="dropdown">Books<span class="caret"></span></a>
                                 <div class="dropdown-menu mega-dropdown-menu">
                                     <div class="menu-top">
@@ -182,12 +183,11 @@
                                         <div class="clearfix"></div>
                                     </div>
                                 </div>
-                            </li> -->
-                            <li><a class="color3" href="${pageContext.request.contextPath}/product">Product</a></li>
-                            <li><a class="color3" href="order.html">Order</a></li>
-                            <li><a class="color4" href="${pageContext.request.contextPath}/404">About</a></li>
-                            <li><a class="color5" href="${pageContext.request.contextPath}/typo">Short Codes</a></li>
-                            <li ><a class="color6" href="${pageContext.request.contextPath}/contact">Contact</a></li>
+                            </li>--%>
+                            <li><a class="header-button" href="${pageContext.request.contextPath}/customer/alterinfo">Product</a></li>
+                            <li><a class="header-button" href="${pageContext.request.contextPath}/customer/orders">Order</a></li>
+                            <%--<li><a class="color5" href="${pageContext.request.contextPath}/typo">Short Codes</a></li>--%>
+                            <li ><a class="header-button" href="${pageContext.request.contextPath}/customer/contact">Contact</a></li>
                         </ul>
                     </div><!-- /.navbar-collapse -->
 
@@ -196,13 +196,13 @@
             <div class="col-sm-2 search-right">
                 <ul class="heart">
                     <li>
-                        <a href="${pageContext.request.contextPath}/wishlist" >
+                        <a href="${pageContext.request.contextPath}/customer/wishlist" >
                             <span class="glyphicon glyphicon-heart" aria-hidden="true"></span>
                         </a></li>
                     <li><a class="play-icon popup-with-zoom-anim" href="#small-dialog"><i class="glyphicon glyphicon-search"> </i></a></li>
                 </ul>
                 <div class="cart box_1">
-                    <a href="${pageContext.request.contextPath}/checkout">
+                    <a href="${pageContext.request.contextPath}/customer/cart">
                         <h3> <div class="total">
                             <span class="simpleCart_total"></span></div>
                             <img src="${pageContext.request.contextPath}/template/images/cart.png" alt=""/></h3>

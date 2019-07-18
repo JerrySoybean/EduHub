@@ -31,7 +31,7 @@
 
 /* Override with your own image and size… */
 .starbox .stars .star_holder .star {
-	background-image: url('https://github.com/sabberworm/jStarbox/raw/master/images/5-small.png');
+	background-image: url('https://github.com/sabberworm/jnavbar-navStarbox/raw/master/images/5-small.png');
 	width:17px;
 	height:17px;
 }
