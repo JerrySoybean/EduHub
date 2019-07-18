@@ -64,7 +64,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
         <div class="container">
             <div class="col-sm-5 col-md-offset-2  header-login">
                 <ul >
-                    <li><a href="${pageContext.request.contextPath}/login">Login</a></li>
+                    <li><a href="${pageContext.request.contextPath}/home/tologin">Login</a></li>
                     <li><a href="${pageContext.request.contextPath}/register">Register</a></li>
                     <li><a href="${pageContext.request.contextPath}/checkout">Checkout</a></li>
                 </ul>
