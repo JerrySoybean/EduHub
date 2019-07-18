@@ -9,10 +9,10 @@
 <html>
 <head>
     <title>Short Codes</title>
-    <link href="../template/css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="../css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
     <!-- Custom Theme files -->
     <!--theme-style-->
-    <link href="../template/css/style.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="../css/style.css" rel="stylesheet" type="text/css" media="all" />
     <!--//theme-style-->
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -20,12 +20,12 @@
 Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
 
     <!--theme-style-->
-    <link href="../template/css/style4.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="../css/style4.css" rel="stylesheet" type="text/css" media="all" />
     <!--//theme-style-->
     <script src="http://apps.bdimg.com/libs/jquery/1.11.1/jquery.min.js"></script>
     <!--- start-rate---->
-    <script src="../template/js/jstarbox.js"></script>
-    <link rel="stylesheet" href="../template/css/jstarbox.css" type="text/css" media="screen" charset="utf-8" />
+    <script src="../js/jstarbox.js"></script>
+    <link rel="stylesheet" href="../css/jstarbox.css" type="text/css" media="screen" charset="utf-8" />
     <script type="text/javascript">
         jQuery(function() {
             jQuery('.starbox').each(function() {
@@ -55,7 +55,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     <div class="container">
         <div class="head">
             <div class=" logo">
-                <a href="../../index.jsp"><img src="../template/images/logo.png" alt=""></a>
+                <a href="../../index.jsp"><img src="../images/logo.png" alt=""></a>
             </div>
         </div>
     </div>
@@ -163,7 +163,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                             </div>
                                         </div>
                                         <div class="col1 col5">
-                                            <img src="../template/images/me.png" class="img-responsive" alt="">
+                                            <img src="../images/me.png" class="img-responsive" alt="">
                                         </div>
                                         <div class="clearfix"></div>
                                     </div>
@@ -228,7 +228,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                             </div>
                                         </div>
                                         <div class="col1 col5">
-                                            <img src="../template/images/me1.png" class="img-responsive" alt="">
+                                            <img src="../images/me1.png" class="img-responsive" alt="">
                                         </div>
                                         <div class="clearfix"></div>
                                     </div>
@@ -255,7 +255,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                     <a href="checkout.jsp">
                         <h3> <div class="total">
                             <span class="simpleCart_total"></span></div>
-                            <img src="../template/images/cart.png" alt=""/></h3>
+                            <img src="../images/cart.png" alt=""/></h3>
                     </a>
                     <p><a href="javascript:;" class="simpleCart_empty">Empty Cart</a></p>
 
@@ -265,8 +265,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                 <!----->
 
                 <!---pop-up-box---->
-                <link href="../template/css/popuo-box.css" rel="stylesheet" type="text/css" media="all"/>
-                <script src="../template/js/jquery.magnific-popup.js" type="text/javascript"></script>
+                <link href="../css/popuo-box.css" rel="stylesheet" type="text/css" media="all"/>
+                <script src="../js/jquery.magnific-popup.js" type="text/javascript"></script>
                 <!---//pop-up-box---->
                 <div id="small-dialog" class="mfp-hide">
                     <div class="search-top">
@@ -825,16 +825,16 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <div class="container">
     <div class="brand">
         <div class="col-md-3 brand-grid">
-            <img src="../template/images/ic.png" class="img-responsive" alt="">
+            <img src="../images/ic.png" class="img-responsive" alt="">
         </div>
         <div class="col-md-3 brand-grid">
-            <img src="../template/images/ic1.png" class="img-responsive" alt="">
+            <img src="../images/ic1.png" class="img-responsive" alt="">
         </div>
         <div class="col-md-3 brand-grid">
-            <img src="../template/images/ic2.png" class="img-responsive" alt="">
+            <img src="../images/ic2.png" class="img-responsive" alt="">
         </div>
         <div class="col-md-3 brand-grid">
-            <img src="../template/images/ic3.png" class="img-responsive" alt="">
+            <img src="../images/ic3.png" class="img-responsive" alt="">
         </div>
         <div class="clearfix"></div>
     </div>
@@ -849,7 +849,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     <div class="footer-middle">
         <div class="container">
             <div class="col-md-3 footer-middle-in">
-                <a href="../../index.jsp"><img src="../template/images/log.png" alt=""></a>
+                <a href="../../index.jsp"><img src="../images/log.png" alt=""></a>
                 <p>Suspendisse sed accumsan risus. Curabitur rhoncus, elit vel tincidunt elementum, nunc urna tristique nisi, in interdum libero magna tristique ante. adipiscing varius. Vestibulum dolor lorem.</p>
             </div>
 
@@ -894,9 +894,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     <div class="footer-bottom">
         <div class="container">
             <ul class="footer-bottom-top">
-                <li><a href="#"><img src="../template/images/f1.png" class="img-responsive" alt=""></a></li>
-                <li><a href="#"><img src="../template/images/f2.png" class="img-responsive" alt=""></a></li>
-                <li><a href="#"><img src="../template/images/f3.png" class="img-responsive" alt=""></a></li>
+                <li><a href="#"><img src="../images/f1.png" class="img-responsive" alt=""></a></li>
+                <li><a href="#"><img src="../images/f2.png" class="img-responsive" alt=""></a></li>
+                <li><a href="#"><img src="../images/f3.png" class="img-responsive" alt=""></a></li>
             </ul>
             <p class="footer-class">Copyright &copy; 2016.Company name All rights reserved.</p>
             <div class="clearfix"> </div>
@@ -906,9 +906,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <!--//footer-->
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 
-<script src="../template/js/simpleCart.min.js"> </script>
+<script src="../js/simpleCart.min.js"> </script>
 <!-- slide -->
-<script src="../template/js/bootstrap.min.js"></script>
+<script src="../js/bootstrap.min.js"></script>
 
 </body>
 </html>

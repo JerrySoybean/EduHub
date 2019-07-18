@@ -24,8 +24,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     <!--//theme-style-->
     <script src="http://apps.bdimg.com/libs/jquery/1.11.1/jquery.min.js"></script>
     <!--- start-rate---->
-    <script src="${pageContext.request.contextPath}/template/js/jstarbox.js"></script>
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/template/css/jstarbox.css" type="text/css" media="screen" charset="utf-8" />
+    <script src="${pageContext.request.contextPath}/WEB-INF/template/js/jstarbox.js"></script>
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/WEB-INF/template/css/jstarbox.css" type="text/css" media="screen" charset="utf-8" />
     <script type="text/javascript">
         jQuery(function() {
             jQuery('.starbox').each(function() {
@@ -56,7 +56,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     <div class="container">
         <div class="head">
             <div class=" logo">
-                <a href="index.jsp"><img src="WEB-INF/template/images/EduHub_logo3.png" alt="EduHub_logo" width="165" height="85"></a>
+                <a href="${pageContext.request.contextPath}/index"><img src="${pageContext.request.contextPath}/WEB-INF/template/images/EduHub_logo3.png" alt="EduHub_logo" width="165" height="85"></a>
             </div>
         </div>
     </div>
@@ -64,9 +64,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
         <div class="container">
             <div class="col-sm-5 col-md-offset-2  header-login">
                 <ul >
-                    <li><a href="${pageContext.request.contextPath}/home/tologin">Login</a></li>
-                    <li><a href="WEB-INF/template/page/register.jsp">Register</a></li>
-                    <li><a href="WEB-INF/template/page/checkout.jsp">Checkout</a></li>
+                    <li><a href="${pageContext.request.contextPath}/login">Login</a></li>
+                    <li><a href="${pageContext.request.contextPath}/register">Register</a></li>
+                    <li><a href="${pageContext.request.contextPath}/checkout">Checkout</a></li>
                 </ul>
             </div>
 
@@ -267,8 +267,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                 <!----->
 
                 <!---pop-up-box---->
-                <link href="${pageContext.request.contextPath}/template/css/popuo-box.css" rel="stylesheet" type="text/css" media="all"/>
-                <script src="${pageContext.request.contextPath}/template/js/jquery.magnific-popup.js" type="text/javascript"></script>
+                <link href="WEB-INF/template/css/popuo-box.css" rel="stylesheet" type="text/css" media="all"/>
+                <script src="WEB-INF/template/js/jquery.magnific-popup.js" type="text/javascript"></script>
                 <!---//pop-up-box---->
                 <div id="small-dialog" class="mfp-hide">
                     <div class="search-top">
@@ -735,12 +735,12 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 </div>
 <!--//footer-->
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-<script src="${pageContext.request.contextPath}/template/js/simpleCart.min.js"> </script>
+<script src="WEB-INF/template/js/simpleCart.min.js"> </script>
 <!-- slide -->
-<script src="${pageContext.request.contextPath}/template/js/bootstrap.min.js"></script>
+<script src="WEB-INF/template/js/bootstrap.min.js"></script>
 <!--light-box-files -->
-<script src="${pageContext.request.contextPath}/template/js/jquery.chocolat.js"></script>
-<link rel="stylesheet" href="${pageContext.request.contextPath}/template/css/chocolat.css" type="text/css" media="screen" charset="utf-8">
+<script src="WEB-INF/template/js/jquery.chocolat.js"></script>
+<link rel="stylesheet" href="WEB-INF/template/css/chocolat.css" type="text/css" media="screen" charset="utf-8">
 <!--light-box-files -->
 <script type="text/javascript" charset="utf-8">
     $(function() {
