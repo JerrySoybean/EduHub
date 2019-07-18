@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.demo.mms.dao.OrdersMapper">
+  <resultMap id="BaseResultMap" type="com.demo.mms.common.domain.Orders">
+    <id column="id" jdbcType="VARCHAR" property="id" />
+    <result column="customer_id" jdbcType="VARCHAR" property="customerId" />
+    <result column="goods_id" jdbcType="VARCHAR" property="goodsId" />
+    <result column="status" jdbcType="BIT" property="status" />
+    <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
+    <result column="finish_time" jdbcType="TIMESTAMP" property="finishTime" />
+    <result column="comment" jdbcType="VARCHAR" property="comment" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    id, customer_id, goods_id, status, create_time, finish_time, comment
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from orders
+    where id = #{id,jdbcType=VARCHAR}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String">
+    delete from orders
+    where id = #{id,jdbcType=VARCHAR}
+  </delete>
+  <insert id="insert" parameterType="com.demo.mms.common.domain.Orders">
+    insert into orders (id, customer_id, goods_id, 
+      status, create_time, finish_time, 
+      comment)
+    values (#{id,jdbcType=VARCHAR}, #{customerId,jdbcType=VARCHAR}, #{goodsId,jdbcType=VARCHAR}, 
+      #{status,jdbcType=BIT}, #{createTime,jdbcType=TIMESTAMP}, #{finishTime,jdbcType=TIMESTAMP}, 
+      #{comment,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.demo.mms.common.domain.Orders">
+    insert into orders
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        id,
+      </if>
+      <if test="customerId != null">
+        customer_id,
+      </if>
+      <if test="goodsId != null">
+        goods_id,
+      </if>
+      <if test="status != null">
+        status,
+      </if>
+      <if test="createTime != null">
+        create_time,
+      </if>
+      <if test="finishTime != null">
+        finish_time,
+      </if>
+      <if test="comment != null">
+        comment,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        #{id,jdbcType=VARCHAR},
+      </if>
+      <if test="customerId != null">
+        #{customerId,jdbcType=VARCHAR},
+      </if>
+      <if test="goodsId != null">
+        #{goodsId,jdbcType=VARCHAR},
+      </if>
+      <if test="status != null">
+        #{status,jdbcType=BIT},
+      </if>
+      <if test="createTime != null">
+        #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="finishTime != null">
+        #{finishTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="comment != null">
+        #{comment,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.demo.mms.common.domain.Orders">
+    update orders
+    <set>
+      <if test="customerId != null">
+        customer_id = #{customerId,jdbcType=VARCHAR},
+      </if>
+      <if test="goodsId != null">
+        goods_id = #{goodsId,jdbcType=VARCHAR},
+      </if>
+      <if test="status != null">
+        status = #{status,jdbcType=BIT},
+      </if>
+      <if test="createTime != null">
+        create_time = #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="finishTime != null">
+        finish_time = #{finishTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="comment != null">
+        comment = #{comment,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where id = #{id,jdbcType=VARCHAR}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.demo.mms.common.domain.Orders">
+    update orders
+    set customer_id = #{customerId,jdbcType=VARCHAR},
+      goods_id = #{goodsId,jdbcType=VARCHAR},
+      status = #{status,jdbcType=BIT},
+      create_time = #{createTime,jdbcType=TIMESTAMP},
+      finish_time = #{finishTime,jdbcType=TIMESTAMP},
+      comment = #{comment,jdbcType=VARCHAR}
+    where id = #{id,jdbcType=VARCHAR}
+  </update>
+</mapper>

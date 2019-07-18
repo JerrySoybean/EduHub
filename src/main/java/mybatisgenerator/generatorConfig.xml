@@ -48,10 +48,28 @@
         <!-- 指定数据库表 -->
 
 
-        <table tableName="admin" domainObjectName="Admin" enableCountByExample="false" enableUpdateByExample="false"
+        <!--<table tableName="admin" domainObjectName="Admin" enableCountByExample="false" enableUpdateByExample="false"-->
+               <!--enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false"/>-->
+
+        <!--<table tableName="customer" domainObjectName="Customer" enableCountByExample="false" enableUpdateByExample="false"-->
+               <!--enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false"/>-->
+
+        <table tableName="gclass" domainObjectName="Gclass" enableCountByExample="false" enableUpdateByExample="false"
                enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false"/>
 
-        <table tableName="customer" domainObjectName="Customer" enableCountByExample="false" enableUpdateByExample="false"
+        <table tableName="gformat" domainObjectName="Gformat" enableCountByExample="false" enableUpdateByExample="false"
+               enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false"/>
+
+        <table tableName="goods" domainObjectName="Goods" enableCountByExample="false" enableUpdateByExample="false"
+               enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false"/>
+
+        <table tableName="orders" domainObjectName="Orders" enableCountByExample="false" enableUpdateByExample="false"
+               enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false"/>
+
+        <table tableName="cart" domainObjectName="Cart" enableCountByExample="false" enableUpdateByExample="false"
+               enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false"/>
+
+        <table tableName="collection" domainObjectName="Collection" enableCountByExample="false" enableUpdateByExample="false"
                enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false"/>
 
         <!-- 有些表的字段需要指定java类型

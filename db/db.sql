@@ -9,7 +9,7 @@ CREATE TABLE `admin` (
   `tel` char(11) DEFAULT NULL -- 电话号码
 ) ENGINE=InnoDB ;
 
-DROP TABLE IF EXISTS `customer`; -- 管理员表
+DROP TABLE IF EXISTS `customer`; -- 顾客表
 CREATE TABLE `customer` (
                        `id` varchar(64) NOT NULL PRIMARY KEY,
                        `name` varchar(64) NOT NULL, -- 登录名
@@ -19,4 +19,64 @@ CREATE TABLE `customer` (
                        `sex`  boolean default null,
                        `birthday` date  default null,
                        `privilege`  boolean default 0
+) ENGINE=InnoDB ;
+
+DROP TABLE IF EXISTS `gclass`; -- 类别表
+CREATE TABLE `gclass` (
+                          `id` varchar(64) NOT NULL PRIMARY KEY,
+                          `cname` varchar(64) NOT NULL -- 类别名
+) ENGINE=InnoDB ;
+
+DROP TABLE IF EXISTS `gformat`; -- 文件类型表
+CREATE TABLE `gformat` (
+                        `id` varchar(64) NOT NULL PRIMARY KEY,
+                        `fname` varchar(64) NOT NULL -- 文件类型名
+) ENGINE=InnoDB ;
+
+DROP TABLE IF EXISTS `goods`; -- 商品表
+CREATE TABLE `goods` (
+                          `id` varchar(64) NOT NULL PRIMARY KEY,
+                          `name` varchar(64) NOT NULL, -- 商品名
+                          `gclass_id` varchar(64),
+                          `gformat_id` varchar(64),
+                          `price` decimal(5, 2) NOT NULL,
+                          `introduction` varchar(256) DEFAULT NULL,
+                          `picture_path`  varchar(128) default null,
+                          `size` int(16) not null ,
+                          `thumb_up`  int(8)  default 0,
+                          `restriction` boolean default 0,
+                          `upload_date` datetime not null,
+                          foreign key (gclass_id) references gclass(id), -- 商品类型
+                          foreign key (gformat_id) references gformat(id)
+) ENGINE=InnoDB ;
+
+DROP TABLE IF EXISTS `orders`; -- 订单表
+CREATE TABLE `orders` (
+                        `id` varchar(64) NOT NULL PRIMARY KEY,
+                        `customer_id` varchar(64),
+                        `goods_id` varchar(64),
+                        `status`  boolean default 0,
+                        `create_time` datetime  not null,
+                        `finish_time` datetime default null,
+                        `comment` varchar(256)  default null,
+                        foreign key (customer_id) references customer(id),
+                        foreign key (goods_id) references goods(id)
+) ENGINE=InnoDB ;
+
+DROP TABLE IF EXISTS `cart`; -- 购物车
+CREATE TABLE `cart` (
+                        `id` varchar(64) NOT NULL PRIMARY KEY,
+                        `customer_id` varchar(64),
+                        `goods_id` varchar(64),
+                        foreign key (customer_id) references customer(id),
+                        foreign key (goods_id) references goods(id)
+) ENGINE=InnoDB ;
+
+DROP TABLE IF EXISTS `collection`; -- 收藏夹
+CREATE TABLE `collection` (
+                        `id` varchar(64) NOT NULL PRIMARY KEY,
+                        `customer_id` varchar(64),
+                        `goods_id` varchar(64),
+                        foreign key (customer_id) references customer(id),
+                        foreign key (goods_id) references goods(id)
 ) ENGINE=InnoDB ;
