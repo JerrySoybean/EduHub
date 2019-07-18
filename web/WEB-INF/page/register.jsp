@@ -63,7 +63,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
         <div class="container">
             <div class="col-sm-5 col-md-offset-2  header-login">
                 <ul >
-                    <li><a href="login.jsp">Login</a></li>
+                    <li><a href="customerLogin.jsp">Login</a></li>
                     <li><a href="register.jsp">Register</a></li>
                     <li><a href="checkout.jsp">Checkout</a></li>
                 </ul>
@@ -341,7 +341,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
                 <p>Pellentesque neque leo, dictum sit amet accumsan non, dignissim ac mauris. Mauris rhoncus, lectus tincidunt tempus aliquam, odio
                     libero tincidunt metus, sed euismod elit enim ut mi. Nulla porttitor et dolor sed condimentum. Praesent porttitor lorem dui, in pulvinar enim rhoncus vitae. Curabitur tincidunt, turpis ac lobortis hendrerit, ex elit vestibulum est, at faucibus erat ligula non neque.</p>
-                <a href="login.jsp" class="hvr-skew-backward">Login</a>
+                <a href="customerLogin.jsp" class="hvr-skew-backward">Login</a>
 
             </div>
 
@@ -396,7 +396,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                 <ul class="in in1">
                     <li><a href="#">Order History</a></li>
                     <li><a href="wishlist.jsp">Wish List</a></li>
-                    <li><a href="login.jsp">Login</a></li>
+                    <li><a href="customerLogin.jsp">Login</a></li>
                 </ul>
                 <div class="clearfix"></div>
             </div>

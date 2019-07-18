@@ -9,10 +9,10 @@
 <html>
 <head>
     <title>Login</title>
-    <link href="../css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="${pageContext.request.contextPath}/template/css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
     <!-- Custom Theme files -->
     <!--theme-style-->
-    <link href="../css/style.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="${pageContext.request.contextPath}/template/css/style.css" rel="stylesheet" type="text/css" media="all" />
     <!--//theme-style-->
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -20,12 +20,12 @@
 Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
 
     <!--theme-style-->
-    <link href="../css/style4.css" rel="stylesheet" type="text/css" media="all"  />
+    <link href="${pageContext.request.contextPath}/template/css/style4.css" rel="stylesheet" type="text/css" media="all"  />
     <!--//theme-style-->
     <script src="http://apps.bdimg.com/libs/jquery/1.11.1/jquery.min.js"></script>
     <!--- start-rate---->
-    <script src="../js/jstarbox.js"></script>
-    <link rel="stylesheet" href="../css/jstarbox.css" type="text/css" media="screen" charset="utf-8" />
+    <script src="${pageContext.request.contextPath}/template/js/jstarbox.js"></script>
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/template/css/jstarbox.css" type="text/css" media="screen" charset="utf-8" />
     <script type="text/javascript">
         jQuery(function() {
             jQuery('.starbox').each(function() {
@@ -55,7 +55,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     <div class="container">
         <div class="head">
             <div class=" logo">
-                <a href="../../index.jsp"><img src="../images/logo.png" alt=""></a>
+                <a href="${pageContext.request.contextPath}/template/../index.jsp"><img src="${pageContext.request.contextPath}/template/images/logo.png" alt=""></a>
             </div>
         </div>
     </div>
@@ -63,7 +63,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
         <div class="container">
             <div class="col-sm-5 col-md-offset-2  header-login">
                 <ul >
-                    <li><a href="login.jsp">Login</a></li>
+                    <li><a href="customerLogin.jsp">Login</a></li>
                     <li><a href="register.jsp">Register</a></li>
                     <li><a href="checkout.jsp">Checkout</a></li>
                 </ul>
@@ -103,7 +103,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                     <!-- Collect the nav links, forms, and other content for toggling -->
                     <div class="collapse navbar-collapse" id="bs-megadropdown-tabs">
                         <ul class="nav navbar-nav nav_1">
-                            <li><a class="color" href="../../index.jsp">Home</a></li>
+                            <li><a class="color" href="${pageContext.request.contextPath}/template/../index.jsp">Home</a></li>
 
                             <li class="dropdown mega-dropdown active">
                                 <a class="color1" href="#" class="dropdown-toggle" data-toggle="dropdown">Women<span class="caret"></span></a>
@@ -163,7 +163,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                             </div>
                                         </div>
                                         <div class="col1 col5">
-                                            <img src="../images/me.png" class="img-responsive" alt="">
+                                            <img src="${pageContext.request.contextPath}/template/images/me.png" class="img-responsive" alt="">
                                         </div>
                                         <div class="clearfix"></div>
                                     </div>
@@ -228,7 +228,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                             </div>
                                         </div>
                                         <div class="col1 col5">
-                                            <img src="../images/me1.png" class="img-responsive" alt="">
+                                            <img src="${pageContext.request.contextPath}/template/images/me1.png" class="img-responsive" alt="">
                                         </div>
                                         <div class="clearfix"></div>
                                     </div>
@@ -255,7 +255,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                     <a href="checkout.jsp">
                         <h3> <div class="total">
                             <span class="simpleCart_total"></span></div>
-                            <img src="../images/cart.png" alt=""/></h3>
+                            <img src="${pageContext.request.contextPath}/template/images/cart.png" alt=""/></h3>
                     </a>
                     <p><a href="javascript:;" class="simpleCart_empty">Empty Cart</a></p>
 
@@ -265,8 +265,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                 <!----->
 
                 <!---pop-up-box---->
-                <link href="../css/popuo-box.css" rel="stylesheet" type="text/css" media="all"/>
-                <script src="../js/jquery.magnific-popup.js" type="text/javascript"></script>
+                <link href="${pageContext.request.contextPath}/template/css/popuo-box.css" rel="stylesheet" type="text/css" media="all"/>
+                <script src="${pageContext.request.contextPath}/template/js/jquery.magnific-popup.js" type="text/javascript"></script>
                 <!---//pop-up-box---->
                 <div id="small-dialog" class="mfp-hide">
                     <div class="search-top">
@@ -304,14 +304,14 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     <div class="container">
         <h1>Login</h1>
         <em></em>
-        <h2><a href="../../index.jsp">Home<label>/</label>Login</a></h2>
+        <h2><a href="${pageContext.request.contextPath}/template/../index.jsp">Home<label>/</label>Login</a></h2>
     </div>
 </div>
 <!--login-->
 <div class="container">
     <div class="login">
 
-        <form action="/customer/login">
+        <form action="/customer/tologin">
             <div class="col-md-6 login-do">
                 <div class="login-mail">
                     <input type="text" placeholder="Username" name="name">
@@ -349,16 +349,16 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <div class="container">
     <div class="brand">
         <div class="col-md-3 brand-grid">
-            <img src="../images/ic.png" class="img-responsive" alt="">
+            <img src="${pageContext.request.contextPath}/template/images/ic.png" class="img-responsive" alt="">
         </div>
         <div class="col-md-3 brand-grid">
-            <img src="../images/ic1.png" class="img-responsive" alt="">
+            <img src="${pageContext.request.contextPath}/template/images/ic1.png" class="img-responsive" alt="">
         </div>
         <div class="col-md-3 brand-grid">
-            <img src="../images/ic2.png" class="img-responsive" alt="">
+            <img src="${pageContext.request.contextPath}/template/images/ic2.png" class="img-responsive" alt="">
         </div>
         <div class="col-md-3 brand-grid">
-            <img src="../images/ic3.png" class="img-responsive" alt="">
+            <img src="${pageContext.request.contextPath}/template/images/ic3.png" class="img-responsive" alt="">
         </div>
         <div class="clearfix"></div>
     </div>
@@ -373,7 +373,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     <div class="footer-middle">
         <div class="container">
             <div class="col-md-3 footer-middle-in">
-                <a href="../../index.jsp"><img src="../images/log.png" alt=""></a>
+                <a href="${pageContext.request.contextPath}/template/../index.jsp"><img src="${pageContext.request.contextPath}/template/images/log.png" alt=""></a>
                 <p>Suspendisse sed accumsan risus. Curabitur rhoncus, elit vel tincidunt elementum, nunc urna tristique nisi, in interdum libero magna tristique ante. adipiscing varius. Vestibulum dolor lorem.</p>
             </div>
 
@@ -388,7 +388,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                 <ul class="in in1">
                     <li><a href="#">Order History</a></li>
                     <li><a href="wishlist.jsp">Wish List</a></li>
-                    <li><a href="login.jsp">Login</a></li>
+                    <li><a href="customerLogin.jsp">Login</a></li>
                 </ul>
                 <div class="clearfix"></div>
             </div>
@@ -418,9 +418,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     <div class="footer-bottom">
         <div class="container">
             <ul class="footer-bottom-top">
-                <li><a href="#"><img src="../images/f1.png" class="img-responsive" alt=""></a></li>
-                <li><a href="#"><img src="../images/f2.png" class="img-responsive" alt=""></a></li>
-                <li><a href="#"><img src="../images/f3.png" class="img-responsive" alt=""></a></li>
+                <li><a href="#"><img src="${pageContext.request.contextPath}/template/images/f1.png" class="img-responsive" alt=""></a></li>
+                <li><a href="#"><img src="${pageContext.request.contextPath}/template/images/f2.png" class="img-responsive" alt=""></a></li>
+                <li><a href="#"><img src="${pageContext.request.contextPath}/template/images/f3.png" class="img-responsive" alt=""></a></li>
             </ul>
             <p class="footer-class">Copyright &copy; 2016.Company name All rights reserved.</p>
             <div class="clearfix"> </div>
@@ -431,9 +431,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 
-<script src="../js/simpleCart.min.js"> </script>
+<script src="${pageContext.request.contextPath}/template/js/simpleCart.min.js"> </script>
 <!-- slide -->
-<script src="../js/bootstrap.min.js"></script>
+<script src="${pageContext.request.contextPath}/template/js/bootstrap.min.js"></script>
 
 </body>
 </html>

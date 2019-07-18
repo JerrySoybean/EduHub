@@ -18,7 +18,7 @@ public class AdminController {
         if (admin == null) {
             msg = "User name doesn't exist";
             modelMap.put("msg", msg);
-            return "login";
+            return "customerLogin";
         } else {
             String pwd = admin.getPassword();
             if (pwd != null && pwd.equals(password)) {
@@ -28,7 +28,7 @@ public class AdminController {
             } else {
                 msg = "Password error";
                 modelMap.put("msg", msg);
-                return "login";
+                return "customerLogin";
             }
         }
     }

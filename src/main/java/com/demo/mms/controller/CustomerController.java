@@ -12,6 +12,12 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class CustomerController {
     @Autowired
     private CustomerService customerService;
+
+    @RequestMapping("/tologin")
+    public String toLogin() {
+        return "customerLogin";
+    }
+
     @RequestMapping("/login")
     public String login(ModelMap modelMap, String name, String password) {
         String msg = null;
@@ -19,7 +25,7 @@ public class CustomerController {
         if (customer == null) {
             msg = "User name doesn't exist";
             modelMap.put("msg", msg);
-            return "login";
+            return "customerLogin";
         } else {
             String pwd = customer.getPassword();
             if (pwd != null && pwd.equals(password)) {
@@ -29,7 +35,7 @@ public class CustomerController {
             } else {
                 msg = "Password error";
                 modelMap.put("msg", msg);
-                return "login";
+                return "customerLogin";
             }
         }
     }
