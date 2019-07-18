@@ -72,8 +72,8 @@ CREATE TABLE `cart` (
                         foreign key (goods_id) references goods(id)
 ) ENGINE=InnoDB ;
 
-DROP TABLE IF EXISTS `collection`; -- 收藏夹
-CREATE TABLE `collection` (
+DROP TABLE IF EXISTS `collections`; -- 收藏夹
+CREATE TABLE `collections` (
                         `id` varchar(64) NOT NULL PRIMARY KEY,
                         `customer_id` varchar(64),
                         `goods_id` varchar(64),
