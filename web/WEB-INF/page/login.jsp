@@ -4,6 +4,7 @@
     <title>Login</title>
 </head>
 <body>
+<p class="login-box-msg" style="color: orangered">${msg}</p>
 <form action="${pageContext.request.contextPath}login" method="post">
     <div class="form-group has-feedback">
         <input type="text" class="form-control" placeholder="用户名" name="name">
