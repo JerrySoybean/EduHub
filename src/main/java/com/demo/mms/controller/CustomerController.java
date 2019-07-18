@@ -40,12 +40,8 @@ public class CustomerController {
         }
     }
 
-    @RequestMapping("/register")
-    public String register(ModelMap modelMap, Customer customer){
-        String msg = null;
-//        customerService.insertCustomer(customer);
-        System.out.println("register");
-
-        return "customerRegister";
+    @RequestMapping("/cart")
+    public String toCart() {
+        return "customerCart";
     }
 }
