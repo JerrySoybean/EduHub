@@ -311,15 +311,19 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <div class="container">
     <div class="login">
 
-        <form>
+        <form action="/login">
             <div class="col-md-6 login-do">
                 <div class="login-mail">
-                    <input type="text" placeholder="Username" required="">
+                    <input type="text" placeholder="Username" name="name">
                     <i  class="glyphicon glyphicon-user"></i>
                 </div>
                 <div class="login-mail">
-                    <input type="password" placeholder="Password" required="">
+                    <input type="password" placeholder="Password" name="password">
                     <i class="glyphicon glyphicon-lock"></i>
+                </div>
+                <div>
+                    <input type="radio" name="ca" value="0" checked="checked">Customer &nbsp;&nbsp;&nbsp;
+                    <input type="radio" name="ca" value="1">Admin
                 </div>
                 <a class="news-letter " href="#">
                     <label class="checkbox1"><input type="checkbox" name="checkbox" ><i> </i>Forget Password</label>
