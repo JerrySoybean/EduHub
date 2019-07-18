@@ -9,10 +9,10 @@
 <html>
 <head>
     <title>404</title>
-    <link href="../css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="${pageContext.request.contextPath}/template/css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
     <!-- Custom Theme files -->
     <!--theme-style-->
-    <link href="../css/style.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="${pageContext.request.contextPath}/template/css/style.css" rel="stylesheet" type="text/css" media="all" />
     <!--//theme-style-->
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -20,12 +20,12 @@
 Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
 
     <!--theme-style-->
-    <link href="../css/style4.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="${pageContext.request.contextPath}/template/css/style4.css" rel="stylesheet" type="text/css" media="all" />
     <!--//theme-style-->
     <script src="http://apps.bdimg.com/libs/jquery/1.11.1/jquery.min.js"></script>
     <!--- start-rate---->
-    <script src="../js/jstarbox.js"></script>
-    <link rel="stylesheet" href="../css/jstarbox.css" type="text/css" media="screen" charset="utf-8" />
+    <script src="${pageContext.request.contextPath}/template/js/jstarbox.js"></script>
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/template/css/jstarbox.css" type="text/css" media="screen" charset="utf-8" />
     <script type="text/javascript">
         jQuery(function() {
             jQuery('.starbox').each(function() {
@@ -55,7 +55,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     <div class="container">
         <div class="head">
             <div class=" logo">
-                <a href="../../index.jsp"><img src="../images/logo.png" alt=""></a>
+                <a href="${pageContext.request.contextPath}/home"><img src="${pageContext.request.contextPath}/template/images/logo.png" alt=""></a>
             </div>
         </div>
     </div>
@@ -63,9 +63,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
         <div class="container">
             <div class="col-sm-5 col-md-offset-2  header-login">
                 <ul >
-                    <li><a href="login.jsp">Login</a></li>
-                    <li><a href="register.jsp">Register</a></li>
-                    <li><a href="checkout.jsp">Checkout</a></li>
+                    <li><a href="${pageContext.request.contextPath}/login">Login</a></li>
+                    <li><a href="${pageContext.request.contextPath}/register">Register</a></li>
+                    <li><a href="${pageContext.request.contextPath}/checkout">Checkout</a></li>
                 </ul>
             </div>
 
@@ -103,7 +103,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                     <!-- Collect the nav links, forms, and other content for toggling -->
                     <div class="collapse navbar-collapse" id="bs-megadropdown-tabs">
                         <ul class="nav navbar-nav nav_1">
-                            <li><a class="color" href="../../index.jsp">Home</a></li>
+                            <li><a class="color" href="${pageContext.request.contextPath}/home">Home</a></li>
 
                             <li class="dropdown mega-dropdown active">
                                 <a class="color1" href="#" class="dropdown-toggle" data-toggle="dropdown">Women<span class="caret"></span></a>
@@ -113,10 +113,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                             <div class="h_nav">
                                                 <h4>Submenu1</h4>
                                                 <ul>
-                                                    <li><a href="product.jsp">Accessories</a></li>
-                                                    <li><a href="product.jsp">Bags</a></li>
-                                                    <li><a href="product.jsp">Caps & Hats</a></li>
-                                                    <li><a href="product.jsp">Hoodies & Sweatshirts</a></li>
+                                                    <li><a href="${pageContext.request.contextPath}/product">Accessories</a></li>
+                                                    <li><a href="${pageContext.request.contextPath}/product">Bags</a></li>
+                                                    <li><a href="${pageContext.request.contextPath}/product">Caps & Hats</a></li>
+                                                    <li><a href="${pageContext.request.contextPath}/product">Hoodies & Sweatshirts</a></li>
 
                                                 </ul>
                                             </div>
@@ -125,12 +125,12 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                             <div class="h_nav">
                                                 <h4>Submenu2</h4>
                                                 <ul>
-                                                    <li><a href="product.jsp">Jackets & Coats</a></li>
-                                                    <li><a href="product.jsp">Jeans</a></li>
-                                                    <li><a href="product.jsp">Jewellery</a></li>
-                                                    <li><a href="product.jsp">Jumpers & Cardigans</a></li>
-                                                    <li><a href="product.jsp">Leather Jackets</a></li>
-                                                    <li><a href="product.jsp">Long Sleeve T-Shirts</a></li>
+                                                    <li><a href="${pageContext.request.contextPath}/product">Jackets & Coats</a></li>
+                                                    <li><a href="${pageContext.request.contextPath}/product">Jeans</a></li>
+                                                    <li><a href="${pageContext.request.contextPath}/product">Jewellery</a></li>
+                                                    <li><a href="${pageContext.request.contextPath}/product">Jumpers & Cardigans</a></li>
+                                                    <li><a href="${pageContext.request.contextPath}/product">Leather Jackets</a></li>
+                                                    <li><a href="${pageContext.request.contextPath}/product">Long Sleeve T-Shirts</a></li>
                                                 </ul>
                                             </div>
                                         </div>
@@ -138,12 +138,12 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                             <div class="h_nav">
                                                 <h4>Submenu3</h4>
                                                 <ul>
-                                                    <li><a href="product.jsp">Shirts</a></li>
-                                                    <li><a href="product.jsp">Shoes, Boots & Trainers</a></li>
-                                                    <li><a href="product.jsp">Sunglasses</a></li>
-                                                    <li><a href="product.jsp">Sweatpants</a></li>
-                                                    <li><a href="product.jsp">Swimwear</a></li>
-                                                    <li><a href="product.jsp">Trousers & Chinos</a></li>
+                                                    <li><a href="${pageContext.request.contextPath}/product">Shirts</a></li>
+                                                    <li><a href="${pageContext.request.contextPath}/product">Shoes, Boots & Trainers</a></li>
+                                                    <li><a href="${pageContext.request.contextPath}/product">Sunglasses</a></li>
+                                                    <li><a href="${pageContext.request.contextPath}/product">Sweatpants</a></li>
+                                                    <li><a href="${pageContext.request.contextPath}/product">Swimwear</a></li>
+                                                    <li><a href="${pageContext.request.contextPath}/product">Trousers & Chinos</a></li>
 
                                                 </ul>
 
@@ -153,17 +153,17 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                             <div class="h_nav">
                                                 <h4>Submenu4</h4>
                                                 <ul>
-                                                    <li><a href="product.jsp">T-Shirts</a></li>
-                                                    <li><a href="product.jsp">Underwear & Socks</a></li>
-                                                    <li><a href="product.jsp">Vests</a></li>
-                                                    <li><a href="product.jsp">Jackets & Coats</a></li>
-                                                    <li><a href="product.jsp">Jeans</a></li>
-                                                    <li><a href="product.jsp">Jewellery</a></li>
+                                                    <li><a href="${pageContext.request.contextPath}/product">T-Shirts</a></li>
+                                                    <li><a href="${pageContext.request.contextPath}/product">Underwear & Socks</a></li>
+                                                    <li><a href="${pageContext.request.contextPath}/product">Vests</a></li>
+                                                    <li><a href="${pageContext.request.contextPath}/product">Jackets & Coats</a></li>
+                                                    <li><a href="${pageContext.request.contextPath}/product">Jeans</a></li>
+                                                    <li><a href="${pageContext.request.contextPath}/product">Jewellery</a></li>
                                                 </ul>
                                             </div>
                                         </div>
                                         <div class="col1 col5">
-                                            <img src="../images/me.png" class="img-responsive" alt="">
+                                            <img src="${pageContext.request.contextPath}/template/images/me.png" class="img-responsive" alt="">
                                         </div>
                                         <div class="clearfix"></div>
                                     </div>
@@ -177,10 +177,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                             <div class="h_nav">
                                                 <h4>Submenu1</h4>
                                                 <ul>
-                                                    <li><a href="product.jsp">Accessories</a></li>
-                                                    <li><a href="product.jsp">Bags</a></li>
-                                                    <li><a href="product.jsp">Caps & Hats</a></li>
-                                                    <li><a href="product.jsp">Hoodies & Sweatshirts</a></li>
+                                                    <li><a href="${pageContext.request.contextPath}/product">Accessories</a></li>
+                                                    <li><a href="${pageContext.request.contextPath}/product">Bags</a></li>
+                                                    <li><a href="${pageContext.request.contextPath}/product">Caps & Hats</a></li>
+                                                    <li><a href="${pageContext.request.contextPath}/product">Hoodies & Sweatshirts</a></li>
 
                                                 </ul>
                                             </div>
@@ -189,12 +189,12 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                             <div class="h_nav">
                                                 <h4>Submenu2</h4>
                                                 <ul>
-                                                    <li><a href="product.jsp">Jackets & Coats</a></li>
-                                                    <li><a href="product.jsp">Jeans</a></li>
-                                                    <li><a href="product.jsp">Jewellery</a></li>
-                                                    <li><a href="product.jsp">Jumpers & Cardigans</a></li>
-                                                    <li><a href="product.jsp">Leather Jackets</a></li>
-                                                    <li><a href="product.jsp">Long Sleeve T-Shirts</a></li>
+                                                    <li><a href="${pageContext.request.contextPath}/product">Jackets & Coats</a></li>
+                                                    <li><a href="${pageContext.request.contextPath}/product">Jeans</a></li>
+                                                    <li><a href="${pageContext.request.contextPath}/product">Jewellery</a></li>
+                                                    <li><a href="${pageContext.request.contextPath}/product">Jumpers & Cardigans</a></li>
+                                                    <li><a href="${pageContext.request.contextPath}/product">Leather Jackets</a></li>
+                                                    <li><a href="${pageContext.request.contextPath}/product">Long Sleeve T-Shirts</a></li>
                                                 </ul>
                                             </div>
                                         </div>
@@ -203,12 +203,12 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                                 <h4>Submenu3</h4>
 
                                                 <ul>
-                                                    <li><a href="product.jsp">Shirts</a></li>
-                                                    <li><a href="product.jsp">Shoes, Boots & Trainers</a></li>
-                                                    <li><a href="product.jsp">Sunglasses</a></li>
-                                                    <li><a href="product.jsp">Sweatpants</a></li>
-                                                    <li><a href="product.jsp">Swimwear</a></li>
-                                                    <li><a href="product.jsp">Trousers & Chinos</a></li>
+                                                    <li><a href="${pageContext.request.contextPath}/product">Shirts</a></li>
+                                                    <li><a href="${pageContext.request.contextPath}/product">Shoes, Boots & Trainers</a></li>
+                                                    <li><a href="${pageContext.request.contextPath}/product">Sunglasses</a></li>
+                                                    <li><a href="${pageContext.request.contextPath}/product">Sweatpants</a></li>
+                                                    <li><a href="${pageContext.request.contextPath}/product">Swimwear</a></li>
+                                                    <li><a href="${pageContext.request.contextPath}/product">Trousers & Chinos</a></li>
 
                                                 </ul>
 
@@ -218,26 +218,26 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                             <div class="h_nav">
                                                 <h4>Submenu4</h4>
                                                 <ul>
-                                                    <li><a href="product.jsp">T-Shirts</a></li>
-                                                    <li><a href="product.jsp">Underwear & Socks</a></li>
-                                                    <li><a href="product.jsp">Vests</a></li>
-                                                    <li><a href="product.jsp">Jackets & Coats</a></li>
-                                                    <li><a href="product.jsp">Jeans</a></li>
-                                                    <li><a href="product.jsp">Jewellery</a></li>
+                                                    <li><a href="${pageContext.request.contextPath}/product">T-Shirts</a></li>
+                                                    <li><a href="${pageContext.request.contextPath}/product">Underwear & Socks</a></li>
+                                                    <li><a href="${pageContext.request.contextPath}/product">Vests</a></li>
+                                                    <li><a href="${pageContext.request.contextPath}/product">Jackets & Coats</a></li>
+                                                    <li><a href="${pageContext.request.contextPath}/product">Jeans</a></li>
+                                                    <li><a href="${pageContext.request.contextPath}/product">Jewellery</a></li>
                                                 </ul>
                                             </div>
                                         </div>
                                         <div class="col1 col5">
-                                            <img src="../images/me1.png" class="img-responsive" alt="">
+                                            <img src="${pageContext.request.contextPath}/template/images/me1.png" class="img-responsive" alt="">
                                         </div>
                                         <div class="clearfix"></div>
                                     </div>
                                 </div>
                             </li>
-                            <li><a class="color3" href="product.jsp">Sale</a></li>
-                            <li><a class="color4" href="404.jsp">About</a></li>
-                            <li><a class="color5" href="typo.jsp">Short Codes</a></li>
-                            <li ><a class="color6" href="contact.jsp">Contact</a></li>
+                            <li><a class="color3" href="${pageContext.request.contextPath}/product">Sale</a></li>
+                            <li><a class="color4" href="${pageContext.request.contextPath}/404">About</a></li>
+                            <li><a class="color5" href="${pageContext.request.contextPath}/typo">Short Codes</a></li>
+                            <li ><a class="color6" href="${pageContext.request.contextPath}/contact">Contact</a></li>
                         </ul>
                     </div><!-- /.navbar-collapse -->
 
@@ -246,16 +246,16 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
             <div class="col-sm-2 search-right">
                 <ul class="heart">
                     <li>
-                        <a href="wishlist.jsp" >
+                        <a href="${pageContext.request.contextPath}/wishlist" >
                             <span class="glyphicon glyphicon-heart" aria-hidden="true"></span>
                         </a></li>
                     <li><a class="play-icon popup-with-zoom-anim" href="#small-dialog"><i class="glyphicon glyphicon-search"> </i></a></li>
                 </ul>
                 <div class="cart box_1">
-                    <a href="checkout.jsp">
+                    <a href="${pageContext.request.contextPath}/checkout">
                         <h3> <div class="total">
                             <span class="simpleCart_total"></span></div>
-                            <img src="../images/cart.png" alt=""/></h3>
+                            <img src="${pageContext.request.contextPath}/template/images/cart.png" alt=""/></h3>
                     </a>
                     <p><a href="javascript:;" class="simpleCart_empty">Empty Cart</a></p>
 
@@ -265,8 +265,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                 <!----->
 
                 <!---pop-up-box---->
-                <link href="../css/popuo-box.css" rel="stylesheet" type="text/css" media="all"/>
-                <script src="../js/jquery.magnific-popup.js" type="text/javascript"></script>
+                <link href="${pageContext.request.contextPath}/template/css/popuo-box.css" rel="stylesheet" type="text/css" media="all"/>
+                <script src="${pageContext.request.contextPath}/template/js/jquery.magnific-popup.js" type="text/javascript"></script>
                 <!---//pop-up-box---->
                 <div id="small-dialog" class="mfp-hide">
                     <div class="search-top">
@@ -304,7 +304,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     <div class="container">
         <h1>404</h1>
         <em></em>
-        <h2><a href="../../index.jsp">Home<label>/</label>404</a></h2>
+        <h2><a href="${pageContext.request.contextPath}/home">Home<label>/</label>404</a></h2>
     </div>
 </div>
 <!--login-->
@@ -312,7 +312,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     <div class="four">
         <h3>404</h3>
         <p>Sorry! Evidently the document you were looking for has either been moved or no longer exist.</p>
-        <a href="../../index.jsp" class="hvr-skew-backward">Back To Home</a>
+        <a href="${pageContext.request.contextPath}/home" class="hvr-skew-backward">Back To Home</a>
     </div>
 </div>
 <!--//login-->
@@ -321,16 +321,16 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <div class="container">
     <div class="brand">
         <div class="col-md-3 brand-grid">
-            <img src="../images/ic.png" class="img-responsive" alt="">
+            <img src="${pageContext.request.contextPath}/template/images/ic.png" class="img-responsive" alt="">
         </div>
         <div class="col-md-3 brand-grid">
-            <img src="../images/ic1.png" class="img-responsive" alt="">
+            <img src="${pageContext.request.contextPath}/template/images/ic1.png" class="img-responsive" alt="">
         </div>
         <div class="col-md-3 brand-grid">
-            <img src="../images/ic2.png" class="img-responsive" alt="">
+            <img src="${pageContext.request.contextPath}/template/images/ic2.png" class="img-responsive" alt="">
         </div>
         <div class="col-md-3 brand-grid">
-            <img src="../images/ic3.png" class="img-responsive" alt="">
+            <img src="${pageContext.request.contextPath}/template/images/ic3.png" class="img-responsive" alt="">
         </div>
         <div class="clearfix"></div>
     </div>
@@ -345,22 +345,22 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     <div class="footer-middle">
         <div class="container">
             <div class="col-md-3 footer-middle-in">
-                <a href="../../index.jsp"><img src="../images/log.png" alt=""></a>
+                <a href="${pageContext.request.contextPath}/home"><img src="${pageContext.request.contextPath}/template/images/log.png" alt=""></a>
                 <p>Suspendisse sed accumsan risus. Curabitur rhoncus, elit vel tincidunt elementum, nunc urna tristique nisi, in interdum libero magna tristique ante. adipiscing varius. Vestibulum dolor lorem.</p>
             </div>
 
             <div class="col-md-3 footer-middle-in">
                 <h6>Information</h6>
                 <ul class=" in">
-                    <li><a href="404.jsp">About</a></li>
-                    <li><a href="contact.jsp">Contact Us</a></li>
+                    <li><a href="${pageContext.request.contextPath}/404">About</a></li>
+                    <li><a href="${pageContext.request.contextPath}/contact">Contact Us</a></li>
                     <li><a href="#">Returns</a></li>
-                    <li><a href="contact.jsp">Site Map</a></li>
+                    <li><a href="${pageContext.request.contextPath}/contact">Site Map</a></li>
                 </ul>
                 <ul class="in in1">
                     <li><a href="#">Order History</a></li>
-                    <li><a href="wishlist.jsp">Wish List</a></li>
-                    <li><a href="login.jsp">Login</a></li>
+                    <li><a href="${pageContext.request.contextPath}/wishlist">Wish List</a></li>
+                    <li><a href="${pageContext.request.contextPath}/login">Login</a></li>
                 </ul>
                 <div class="clearfix"></div>
             </div>
@@ -390,9 +390,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     <div class="footer-bottom">
         <div class="container">
             <ul class="footer-bottom-top">
-                <li><a href="#"><img src="../images/f1.png" class="img-responsive" alt=""></a></li>
-                <li><a href="#"><img src="../images/f2.png" class="img-responsive" alt=""></a></li>
-                <li><a href="#"><img src="../images/f3.png" class="img-responsive" alt=""></a></li>
+                <li><a href="#"><img src="${pageContext.request.contextPath}/template/images/f1.png" class="img-responsive" alt=""></a></li>
+                <li><a href="#"><img src="${pageContext.request.contextPath}/template/images/f2.png" class="img-responsive" alt=""></a></li>
+                <li><a href="#"><img src="${pageContext.request.contextPath}/template/images/f3.png" class="img-responsive" alt=""></a></li>
             </ul>
             <p class="footer-class">Copyright &copy; 2016.Company name All rights reserved.</p>
             <div class="clearfix"> </div>
@@ -402,9 +402,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <!--//footer-->
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 
-<script src="../js/simpleCart.min.js"> </script>
+<script src="${pageContext.request.contextPath}/template/js/simpleCart.min.js"> </script>
 <!-- slide -->
-<script src="../js/bootstrap.min.js"></script>
+<script src="${pageContext.request.contextPath}/template/js/bootstrap.min.js"></script>
 
 </body>
 </html>
