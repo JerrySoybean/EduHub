@@ -55,7 +55,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     <div class="container">
         <div class="head">
             <div class=" logo">
-                <a href="index.jsp"><img src="../images/logo.png" alt=""></a>
+                <a href="../../../index.jsp"><img src="../images/logo.png" alt=""></a>
             </div>
         </div>
     </div>
@@ -103,7 +103,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                     <!-- Collect the nav links, forms, and other content for toggling -->
                     <div class="collapse navbar-collapse" id="bs-megadropdown-tabs">
                         <ul class="nav navbar-nav nav_1">
-                            <li><a class="color" href="index.jsp">Home</a></li>
+                            <li><a class="color" href="../../../index.jsp">Home</a></li>
                             <li class="dropdown mega-dropdown active">
                                 <a class="color1" href="#" class="dropdown-toggle" data-toggle="dropdown">Women<span class="caret"></span></a>
                                 <div class="dropdown-menu ">
@@ -303,7 +303,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     <div class="container">
         <h1>Checkout</h1>
         <em></em>
-        <h2><a href="index.jsp">Home<label>/</label>Checkout</a></h2>
+        <h2><a href="../../../index.jsp">Home<label>/</label>Checkout</a></h2>
     </div>
 </div>
 <!--login-->
@@ -423,7 +423,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     <div class="footer-middle">
         <div class="container">
             <div class="col-md-3 footer-middle-in">
-                <a href="index.jsp"><img src="../images/log.png" alt=""></a>
+                <a href="../../../index.jsp"><img src="../images/log.png" alt=""></a>
                 <p>Suspendisse sed accumsan risus. Curabitur rhoncus, elit vel tincidunt elementum, nunc urna tristique nisi, in interdum libero magna tristique ante. adipiscing varius. Vestibulum dolor lorem.</p>
             </div>
 
