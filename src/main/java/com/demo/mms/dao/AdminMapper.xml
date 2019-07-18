@@ -5,7 +5,7 @@
     <id column="id" jdbcType="VARCHAR" property="id" />
     <result column="name" jdbcType="VARCHAR" property="name" />
     <result column="password" jdbcType="VARCHAR" property="password" />
-    <result column="tel" jdbcType="INTEGER" property="tel" />
+    <result column="tel" jdbcType="CHAR" property="tel" />
   </resultMap>
   <sql id="Base_Column_List">
     id, name, password, tel
@@ -24,7 +24,7 @@
     insert into admin (id, name, password, 
       tel)
     values (#{id,jdbcType=VARCHAR}, #{name,jdbcType=VARCHAR}, #{password,jdbcType=VARCHAR}, 
-      #{tel,jdbcType=INTEGER})
+      #{tel,jdbcType=CHAR})
   </insert>
   <insert id="insertSelective" parameterType="com.demo.mms.common.domain.Admin">
     insert into admin
@@ -53,7 +53,7 @@
         #{password,jdbcType=VARCHAR},
       </if>
       <if test="tel != null">
-        #{tel,jdbcType=INTEGER},
+        #{tel,jdbcType=CHAR},
       </if>
     </trim>
   </insert>
@@ -67,7 +67,7 @@
         password = #{password,jdbcType=VARCHAR},
       </if>
       <if test="tel != null">
-        tel = #{tel,jdbcType=INTEGER},
+        tel = #{tel,jdbcType=CHAR},
       </if>
     </set>
     where id = #{id,jdbcType=VARCHAR}
@@ -76,7 +76,7 @@
     update admin
     set name = #{name,jdbcType=VARCHAR},
       password = #{password,jdbcType=VARCHAR},
-      tel = #{tel,jdbcType=INTEGER}
+      tel = #{tel,jdbcType=CHAR}
     where id = #{id,jdbcType=VARCHAR}
   </update>
 </mapper>

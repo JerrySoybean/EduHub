@@ -7,7 +7,7 @@ public class Admin {
 
     private String password;
 
-    private Integer tel;
+    private String tel;
 
     public String getId() {
         return id;
@@ -33,11 +33,11 @@ public class Admin {
         this.password = password == null ? null : password.trim();
     }
 
-    public Integer getTel() {
+    public String getTel() {
         return tel;
     }
 
-    public void setTel(Integer tel) {
-        this.tel = tel;
+    public void setTel(String tel) {
+        this.tel = tel == null ? null : tel.trim();
     }
 }

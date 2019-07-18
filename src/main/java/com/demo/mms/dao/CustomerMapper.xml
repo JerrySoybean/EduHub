@@ -6,7 +6,7 @@
     <result column="name" jdbcType="VARCHAR" property="name" />
     <result column="password" jdbcType="VARCHAR" property="password" />
     <result column="email" jdbcType="VARCHAR" property="email" />
-    <result column="tel" jdbcType="INTEGER" property="tel" />
+    <result column="tel" jdbcType="CHAR" property="tel" />
     <result column="sex" jdbcType="BIT" property="sex" />
     <result column="birthday" jdbcType="DATE" property="birthday" />
     <result column="privilege" jdbcType="BIT" property="privilege" />
@@ -29,7 +29,7 @@
       email, tel, sex, birthday, 
       privilege)
     values (#{id,jdbcType=VARCHAR}, #{name,jdbcType=VARCHAR}, #{password,jdbcType=VARCHAR}, 
-      #{email,jdbcType=VARCHAR}, #{tel,jdbcType=INTEGER}, #{sex,jdbcType=BIT}, #{birthday,jdbcType=DATE}, 
+      #{email,jdbcType=VARCHAR}, #{tel,jdbcType=CHAR}, #{sex,jdbcType=BIT}, #{birthday,jdbcType=DATE}, 
       #{privilege,jdbcType=BIT})
   </insert>
   <insert id="insertSelective" parameterType="com.demo.mms.common.domain.Customer">
@@ -74,7 +74,7 @@
         #{email,jdbcType=VARCHAR},
       </if>
       <if test="tel != null">
-        #{tel,jdbcType=INTEGER},
+        #{tel,jdbcType=CHAR},
       </if>
       <if test="sex != null">
         #{sex,jdbcType=BIT},
@@ -100,7 +100,7 @@
         email = #{email,jdbcType=VARCHAR},
       </if>
       <if test="tel != null">
-        tel = #{tel,jdbcType=INTEGER},
+        tel = #{tel,jdbcType=CHAR},
       </if>
       <if test="sex != null">
         sex = #{sex,jdbcType=BIT},
@@ -119,7 +119,7 @@
     set name = #{name,jdbcType=VARCHAR},
       password = #{password,jdbcType=VARCHAR},
       email = #{email,jdbcType=VARCHAR},
-      tel = #{tel,jdbcType=INTEGER},
+      tel = #{tel,jdbcType=CHAR},
       sex = #{sex,jdbcType=BIT},
       birthday = #{birthday,jdbcType=DATE},
       privilege = #{privilege,jdbcType=BIT}

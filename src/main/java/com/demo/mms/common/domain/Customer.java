@@ -11,7 +11,7 @@ public class Customer {
 
     private String email;
 
-    private Integer tel;
+    private String tel;
 
     private Boolean sex;
 
@@ -51,12 +51,12 @@ public class Customer {
         this.email = email == null ? null : email.trim();
     }
 
-    public Integer getTel() {
+    public String getTel() {
         return tel;
     }
 
-    public void setTel(Integer tel) {
-        this.tel = tel;
+    public void setTel(String tel) {
+        this.tel = tel == null ? null : tel.trim();
     }
 
     public Boolean getSex() {
