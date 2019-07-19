@@ -15,6 +15,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
     <!--theme-style-->
     <link href="${pageContext.request.contextPath}/template/css/style4.css" rel="stylesheet" type="text/css" media="all" />
+    <%--datepicker--%>
+    <link href="${pageContext.request.contextPath}/template/plugins/timepicker/bootstrap-timepicker.min.css" rel="stylesheet"/>
     <!--//theme-style-->
     <script src="http://apps.bdimg.com/libs/jquery/1.11.1/jquery.min.js"></script>
     <!--- start-rate---->
@@ -56,7 +58,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                 <label class="line"></label>
                 <%--form--%>
                 <div class="bs-example" data-example-id="simple-horizontal-form">
-                    <form class="form-horizontal" action="${pageContext.request.contextPath}/customer/infosubmitupdate">
+                    <form class="form-horizontal" action="${pageContext.request.contextPath}/customer/infoupdate">
                         <div class="form-group">
                             <label for="inputName3" class="col-sm-2 control-label">UserName</label>
                             <div class="col-sm-10">
@@ -406,15 +408,11 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <!--light-box-files -->
 <script src="${pageContext.request.contextPath}/template/js/jquery.chocolat.js"></script>
 <link rel="stylesheet" href="${pageContext.request.contextPath}/template/css/chocolat.css" type="text/css" media="screen" charset="utf-8">
+<script src = "${pageContext.request.contextPath}/template/plugins/timepicker/bootstrap-timepicker.min.js"></script>
 <!--light-box-files -->
 <script type="text/javascript" charset="utf-8">
     $(function() {
         $('a.picture').Chocolat();
-    });
-</script>
-<script>
-    $(function(){
-        //Date picker
         $('#inputBirthday3').datepicker({
             autoclose: true,
             // language: "zh-CN", //使用中文日期
@@ -423,7 +421,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
         $(".btn-cancel").click(function(){
             window.history.go(-1);
         })
-    })
+    });
 </script>
 
 </body>
