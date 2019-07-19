@@ -1,0 +1,9 @@
+package com.demo.mms.service;
+
+import com.demo.mms.common.domain.Orders;
+
+import java.util.List;
+
+public interface OrdersService {
+    List<Orders> findOrdersIdByCustomerId(String customer_id);
+}

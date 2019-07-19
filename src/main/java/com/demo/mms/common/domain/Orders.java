@@ -45,6 +45,10 @@ public class Orders {
         return status;
     }
 
+    public String getStatusTxt() {
+        return status?"Finished":"Unfinished";
+    }
+
     public void setStatus(Boolean status) {
         this.status = status;
     }

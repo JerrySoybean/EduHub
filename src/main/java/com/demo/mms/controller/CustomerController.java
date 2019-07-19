@@ -1,21 +1,30 @@
 package com.demo.mms.controller;
 
 import com.demo.mms.common.domain.Customer;
+import com.demo.mms.common.domain.Goods;
+import com.demo.mms.common.domain.Orders;
 import com.demo.mms.common.utils.IDGenerator;
 import com.demo.mms.service.CustomerService;
 import com.demo.mms.service.GoodsService;
+import com.demo.mms.service.OrdersService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import javax.servlet.http.HttpSession;
+import java.util.ArrayList;
+import java.util.List;
 
 @Controller
 @RequestMapping("/customer")
 public class CustomerController {
     @Autowired
+    private GoodsService goodsService;
+    @Autowired
     private CustomerService customerService;
+    @Autowired
+    private OrdersService ordersService;
 
     @RequestMapping("/tologin")
     public String toLogin() {
@@ -97,5 +106,23 @@ public class CustomerController {
     @RequestMapping("/home")
     public String home(){
         return "customerHome";
+    }
+
+    @RequestMapping("orders")
+    public String lookOrders(ModelMap modelMap, HttpSession session) {
+        if (session.getAttribute("curr_customer") == null) {
+            return "customerLogin";
+        }
+        String customer_id = ((Customer) session.getAttribute("curr_customer")).getId();
+        List<Orders> orders_list = ordersService.findOrdersIdByCustomerId(customer_id);
+        int size = orders_list.size();
+        List<Goods> all_goods_in_orders = new ArrayList<>(size);
+        for (int i = 0; i < size; i++) {
+            String good_id = orders_list.get(i).getGoodsId();
+            all_goods_in_orders.add(goodsService.findGoodsById(good_id));
+        }
+        modelMap.put("orders", orders_list);
+        modelMap.put("goods_in_orders", all_goods_in_orders);
+        return "customerOrders";
     }
 }

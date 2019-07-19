@@ -2,6 +2,8 @@ package com.demo.mms.dao;
 
 import com.demo.mms.common.domain.Orders;
 
+import java.util.List;
+
 public interface OrdersMapper {
     int deleteByPrimaryKey(String id);
 
@@ -14,4 +16,6 @@ public interface OrdersMapper {
     int updateByPrimaryKeySelective(Orders record);
 
     int updateByPrimaryKey(Orders record);
+
+    List<Orders> selectByCustomerId(String customer_id);
 }
