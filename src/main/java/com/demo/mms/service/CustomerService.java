@@ -6,4 +6,8 @@ public interface CustomerService {
     Customer findCustomerByName(String name);
 
     void insertCustomer(Customer customer);
+
+    void updateCustomer(Customer customer);
+
+    Customer findCustomerById(String id);
 }

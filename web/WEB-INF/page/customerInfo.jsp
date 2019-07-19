@@ -2,7 +2,7 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <html>
 <head>
-    <title>Home</title>
+    <title>Customer Information</title>
     <link href="${pageContext.request.contextPath}/template/css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
     <!-- Custom Theme files -->
     <!--theme-style-->
@@ -56,7 +56,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                 <label class="line"></label>
                 <%--form--%>
                 <div class="bs-example" data-example-id="simple-horizontal-form">
-                    <form class="form-horizontal" action="${pageContext.request.contextPath}/customer/infoupdate">
+                    <form class="form-horizontal" action="${pageContext.request.contextPath}/customer/infosubmitupdate">
                         <div class="form-group">
                             <label for="inputName3" class="col-sm-2 control-label">UserName</label>
                             <div class="col-sm-10">

@@ -14,6 +14,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import javax.jws.WebParam;
 import javax.servlet.http.HttpSession;
 import java.util.ArrayList;
 import java.util.List;
@@ -128,6 +129,23 @@ public class CustomerController {
     @RequestMapping("/info")
     public String info(){
         return "customerInfo";
+    }
+
+    @RequestMapping("/infotoupdate")
+    public String infoSubmitupdate(ModelMap modelMap,String id){
+        Customer student = customerService.findCustomerById(id);
+
+        modelMap.put("stu",student);
+        return "customerInfo";
+    }
+
+    @RequestMapping("/infosubmitupdate")
+    public String infoToupdate(ModelMap modelMap, Customer customer){
+        customerService.updateCustomer(customer);
+
+        modelMap.put("cus",customer);
+
+        return "customerHome";
     }
 
     @RequestMapping("/home")
