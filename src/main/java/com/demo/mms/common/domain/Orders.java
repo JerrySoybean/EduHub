@@ -1,5 +1,7 @@
 package com.demo.mms.common.domain;
 
+import com.demo.mms.common.utils.DateUtil;
+
 import java.util.Date;
 
 public class Orders {
@@ -55,6 +57,10 @@ public class Orders {
 
     public Date getCreateTime() {
         return createTime;
+    }
+
+    public String getCreateTimeTxt() {
+        return DateUtil.parseDateToStr(createTime, DateUtil.DATE_FORMAT_YYYY_MM_DD);
     }
 
     public void setCreateTime(Date createTime) {

@@ -184,7 +184,7 @@
                                     </div>
                                 </div>
                             </li>--%>
-                            <li><a class="header-button" href="${pageContext.request.contextPath}/customer/orders">Order</a></li>
+                            <li><a class="header-button" href="${pageContext.request.contextPath}/customer/orders">Orders</a></li>
                             <%--<li><a class="color5" href="${pageContext.request.contextPath}/typo">Short Codes</a></li>--%>
                             <li ><a class="header-button" href="${pageContext.request.contextPath}/customer/contact">Contact</a></li>
                         </ul>

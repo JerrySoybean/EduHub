@@ -5,7 +5,6 @@ import com.demo.mms.common.domain.Customer;
 import com.demo.mms.common.domain.Goods;
 import com.demo.mms.common.utils.IDGenerator;
 import com.demo.mms.service.CartService;
-import com.demo.mms.service.CollectionsService;
 import com.demo.mms.service.GoodsService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -41,6 +40,7 @@ public class CartController {
             String good_id = cart_list.get(i).getGoodsId();
             all_goods_in_cart.add(goodsService.findGoodsById(good_id));
         }
+        modelMap.put("cart_list", cart_list);
         modelMap.put("goods_in_cart", all_goods_in_cart);
         return "customerCart";
     }
@@ -52,11 +52,19 @@ public class CartController {
             return "customerLogin";
         }
         String curr_customer_id = ((Customer) session.getAttribute("curr_customer")).getId();
-        Cart cart = new Cart();
-        cart.setId(IDGenerator.getId());
-        cart.setCustomerId(curr_customer_id);
-        cart.setGoodsId(goods_id);
-        cartService.addItem(cart);
+        Cart item = new Cart();
+        item.setId(IDGenerator.getId());
+        item.setCustomerId(curr_customer_id);
+        item.setGoodsId(goods_id);cartService.addItem(item);
+        Map<String, Object> map = new HashMap<>();
+        map.put("ok", true);
+        return map;
+    }
+
+    @RequestMapping("/del")
+    @ResponseBody
+    public Object delItem(String id) {
+        cartService.deleteItemById(id);
         Map<String, Object> map = new HashMap<>();
         map.put("ok", true);
         return map;

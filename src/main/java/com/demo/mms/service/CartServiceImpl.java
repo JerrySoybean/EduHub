@@ -19,7 +19,16 @@ public class CartServiceImpl implements CartService {
 
     @Override
     @Transactional
-    public int addItem(Cart cart) {
-        return cartMapper.insert(cart);
+    public int addItem(Cart item) {
+        System.out.println(item.getId());
+        System.out.println(item.getGoodsId());
+        System.out.println(item.getCustomerId());
+        return cartMapper.insert(item);
+    }
+
+    @Override
+    @Transactional
+    public int deleteItemById(String id) {
+        return cartMapper.deleteByPrimaryKey(id);
     }
 }

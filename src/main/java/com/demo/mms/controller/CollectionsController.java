@@ -39,6 +39,7 @@ public class CollectionsController {
             String good_id = wishlist.get(i).getGoodsId();
             all_goods_in_wishlist.add(goodsService.findGoodsById(good_id));
         }
+        modelMap.put("wish_list", wishlist);
         modelMap.put("goods_in_wishlist", all_goods_in_wishlist);
         return "customerWishlist";
     }
@@ -46,15 +47,21 @@ public class CollectionsController {
     @RequestMapping("/addwish")
     @ResponseBody
     public Object addWish(String goods_id, HttpSession session){
-        if (session.getAttribute("curr_customer") == null) {
-            return "customerLogin";
-        }
         String curr_customer_id = ((Customer) session.getAttribute("curr_customer")).getId();
         Collections collection = new Collections();
         collection.setId(IDGenerator.getId());
         collection.setCustomerId(curr_customer_id);
         collection.setGoodsId(goods_id);
         collectionsService.addItem(collection);
+        Map<String, Object> map = new HashMap<>();
+        map.put("ok", true);
+        return map;
+    }
+
+    @RequestMapping("/del")
+    @ResponseBody
+    public Object delCollection(String id) {
+        collectionsService.deleteCollectionById(id);
         Map<String, Object> map = new HashMap<>();
         map.put("ok", true);
         return map;

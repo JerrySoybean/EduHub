@@ -65,19 +65,20 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                         <th>Prices</th>
                         <th>Status</th>
                         <th>Created time</th>
+                        <th>Comment</th>
                     </tr>
-                    <c:forEach items="${orders}" var="good" varStatus="loop">
-                        <tr class="cart-header" id="${good.id}">
+                    <c:forEach items="${orders}" var="order" varStatus="loop">
+                        <tr class="cart-header">
                             <td class="ring-in"><a href="single.jsp" class="at-in"><img src="${pageContext.request.contextPath}/template/images/ch.jpg" class="img-responsive" alt=""></a>
                                 <div class="sed">
                                     <h5><a href="single.jsp">${goods_in_orders[loop.count-1].name}</a></h5>
                                     <p>${goods_in_orders[loop.count-1].introduction}</p>
                                 </div>
                                 <div class="clearfix"> </div>
-                                <div class="close1"> </div></td>
-                            <td>${goods_in_orders[loop.count-1].price}</td>
-                            <td>${orders.statusTxt}</td>
-                            <td class="item_price">${orders.createTime}</td>
+                            </td>
+                            <td>$${goods_in_orders[loop.count-1].price}</td>
+                            <td>${order.statusTxt}</td>
+                            <td class="item_price">${order.createTimeTxt}</td>
                         </tr>
                     </c:forEach>
                 </table>
@@ -87,25 +88,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 </div>
 
 <!--//login-->
-<!--brand-->
-<div class="container">
-    <div class="brand">
-        <div class="col-md-3 brand-grid">
-            <img src="${pageContext.request.contextPath}/template/images/ic.png" class="img-responsive" alt="">
-        </div>
-        <div class="col-md-3 brand-grid">
-            <img src="${pageContext.request.contextPath}/template/images/ic1.png" class="img-responsive" alt="">
-        </div>
-        <div class="col-md-3 brand-grid">
-            <img src="${pageContext.request.contextPath}/template/images/ic2.png" class="img-responsive" alt="">
-        </div>
-        <div class="col-md-3 brand-grid">
-            <img src="${pageContext.request.contextPath}/template/images/ic3.png" class="img-responsive" alt="">
-        </div>
-        <div class="clearfix"></div>
-    </div>
-</div>
-<!--//brand-->
 </div>
 
 </div>

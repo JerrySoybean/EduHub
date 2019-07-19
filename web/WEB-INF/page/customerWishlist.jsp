@@ -71,22 +71,21 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                 <table class="table-heading simpleCart_shelfItem" id="cartTable">
                     <tr>
                         <th class="table-grid">Item</th>
-
                         <th>Prices</th>
                         <th>Size</th>
                         <th>BalaBala</th>
                     </tr>
-                    <c:forEach items="${goods_in_wishlist}" var="good">
+                    <c:forEach items="${wish_list}" var="good" varStatus="loop">
                         <tr class="cart-header" id="${good.id}">
                             <td class="ring-in"><a href="single.jsp" class="at-in"><img src="${pageContext.request.contextPath}/template/images/ch.jpg" class="img-responsive" alt=""></a>
                                 <div class="sed">
-                                    <h5><a href="single.jsp">${good.name}</a></h5>
-                                    <p>${good.introduction}</p>
+                                    <h5><a href="single.jsp">${goods_in_wishlist[loop.count-1].name}</a></h5>
+                                    <p>${goods_in_wishlist[loop.count-1].introduction}</p>
                                 </div>
                                 <div class="clearfix"> </div>
-                                <div class="close1"> </div></td>
-                            <td>$${good.price}</td>
-                            <td>${good.size}</td>
+                            </td>
+                            <td>$${goods_in_wishlist[loop.count-1].price}</td>
+                            <td>${goods_in_wishlist[loop.count-1].size}</td>
                             <td class="item_price">balabala</td>
                             <td class="add-check">
                                 <a class="item_add hvr-skew-backward" href="#">Buy</a>
@@ -132,7 +131,31 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <!-- slide -->
 <script src="${pageContext.request.contextPath}/template/js/bootstrap.min.js"></script>
 <script src="${pageContext.request.contextPath}/template/layer/layer.js"></script>
-
+<script>
+    $(function () {
+        $(".btn_del").click(function () {
+            var $tr = $(this).parents("tr");
+            var collection_idvalue = $tr.attr("id");
+            var goods_name = $tr.find("td:eq(0)").find("div:eq(0)").find("a").html();
+            layer.confirm('Do you want to delete ' + goods_name + '?', {icon: 3, title: "Tips"}, function() {
+                $.ajax({
+                    type: "POST",
+                    url: "${pageContext.request.contextPath}/collections/del",
+                    data: {id: collection_idvalue},
+                    success: function (msg) {
+                        if (msg["ok"]) {
+                            layer.msg("Succeed", {time: 700}, function () {
+                                window.location.reload();
+                            })
+                        }
+                    },
+                    dataType: "json"
+                });
+            });
+            layer.close(index);
+        })
+    })
+</script>
 <script>
     $(function () {
         $(".btn_add").click(function () {
@@ -141,7 +164,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
             $.ajax({
                 type: "POST",
                 url: "${pageContext.request.contextPath}/cart/addcart",
-                data: {goods_id:goods_idvalue},
+                data: {goods_id: goods_idvalue},
                 success: function (msg) {
                     if (msg["ok"]) {
                         layer.msg('Added successfully!');

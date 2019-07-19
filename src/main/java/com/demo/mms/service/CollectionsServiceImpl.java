@@ -20,4 +20,10 @@ public class CollectionsServiceImpl implements CollectionsService {
     @Override
     @Transactional
     public int addItem(Collections collection) { return collectionsMapper.insert(collection); }
+
+    @Override
+    @Transactional
+    public int deleteCollectionById(String id) {
+        return collectionsMapper.deleteByPrimaryKey(id);
+    }
 }
