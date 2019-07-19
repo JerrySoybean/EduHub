@@ -1,21 +1,30 @@
 package com.demo.mms.controller;
 
+import com.demo.mms.common.domain.Cart;
 import com.demo.mms.common.domain.Customer;
 import com.demo.mms.common.utils.IDGenerator;
+import com.demo.mms.common.domain.Goods;
+import com.demo.mms.service.CartService;
 import com.demo.mms.service.CustomerService;
+import com.demo.mms.service.GoodsService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import javax.servlet.http.HttpSession;
+import java.util.ArrayList;
 import java.util.List;
-
 
 @Controller
 @RequestMapping("/customer")
 public class CustomerController {
     @Autowired
     private CustomerService customerService;
+    @Autowired
+    private GoodsService goodsService;
+    @Autowired
+    private CartService cartService;
 
     @RequestMapping("/tologin")
     public String toLogin() {
@@ -45,7 +54,18 @@ public class CustomerController {
     }
 
     @RequestMapping("/cart")
-    public String toCart() {
+    public String toCart(ModelMap modelMap, HttpSession session) {
+        Customer curr_customer = (Customer) session.getAttribute("curr_customer");
+        String curr_customer_id = curr_customer.getId();
+        List<Cart> cart_list = cartService.findGoodsIdByCustomerId(curr_customer_id);
+        int size = cart_list.size();
+        List<Goods> all_goods_in_cart = new ArrayList<>(size);
+        for (int i = 0; i < size; i++) {
+            String good_id = cart_list.get(i).getGoodsId();
+            all_goods_in_cart.add(goodsService.findGoodsById(good_id));
+        }
+        modelMap.put("goods_in_cart", all_goods_in_cart);
+        System.out.println(all_goods_in_cart);
         return "customerCart";
     }
 
