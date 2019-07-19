@@ -1,10 +1,12 @@
 package com.demo.mms.controller;
 
 import com.demo.mms.common.domain.Cart;
+import com.demo.mms.common.domain.Collections;
 import com.demo.mms.common.domain.Customer;
 import com.demo.mms.common.utils.IDGenerator;
 import com.demo.mms.common.domain.Goods;
 import com.demo.mms.service.CartService;
+import com.demo.mms.service.CollectionsService;
 import com.demo.mms.service.CustomerService;
 import com.demo.mms.service.GoodsService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -25,6 +27,8 @@ public class CustomerController {
     private GoodsService goodsService;
     @Autowired
     private CartService cartService;
+    @Autowired
+    private CollectionsService collectionsService;
 
     @RequestMapping("/tologin")
     public String toLogin() {
@@ -56,6 +60,9 @@ public class CustomerController {
 
     @RequestMapping("/cart")
     public String toCart(ModelMap modelMap, HttpSession session) {
+        if (session.getAttribute("curr_customer") == null) {
+            return "customerLogin";
+        }
         Customer curr_customer = (Customer) session.getAttribute("curr_customer");
         String curr_customer_id = curr_customer.getId();
         List<Cart> cart_list = cartService.findGoodsIdByCustomerId(curr_customer_id);
@@ -67,6 +74,24 @@ public class CustomerController {
         }
         modelMap.put("goods_in_cart", all_goods_in_cart);
         return "customerCart";
+    }
+
+    @RequestMapping("/wishlist")
+    public String toWishlist(ModelMap modelMap, HttpSession session) {
+        if (session.getAttribute("curr_customer") == null) {
+            return "customerLogin";
+        }
+        Customer curr_customer = (Customer) session.getAttribute("curr_customer");
+        String curr_customer_id = curr_customer.getId();
+        List<Collections> wishlist = collectionsService.findGoodsIdByCustomerId(curr_customer_id);
+        int size = wishlist.size();
+        List<Goods> all_goods_in_wishlist = new ArrayList<>(size);
+        for (int i = 0; i < size; i++) {
+            String good_id = wishlist.get(i).getGoodsId();
+            all_goods_in_wishlist.add(goodsService.findGoodsById(good_id));
+        }
+        modelMap.put("goods_in_wishlist", all_goods_in_wishlist);
+        return "customerWishlist";
     }
 
     @RequestMapping("/toregister")
