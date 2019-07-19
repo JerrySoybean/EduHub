@@ -80,17 +80,17 @@ public class CustomerController {
     public String info(ModelMap modelMap,String id){
         Customer customer = customerService.findCustomerById(id);
         modelMap.put("cus",customer);
+        System.out.println("info");
+        System.out.println(customer.getBirthday());
         return "customerInfo";
     }
 
     @RequestMapping("/infoupdate")
     public String infoToupdate(ModelMap modelMap, Customer customer){
-        System.out.println(customer.getName());
-        System.out.println(customer.getEmail());
+        System.out.println("hello");
         System.out.println(customer.getBirthdayTxt());
-        System.out.println(customer.getSex());
-        System.out.println(customer.getTel());
         customerService.updateCustomer(customer);
+        System.out.println("success");
         modelMap.put("cus",customer);
         return "customerHome";
     }

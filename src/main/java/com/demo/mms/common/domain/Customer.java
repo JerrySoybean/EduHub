@@ -67,7 +67,7 @@ public class Customer {
 
     public String getSexTxt(){
 //        return sex==0?"Female":"Male";
-        return sex == false?"Female":"Male";
+        return !sex?"Female":"Male";
     }
 
     public void setSex(Boolean sex) {

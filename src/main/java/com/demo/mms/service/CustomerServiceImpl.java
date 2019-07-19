@@ -4,6 +4,7 @@ import com.demo.mms.common.domain.Customer;
 import com.demo.mms.dao.CustomerMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 @Service
 public class CustomerServiceImpl implements CustomerService {
@@ -19,8 +20,9 @@ public class CustomerServiceImpl implements CustomerService {
         customerMapper.insertSelective(customer);
     }
 
-    @Override
+    @Transactional
     public void updateCustomer(Customer customer) {
+        System.out.println("service");
         customerMapper.updateByPrimaryKeySelective(customer);
     }
 
