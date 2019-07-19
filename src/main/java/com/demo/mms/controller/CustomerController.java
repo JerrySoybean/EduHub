@@ -7,7 +7,6 @@ import com.demo.mms.common.domain.Goods;
 import com.demo.mms.service.CartService;
 import com.demo.mms.service.CustomerService;
 import com.demo.mms.service.GoodsService;
-import javafx.scene.control.Alert;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
@@ -33,7 +32,7 @@ public class CustomerController {
     }
 
     @RequestMapping("/login")
-    public String login(ModelMap modelMap, String name, String password) {
+    public String login(ModelMap modelMap, String name, String password, HttpSession session) {
         String msg = null;
         Customer customer = customerService.findCustomerByName(name);
         if (customer == null) {
@@ -45,6 +44,7 @@ public class CustomerController {
             if (pwd != null && pwd.equals(password)) {
                 msg = "Login success";
                 modelMap.put("msg", msg);
+                session.setAttribute("curr_customer", customer);
                 return "customerHome";
             } else {
                 msg = "Password error";
@@ -66,7 +66,6 @@ public class CustomerController {
             all_goods_in_cart.add(goodsService.findGoodsById(good_id));
         }
         modelMap.put("goods_in_cart", all_goods_in_cart);
-        System.out.println(all_goods_in_cart);
         return "customerCart";
     }
 
