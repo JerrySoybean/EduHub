@@ -86,12 +86,11 @@ public class CustomerController {
     }
 
     @RequestMapping("/infoupdate")
-    public String infoToupdate(ModelMap modelMap, Customer customer){
+    public String infoToupdate(Customer customer){
         System.out.println("hello");
         System.out.println(customer.getBirthdayTxt());
         customerService.updateCustomer(customer);
         System.out.println("success");
-        modelMap.put("cus",customer);
         return "customerHome";
     }
 

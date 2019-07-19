@@ -1,6 +1,7 @@
 package com.demo.mms.common.domain;
 
 import com.demo.mms.common.utils.DateUtil;
+import org.springframework.format.annotation.DateTimeFormat;
 
 import java.util.Date;
 
@@ -17,6 +18,7 @@ public class Customer {
 
     private Boolean sex;
 
+    @DateTimeFormat(pattern = "yyyy-mm-dd")
     private Date birthday;
 
     private Boolean privilege;

@@ -152,6 +152,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
         $("#inputBirthday3").datepicker({
             autoclose: true,
             todayHighlight: true,
+            format: "yyyy-mm-dd"
+        });
+        $(".btn-flat").click(function(){
+            alert("Submit successfully.")
         });
     });
 </script>
