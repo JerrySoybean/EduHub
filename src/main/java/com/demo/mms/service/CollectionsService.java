@@ -6,4 +6,6 @@ import java.util.List;
 
 public interface CollectionsService {
     List<Collections> findGoodsIdByCustomerId(String customer_id);
+
+    int addItem(Collections collection);
 }

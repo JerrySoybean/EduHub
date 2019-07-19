@@ -165,4 +165,21 @@ public class CustomerController {
         map.put("ok", true);
         return map;
     }
+
+    @RequestMapping("/addwish")
+    @ResponseBody
+    public Object addWish(String goods_id, HttpSession session){
+        if (session.getAttribute("curr_customer") == null) {
+            return "customerLogin";
+        }
+        String curr_customer_id = ((Customer) session.getAttribute("curr_customer")).getId();
+        Collections collection = new Collections();
+        collection.setId(IDGenerator.getId());
+        collection.setCustomerId(curr_customer_id);
+        collection.setGoodsId(goods_id);
+        collectionsService.addItem(collection);
+        Map<String, Object> map = new HashMap<>();
+        map.put("ok", true);
+        return map;
+    }
 }
