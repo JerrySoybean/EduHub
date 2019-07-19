@@ -81,6 +81,13 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                     <input type="password" placeholder="Password" name = "password">
                     <i class="glyphicon glyphicon-lock"></i>
                 </div>
+                <div class="form-group">
+                    <div class="col-sm-10">
+                        <input type="radio" name="sex"  checked="checked"> Male
+                        &nbsp;&nbsp;&nbsp;&nbsp;
+                        <input type="radio" name="sex"> Female
+                    </div>
+                </div>
                 <a class="news-letter " href="#">
                     <label class="checkbox1"><input type="checkbox" name="checkbox" ><i> </i>Forget Password</label>
                 </a>

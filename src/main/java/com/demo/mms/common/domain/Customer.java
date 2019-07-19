@@ -1,5 +1,7 @@
 package com.demo.mms.common.domain;
 
+import com.demo.mms.common.utils.DateUtil;
+
 import java.util.Date;
 
 public class Customer {
@@ -63,12 +65,25 @@ public class Customer {
         return sex;
     }
 
+    public String getSexTxt(){
+//        return sex==0?"Female":"Male";
+        return sex == false?"Female":"Male";
+    }
+
     public void setSex(Boolean sex) {
         this.sex = sex;
     }
 
     public Date getBirthday() {
         return birthday;
+    }
+
+    public String getBirthdayTxt()
+    {
+        if (birthday == null){
+            return null;
+        }
+        return DateUtil.parseDateToStr(birthday,DateUtil.DATE_FORMAT_YYYY_MM_DD);
     }
 
     public void setBirthday(Date birthday) {
