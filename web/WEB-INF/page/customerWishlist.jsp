@@ -16,7 +16,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     <!--theme-style-->
     <link href="${pageContext.request.contextPath}/template/css/style4.css" rel="stylesheet" type="text/css" media="all" />
     <!--//theme-style-->
-    <script src="http://apps.bdimg.com/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="${pageContext.request.contextPath}/template/js/jquery.min.js"></script>
+    <%--<script src="http://apps.bdimg.com/libs/jquery/1.11.1/jquery.min.js"></script>--%>
     <!--- start-rate---->
     <script src="${pageContext.request.contextPath}/template/js/jstarbox.js"></script>
     <link rel="stylesheet" href="${pageContext.request.contextPath}/template/css/jstarbox.css" type="text/css" media="screen" charset="utf-8" />
@@ -76,7 +77,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                         <th>BalaBala</th>
                     </tr>
                     <c:forEach items="${goods_in_wishlist}" var="good">
-                        <tr class="cart-header">
+                        <tr class="cart-header" id="${good.id}">
                             <td class="ring-in"><a href="single.jsp" class="at-in"><img src="${pageContext.request.contextPath}/template/images/ch.jpg" class="img-responsive" alt=""></a>
                                 <div class="sed">
                                     <h5><a href="single.jsp">${good.name}</a></h5>
@@ -130,6 +131,28 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <script src="${pageContext.request.contextPath}/template/js/simpleCart.min.js"> </script>
 <!-- slide -->
 <script src="${pageContext.request.contextPath}/template/js/bootstrap.min.js"></script>
+<script src="${pageContext.request.contextPath}/template/layer/layer.js"></script>
 
+<script>
+    $(function () {
+        $(".btn_add").click(function () {
+            var $tr = $(this).parents("tr");
+            var goods_idvalue = $tr.attr("id");
+            $.ajax({
+                type: "POST",
+                url: "${pageContext.request.contextPath}/customer/addcart",
+                data: {goods_id:goods_idvalue},
+                success: function (msg) {
+                    if (msg["ok"]) {
+                        layer.msg('Added successfully!');
+                    }
+                },
+                dataType: "json"
+            });
+        });
+
+
+    })
+</script>
 </body>
 </html>

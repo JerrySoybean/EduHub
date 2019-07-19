@@ -13,11 +13,13 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 
-import javax.jws.WebParam;
 import javax.servlet.http.HttpSession;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 @Controller
 @RequestMapping("/customer")
@@ -82,8 +84,7 @@ public class CustomerController {
         if (session.getAttribute("curr_customer") == null) {
             return "customerLogin";
         }
-        Customer curr_customer = (Customer) session.getAttribute("curr_customer");
-        String curr_customer_id = curr_customer.getId();
+        String curr_customer_id = ((Customer) session.getAttribute("curr_customer")).getId();
         List<Collections> wishlist = collectionsService.findGoodsIdByCustomerId(curr_customer_id);
         int size = wishlist.size();
         List<Goods> all_goods_in_wishlist = new ArrayList<>(size);
@@ -146,5 +147,22 @@ public class CustomerController {
     @RequestMapping("/home")
     public String home(){
         return "customerHome";
+    }
+
+    @RequestMapping("/addcart")
+    @ResponseBody
+    public Object addCart(String goods_id, HttpSession session){
+        if (session.getAttribute("curr_customer") == null) {
+            return "customerLogin";
+        }
+        String curr_customer_id = ((Customer) session.getAttribute("curr_customer")).getId();
+        Cart cart = new Cart();
+        cart.setId(IDGenerator.getId());
+        cart.setCustomerId(curr_customer_id);
+        cart.setGoodsId(goods_id);
+        cartService.addItem(cart);
+        Map<String, Object> map = new HashMap<>();
+        map.put("ok", true);
+        return map;
     }
 }

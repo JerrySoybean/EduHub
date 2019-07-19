@@ -6,4 +6,6 @@ import java.util.List;
 
 public interface CartService {
     List<Cart> findGoodsIdByCustomerId(String customer_id);
+
+    int addItem(Cart cart);
 }
