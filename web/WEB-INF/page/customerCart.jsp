@@ -97,7 +97,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
             </div>
         </div>
         <div class="produced">
-            <a href="single.jsp" class="hvr-skew-backward">Buy all</a>
+            <a href="${pageContext.request.contextPath}/customer/pay?goods=${goods_in_cart}" class="hvr-skew-backward">Buy all</a>
         </div>
     </div>
 </div>

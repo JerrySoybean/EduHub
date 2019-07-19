@@ -140,7 +140,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
             var goods_idvalue = $tr.attr("id");
             $.ajax({
                 type: "POST",
-                url: "${pageContext.request.contextPath}/customer/addcart",
+                url: "${pageContext.request.contextPath}/cart/addcart",
                 data: {goods_id:goods_idvalue},
                 success: function (msg) {
                     if (msg["ok"]) {
