@@ -2,7 +2,7 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <html>
 <head>
-    <title>Checkout</title>
+    <title>Collections</title>
     <link href="${pageContext.request.contextPath}/template/css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
     <!-- Custom Theme files -->
     <!--theme-style-->
@@ -49,9 +49,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <!--banner-->
 <div class="banner-top">
     <div class="container">
-        <h1>Checkout</h1>
+        <h1>Collections</h1>
         <em></em>
-        <h2><a href="${pageContext.request.contextPath}/customer/home">Home</a><label>/</label>Checkout</h2>
+        <h2><a href="${pageContext.request.contextPath}/customer/home">Home</a><label>/</label>Collections</h2>
     </div>
 </div>
 <!--login-->
@@ -89,7 +89,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                             <td>${good.size}</td>
                             <td class="item_price">balabala</td>
                             <td class="add-check">
-                                <a class="item_add hvr-skew-backward" href="#">Pay</a>
+                                <a class="item_add hvr-skew-backward" href="#">Buy</a>
                                 <button class="item_add hvr-skew-backward btn_add">Add to cart</button>
                                 <button class="item_add hvr-skew-backward btn_del">Delete</button>
                             </td>

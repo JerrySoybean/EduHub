@@ -14,7 +14,7 @@
                 <ul >
                     <li><a href="${pageContext.request.contextPath}/customer/tologin">Login</a></li>
                     <li><a href="${pageContext.request.contextPath}/customer/toregister">Register</a></li>
-                    <li><a href="${pageContext.request.contextPath}/customer/cart">Checkout</a></li>
+                    <li><a href="${pageContext.request.contextPath}/cart/cart">Checkout</a></li>
                 </ul>
             </div>
 
@@ -195,13 +195,13 @@
             <div class="col-sm-2 search-right">
                 <ul class="heart">
                     <li>
-                        <a href="${pageContext.request.contextPath}/customer/wishlist" >
+                        <a href="${pageContext.request.contextPath}/collections/wishlist" >
                             <span class="glyphicon glyphicon-heart" aria-hidden="true"></span>
                         </a></li>
                     <li><a class="play-icon popup-with-zoom-anim" href="#small-dialog"><i class="glyphicon glyphicon-search"> </i></a></li>
                 </ul>
                 <div class="cart box_1">
-                    <a href="${pageContext.request.contextPath}/customer/cart">
+                    <a href="${pageContext.request.contextPath}/cart/cart">
                         <h3> <div class="total">
                             <span class="simpleCart_total"></span></div>
                             <img src="${pageContext.request.contextPath}/template/images/cart.png" alt=""/></h3>

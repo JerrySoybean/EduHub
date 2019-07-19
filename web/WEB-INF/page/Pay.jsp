@@ -2,7 +2,7 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <html>
 <head>
-    <title>Cart</title>
+    <title>Pay</title>
     <link href="${pageContext.request.contextPath}/template/css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
     <!-- Custom Theme files -->
     <!--theme-style-->
@@ -16,7 +16,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     <!--theme-style-->
     <link href="${pageContext.request.contextPath}/template/css/style4.css" rel="stylesheet" type="text/css" media="all" />
     <!--//theme-style-->
-    <script src="http://apps.bdimg.com/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="${pageContext.request.contextPath}/template/js/jquery.min.js"></script>
+    <%--<script src="http://apps.bdimg.com/libs/jquery/1.11.1/jquery.min.js"></script>--%>
     <!--- start-rate---->
     <script src="${pageContext.request.contextPath}/template/js/jstarbox.js"></script>
     <link rel="stylesheet" href="${pageContext.request.contextPath}/template/css/jstarbox.css" type="text/css" media="screen" charset="utf-8" />
@@ -48,12 +49,20 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <!--banner-->
 <div class="banner-top">
     <div class="container">
-        <h1>Cart</h1>
+        <h1>Pay</h1>
         <em></em>
-        <h2><a href="${pageContext.request.contextPath}/customer/home">Home</a><label>/</label>Cart</h2>
+        <h2><a href="${pageContext.request.contextPath}/customer/home">Home</a><label>/</label>Pay</h2>
     </div>
 </div>
 <!--login-->
+<script>$(document).ready(function(c) {
+    $('.close1').on('click', function(c){
+        $('.cart-header').fadeOut('slow', function(c){
+            $('.cart-header').remove();
+        });
+    });
+});
+</script>
 
 <div class="container">
     <div class="check-out">
@@ -67,8 +76,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                         <th>Size</th>
                         <th>BalaBala</th>
                     </tr>
-                    <c:forEach items="${goods_in_cart}" var="good">
-                        <tr class="cart-header">
+                    <c:forEach items="${goods_in_wishlist}" var="good">
+                        <tr class="cart-header" id="${good.id}">
                             <td class="ring-in"><a href="single.jsp" class="at-in"><img src="${pageContext.request.contextPath}/template/images/ch.jpg" class="img-responsive" alt=""></a>
                                 <div class="sed">
                                     <h5><a href="single.jsp">${good.name}</a></h5>
@@ -77,42 +86,15 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                 <div class="clearfix"> </div>
                             <td>$${good.price}</td>
                             <td>${good.size}</td>
-                            <td class="item_price">balabala</td>
-                            <td class="add-check">
-                                <a class="item_add hvr-skew-backward" href="#">Buy</a>
-                                <button class="item_add hvr-skew-backward btn_del">Delete</button>
-                            </td>
                         </tr>
                     </c:forEach>
                 </table>
             </div>
         </div>
-        <div class="produced">
-            <button class="hvr-skew-backward buy_all" id="${goods_in_cart}">Buy all</button>
-        </div>
     </div>
 </div>
 
 <!--//login-->
-<!--brand-->
-<div class="container">
-    <div class="brand">
-        <div class="col-md-3 brand-grid">
-            <img src="${pageContext.request.contextPath}/template/images/ic.png" class="img-responsive" alt="">
-        </div>
-        <div class="col-md-3 brand-grid">
-            <img src="${pageContext.request.contextPath}/template/images/ic1.png" class="img-responsive" alt="">
-        </div>
-        <div class="col-md-3 brand-grid">
-            <img src="${pageContext.request.contextPath}/template/images/ic2.png" class="img-responsive" alt="">
-        </div>
-        <div class="col-md-3 brand-grid">
-            <img src="${pageContext.request.contextPath}/template/images/ic3.png" class="img-responsive" alt="">
-        </div>
-        <div class="clearfix"></div>
-    </div>
-</div>
-<!--//brand-->
 </div>
 
 </div>
@@ -123,20 +105,22 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <script src="${pageContext.request.contextPath}/template/js/simpleCart.min.js"> </script>
 <!-- slide -->
 <script src="${pageContext.request.contextPath}/template/js/bootstrap.min.js"></script>
+<script src="${pageContext.request.contextPath}/template/layer/layer.js"></script>
+
 <script>
     $(function () {
-        $(".buy_all").click(function () {
-            var goods_list = $(this).attr("id");
-            console.info(goods_list);
+        $(".btn_add").click(function () {
+            var $tr = $(this).parents("tr");
+            var goods_idvalue = $tr.attr("id");
             $.ajax({
                 type: "POST",
-                url: "${pageContext.request.contextPath}/pay",
-                data: {goods: goods_list},
-                // success: function (msg) {
-                //     if (msg["ok"]) {
-                //         layer.msg('Added successfully!');
-                //     }
-                // },
+                url: "${pageContext.request.contextPath}/cart/addcart",
+                data: {goods_id:goods_idvalue},
+                success: function (msg) {
+                    if (msg["ok"]) {
+                        layer.msg('Added successfully!');
+                    }
+                },
                 dataType: "json"
             });
         });
