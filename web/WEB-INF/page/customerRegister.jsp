@@ -62,22 +62,23 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <!--login-->
 <div class="container">
     <div class="login">
-        <form action = "/customer/register">
+        <p class="login-box-msg" style="color: orangered">${msg}</p>
+        <form action = "${pageContext.request.contextPath}/customer/register" method = "post">
             <div class="col-md-6 login-do">
                 <div class="login-mail">
-                    <input type="text" placeholder="Name" required="">
+                    <input type="text" placeholder="Name" name = "name">
                     <i  class="glyphicon glyphicon-user"></i>
                 </div>
                 <div class="login-mail">
-                    <input type="text" placeholder="Phone Number" required="">
+                    <input type="text" placeholder="Phone Number" name = "tel">
                     <i  class="glyphicon glyphicon-phone"></i>
                 </div>
                 <div class="login-mail">
-                    <input type="text" placeholder="Email" required="">
+                    <input type="text" placeholder="Email" name = "email">
                     <i  class="glyphicon glyphicon-envelope"></i>
                 </div>
                 <div class="login-mail">
-                    <input type="password" placeholder="Password" required="">
+                    <input type="password" placeholder="Password" name = "password">
                     <i class="glyphicon glyphicon-lock"></i>
                 </div>
                 <a class="news-letter " href="#">
@@ -93,7 +94,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
                 <p>Pellentesque neque leo, dictum sit amet accumsan non, dignissim ac mauris. Mauris rhoncus, lectus tincidunt tempus aliquam, odio
                     libero tincidunt metus, sed euismod elit enim ut mi. Nulla porttitor et dolor sed condimentum. Praesent porttitor lorem dui, in pulvinar enim rhoncus vitae. Curabitur tincidunt, turpis ac lobortis hendrerit, ex elit vestibulum est, at faucibus erat ligula non neque.</p>
-                <a href="customerLogin.jsp" class="hvr-skew-backward">Login</a>
+                <a href="${pageContext.request.contextPath}/customer/tologin" class="hvr-skew-backward">Login</a>
 
             </div>
 
