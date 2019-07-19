@@ -7,6 +7,7 @@ import com.demo.mms.common.domain.Goods;
 import com.demo.mms.service.CartService;
 import com.demo.mms.service.CustomerService;
 import com.demo.mms.service.GoodsService;
+import javafx.scene.control.Alert;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
@@ -98,5 +99,15 @@ public class CustomerController {
         msg = "Register successfully.";
         modelMap.put("msg",msg);
         return "customerLogin";
+    }
+
+    @RequestMapping("/info")
+    public String info(){
+        return "customerInfo";
+    }
+
+    @RequestMapping("/home")
+    public String home(){
+        return "customerHome";
     }
 }
