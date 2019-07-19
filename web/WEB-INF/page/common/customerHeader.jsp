@@ -38,7 +38,7 @@
 
             <div class="col-sm-8 col-md-offset-2 h_menu4">
                 <nav class="navbar nav_bottom" role="navigation">
-
+                    <%--navigation section--%>
                     <!-- Brand and toggle get grouped for better mobile display -->
                     <div class="navbar-header nav_2">
                         <button type="button" class="navbar-toggle collapsed navbar-toggle1" data-toggle="collapse" data-target="#bs-megadropdown-tabs">
