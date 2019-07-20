@@ -24,7 +24,6 @@ public class CustomerServiceImpl implements CustomerService {
 
     @Transactional
     public void updateCustomer(Customer customer) {
-        System.out.println("service");
         customerMapper.updateByPrimaryKeySelective(customer);
     }
 

@@ -61,9 +61,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                     </tr>
                     <c:forEach items="${orders}" var="order" varStatus="loop">
                         <tr class="cart-header" id="${order.id}">
-                            <td class="ring-in"><a href="single.jsp" class="at-in"><img src="${pageContext.request.contextPath}/template/images/ch.jpg" class="img-responsive" alt=""></a>
+                            <td class="ring-in"><a href="customerItem.jsp" class="at-in"><img src="${pageContext.request.contextPath}/template/images/ch.jpg" class="img-responsive" alt=""></a>
                                 <div class="sed">
-                                    <h5><a href="single.jsp">${goods_in_orders[loop.count-1].name}</a></h5>
+                                    <h5><a href="customerItem.jsp">${goods_in_orders[loop.count-1].name}</a></h5>
                                     <p>${goods_in_orders[loop.count-1].introduction}</p>
                                 </div>
                                 <div class="clearfix"> </div>

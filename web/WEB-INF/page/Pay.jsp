@@ -78,9 +78,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                     </tr>
                     <c:forEach items="${goods_in_wishlist}" var="good">
                         <tr class="cart-header" id="${good.id}">
-                            <td class="ring-in"><a href="single.jsp" class="at-in"><img src="${pageContext.request.contextPath}/template/images/ch.jpg" class="img-responsive" alt=""></a>
+                            <td class="ring-in"><a href="customerItem.jsp" class="at-in"><img src="${pageContext.request.contextPath}/template/images/ch.jpg" class="img-responsive" alt=""></a>
                                 <div class="sed">
-                                    <h5><a href="single.jsp">${good.name}</a></h5>
+                                    <h5><a href="customerItem.jsp">${good.name}</a></h5>
                                     <p>${good.introduction}</p>
                                 </div>
                                 <div class="clearfix"> </div>

@@ -345,9 +345,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                     </tr>
                     <tr class="cart-header">
 
-                        <td class="ring-in"><a href="single.jsp" class="at-in"><img src="../images/ch.jpg" class="img-responsive" alt=""></a>
+                        <td class="ring-in"><a href="customerItem.jsp" class="at-in"><img src="../images/ch.jpg" class="img-responsive" alt=""></a>
                             <div class="sed">
-                                <h5><a href="single.jsp">Sed ut perspiciatis unde</a></h5>
+                                <h5><a href="customerItem.jsp">Sed ut perspiciatis unde</a></h5>
                                 <p>(At vero eos et accusamus et iusto odio dignissimos ducimus ) </p>
 
                             </div>
@@ -359,9 +359,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                         <td class="add-check"><a class="item_add hvr-skew-backward" href="#">Add To Cart</a></td>
                     </tr>
                     <tr class="cart-header1">
-                        <td class="ring-in"><a href="single.jsp" class="at-in"><img src="../images/ch2.jpg" class="img-responsive" alt=""></a>
+                        <td class="ring-in"><a href="customerItem.jsp" class="at-in"><img src="../images/ch2.jpg" class="img-responsive" alt=""></a>
                             <div class="sed">
-                                <h5><a href="single.jsp">Sed ut perspiciatis unde</a></h5>
+                                <h5><a href="customerItem.jsp">Sed ut perspiciatis unde</a></h5>
                                 <p>(At vero eos et accusamus et iusto odio dignissimos ducimus ) </p>
                             </div>
                             <div class="clearfix"> </div>
@@ -372,9 +372,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                         <td class="add-check"><a class="item_add hvr-skew-backward" href="#">Add To Cart</a></td>
                     </tr>
                     <tr class="cart-header2">
-                        <td class="ring-in"><a href="single.jsp" class="at-in"><img src="../images/ch1.jpg" class="img-responsive" alt=""></a>
+                        <td class="ring-in"><a href="customerItem.jsp" class="at-in"><img src="../images/ch1.jpg" class="img-responsive" alt=""></a>
                             <div class="sed">
-                                <h5><a href="single.jsp">Sed ut perspiciatis unde</a></h5>
+                                <h5><a href="customerItem.jsp">Sed ut perspiciatis unde</a></h5>
                                 <p>(At vero eos et accusamus et iusto odio dignissimos ducimus ) </p>
                             </div>
                             <div class="clearfix"> </div>
@@ -389,7 +389,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
             </div>
         </div>
         <div class="produced">
-            <a href="single.jsp" class="hvr-skew-backward">Produced To Buy</a>
+            <a href="customerItem.jsp" class="hvr-skew-backward">Produced To Buy</a>
         </div>
     </div>
 </div>

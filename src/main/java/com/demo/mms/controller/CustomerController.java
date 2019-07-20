@@ -12,6 +12,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import javax.annotation.RegEx;
 import javax.servlet.http.HttpSession;
 import java.util.ArrayList;
 import java.util.List;
@@ -86,12 +87,12 @@ public class CustomerController {
     }
 
     @RequestMapping("/info")
-    public String info(ModelMap modelMap, HttpSession session){
+    public String info(ModelMap modelMap,String id,HttpSession session){
         if (session.getAttribute("curr_customer") == null) {
             return "customerLogin";
         }
         String customer_id = ((Customer) session.getAttribute("curr_customer")).getId();
-        Customer customer = customerService.findCustomerById(customer_id);
+        Customer customer = customerService.findCustomerById(id);
         modelMap.put("cus",customer);
         System.out.println(customer.getBirthday());
         return "customerInfo";
@@ -99,13 +100,47 @@ public class CustomerController {
 
     @RequestMapping("/infoupdate")
     public String infoToupdate(Customer customer){
+                                                    System.out.println(customer.getBirthdayTxt());
         customerService.updateCustomer(customer);
         return "customerHome";
     }
+//    bug: birthday的月份永远显示的是一月
 
     @RequestMapping("/home")
     public String home(){
         return "customerHome";
+    }
+
+
+    @RequestMapping("/learnvideo")
+    public String toLearnvideo(){
+        return "customerLearnvideo";
+    }
+
+    @RequestMapping("/ebook")
+    public String toEbook(){
+        return "customerEbook";
+    }
+    @RequestMapping("/paper")
+    public String toPaper(){
+        return "customerPaper";
+    }
+    @RequestMapping("/flowchart")
+    public String toFlowchart(){
+        return "customerFlowchart";
+    }
+    @RequestMapping("/protocol")
+    public String toProtocol(){
+        return "customerProtocol";
+    }
+    @RequestMapping("/studynote")
+    public String toStudynote(){
+        return "customerStudynote";
+    }
+
+    @RequestMapping("/item")
+    public String toItem(){
+        return "customerItem";
     }
 
     @RequestMapping("/orders")

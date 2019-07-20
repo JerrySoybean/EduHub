@@ -53,28 +53,28 @@
                     <div class="collapse navbar-collapse" id="bs-megadropdown-tabs">
                         <ul class="nav navbar-nav nav_1">
                             <li><a class="header-button" href="${pageContext.request.contextPath}/customer/home">Home</a></li>
-                            <li><a class="header-button" href="${pageContext.request.contextPath}/customer/info">Personal Information</a></li>
+                            <li><a class="header-button" href="${pageContext.request.contextPath}/customer/info?id=${curr_customer.id}">Personal Information</a></li>
                             <li class="dropdown mega-dropdown active">
                                 <a class="color1" href="#" class="dropdown-toggle" data-toggle="dropdown">Product Class<span class="caret"></span></a>
                                 <div class="dropdown-menu ">
                                     <div class="menu-top">
                                         <div class="col1">
                                             <div class="h_nav">
-                                                <h4>Submenu1</h4>
                                                 <ul>
-                                                    <li><a href="${pageContext.request.contextPath}/product">Accessories</a></li>
-                                                    <li><a href="${pageContext.request.contextPath}/product">Bags</a></li>
-                                                    <li><a href="${pageContext.request.contextPath}/product">Caps & Hats</a></li>
-                                                    <li><a href="${pageContext.request.contextPath}/product">Hoodies & Sweatshirts</a></li>
-
+                                                    <li><a href="${pageContext.request.contextPath}/customer/learnvideo"><h4>Leaning Video</h4></a></li>
+                                                    <li><a href="${pageContext.request.contextPath}/customer/ebook"><h4>Electronic Books</h4></a></li>
+                                                    <li><a href="${pageContext.request.contextPath}/customer/paper"><h4>Test Paper Analysis</h4></a></li>
+                                                    <li><a href="${pageContext.request.contextPath}/customer/flowchart"><h4>Flow Chart</h4></a></li>
+                                                    <li><a href="${pageContext.request.contextPath}/customer/protocol"><h4>Experiment Protocol</h4></a></li>
+                                                    <li><a href="${pageContext.request.contextPath}/customer/studynote"><h4>Studying Notes</h4></a></li>
                                                 </ul>
                                             </div>
                                         </div>
-                                        <div class="col1">
+                                        <%--<div class="col1">
                                             <div class="h_nav">
                                                 <h4>Submenu2</h4>
                                                 <ul>
-                                                    <li><a href="${pageContext.request.contextPath}/product">Jackets & Coats</a></li>
+                                                    <li><a href="${pageContext.request.contextPath}/learningvideo"><h4>Leaning Video</h4></a></li>
                                                     <li><a href="${pageContext.request.contextPath}/product">Jeans</a></li>
                                                     <li><a href="${pageContext.request.contextPath}/product">Jewellery</a></li>
                                                     <li><a href="${pageContext.request.contextPath}/product">Jumpers & Cardigans</a></li>
@@ -110,7 +110,7 @@
                                                     <li><a href="${pageContext.request.contextPath}/product">Jewellery</a></li>
                                                 </ul>
                                             </div>
-                                        </div>
+                                        </div>--%>
                                         <div class="col1 col5">
                                             <img src="${pageContext.request.contextPath}/template/images/me.png" class="img-responsive" alt="">
                                         </div>
@@ -185,8 +185,8 @@
                                 </div>
                             </li>--%>
                             <li><a class="header-button" href="${pageContext.request.contextPath}/customer/orders">Orders</a></li>
-                            <li><a class="color5" href="${pageContext.request.contextPath}/vip/test">VIP</a></li>
-                            <li><a class="header-button" href="${pageContext.request.contextPath}/customer/contact">Contact</a></li>
+                            <%--<li><a class="color5" href="${pageContext.request.contextPath}/typo">Short Codes</a></li>--%>
+                            <li ><a class="header-button" href="${pageContext.request.contextPath}/customer/contact">Contact</a></li>
                         </ul>
                     </div><!-- /.navbar-collapse -->
 

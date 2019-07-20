@@ -156,7 +156,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
             format: "yyyy-mm-dd"
         });
         $(".btn-flat").click(function(){
-            alert("Submit successfully.")
+            // alert("Submit successfully.")
         });
     });
 </script>
