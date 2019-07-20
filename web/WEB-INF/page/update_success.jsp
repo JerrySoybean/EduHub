@@ -1,3 +1,4 @@
+
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!DOCTYPE html>
 <html>
@@ -19,12 +20,14 @@
     <link rel="stylesheet" href="${pageContext.request.contextPath}/adminlte/dist/css/AdminLTE.min.css">
     <link rel="stylesheet" href="${pageContext.request.contextPath}/adminlte/dist/css/skins/_all-skins.min.css">
 
+
 </head>
 <body class="hold-transition skin-blue sidebar-mini">
 <div class="wrapper">
 
     <jsp:include page="/WEB-INF/page/common/adminHeader.jsp"/>
     <!-- Left side column. contains the logo and sidebar -->
+
     <jsp:include page="/WEB-INF/page/common/menu.jsp"/>
     <!-- Content Wrapper. Contains page content -->
     <div class="content-wrapper">
@@ -45,17 +48,20 @@
         <section class="content">
             <div class="row">
                 <div class="col-xs-12">
-                    请点击左边菜单
+                    Change is successful!
                 </div>
                 <!-- /.col -->
+                <div class="box-footer">
+                    <a  class="btn btn-default btn_quxiao" href="${pageContext.request.contextPath}/admin/customers">Back</a>
+                </div>
             </div>
             <!-- /.row -->
         </section>
         <!-- /.content -->
     </div>
     <!-- /.content-wrapper -->
+    <jsp:include page="/WEB-INF/page/common/footer.jsp"/>
 
-    <jsp:include page="/WEB-INF/page/common/adminFooter.jsp"/>
 
 </div>
 <!-- ./wrapper -->

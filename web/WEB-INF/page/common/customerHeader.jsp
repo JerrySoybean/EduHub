@@ -24,7 +24,7 @@
                     <li><a href="#"><i class="ic1"></i></a></li>
                     <li><a href="#"><i class="ic2"></i></a></li>
                     <li><a href="#"><i class="ic3"></i></a></li>
-                    <li><a href="#"><i class="ic4"></i></a></li>
+                    <li><a href="/admin/tologin"><i class="ic4"></i></a></li>
                 </ul>
 
             </div>
@@ -185,8 +185,8 @@
                                 </div>
                             </li>--%>
                             <li><a class="header-button" href="${pageContext.request.contextPath}/customer/orders">Orders</a></li>
-                            <%--<li><a class="color5" href="${pageContext.request.contextPath}/typo">Short Codes</a></li>--%>
-                            <li ><a class="header-button" href="${pageContext.request.contextPath}/customer/contact">Contact</a></li>
+                            <li><a class="color5" href="${pageContext.request.contextPath}/vip/test">VIP</a></li>
+                            <li><a class="header-button" href="${pageContext.request.contextPath}/customer/contact">Contact</a></li>
                         </ul>
                     </div><!-- /.navbar-collapse -->
 

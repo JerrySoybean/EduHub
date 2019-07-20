@@ -2,6 +2,8 @@ package com.demo.mms.dao;
 
 import com.demo.mms.common.domain.Admin;
 
+import java.util.List;
+
 public interface AdminMapper {
     int deleteByPrimaryKey(String id);
 

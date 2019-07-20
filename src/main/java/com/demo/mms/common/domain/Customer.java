@@ -67,9 +67,15 @@ public class Customer {
         return sex;
     }
 
-    public String getSexTxt(){
-//        return sex==0?"Female":"Male";
-        return !sex?"Female":"Male";
+    public String getSexTxt() {
+        if (sex == null) {
+            return null;
+        }
+        return sex?"Male":"Female";
+    }
+
+    public String getPrivilegeTxt() {
+        return privilege?"vip":"non-vip";
     }
 
     public void setSex(Boolean sex) {

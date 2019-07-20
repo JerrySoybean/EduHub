@@ -1,4 +1,5 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -17,7 +18,10 @@
     <link rel="stylesheet" href="${pageContext.request.contextPath}/adminlte/bower_components/datatables.net-bs/css/dataTables.bootstrap.min.css">
     <!-- Theme style -->
     <link rel="stylesheet" href="${pageContext.request.contextPath}/adminlte/dist/css/AdminLTE.min.css">
+    <!-- AdminLTE Skins. Choose a skin from the css/skins
+         folder instead of downloading all of them to reduce the load. -->
     <link rel="stylesheet" href="${pageContext.request.contextPath}/adminlte/dist/css/skins/_all-skins.min.css">
+
 
 </head>
 <body class="hold-transition skin-blue sidebar-mini">
@@ -26,6 +30,7 @@
     <jsp:include page="/WEB-INF/page/common/adminHeader.jsp"/>
     <!-- Left side column. contains the logo and sidebar -->
     <jsp:include page="/WEB-INF/page/common/menu.jsp"/>
+
     <!-- Content Wrapper. Contains page content -->
     <div class="content-wrapper">
         <!-- Content Header (Page header) -->
@@ -45,7 +50,33 @@
         <section class="content">
             <div class="row">
                 <div class="col-xs-12">
-                    请点击左边菜单
+                    <table class="table"id="cusTable">
+                        <thead>
+                        <tr>
+                            <th>name</th>
+                            <th>email</th>
+                            <th>tel</th>
+                            <th>sex</th>
+                            <th>birthday</th>
+                            <th>privilege</th>
+                            <th>Operate</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <c:forEach items="${allCus}" var="cus">
+                            <tr>
+                                <td>${cus.name}</td>
+                                <td>${cus.email}</td>
+                                <td>${cus.tel}</td>
+                                <td>${cus.sexTxt}</td>
+                                <td>${cus.birthdayTxt}</td>
+                                <td>${cus.privilegeTxt}</td>
+                                <td><a href="${pageContext.request.contextPath}/admin/customer?id=${cus.id}" class="btn btn-link btn-xs btn-flat"><i class="fa fa-edit"></i>Modify</a></td>
+                            </tr>
+                        </c:forEach>
+                        </tbody>
+                    </table>
+                    <!-- /.box -->
                 </div>
                 <!-- /.col -->
             </div>
@@ -54,7 +85,6 @@
         <!-- /.content -->
     </div>
     <!-- /.content-wrapper -->
-
     <jsp:include page="/WEB-INF/page/common/adminFooter.jsp"/>
 
 </div>
@@ -75,6 +105,12 @@
 <script src="${pageContext.request.contextPath}/adminlte/dist/js/adminlte.min.js"></script>
 <!-- AdminLTE for demo purposes -->
 <script src="${pageContext.request.contextPath}/adminlte/dist/js/demo.js"></script>
+<!-- page script -->
+<script>
+    $(function () {
+        $('#cusTable').DataTable();
 
+    })
+</script>
 </body>
 </html>
