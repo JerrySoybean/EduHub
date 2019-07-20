@@ -86,20 +86,20 @@ public class CustomerController {
     }
 
     @RequestMapping("/info")
-    public String info(ModelMap modelMap,String id){
-        Customer customer = customerService.findCustomerById(id);
+    public String info(ModelMap modelMap, HttpSession session){
+        if (session.getAttribute("curr_customer") == null) {
+            return "customerLogin";
+        }
+        String customer_id = ((Customer) session.getAttribute("curr_customer")).getId();
+        Customer customer = customerService.findCustomerById(customer_id);
         modelMap.put("cus",customer);
-        System.out.println("info");
         System.out.println(customer.getBirthday());
         return "customerInfo";
     }
 
     @RequestMapping("/infoupdate")
     public String infoToupdate(Customer customer){
-        System.out.println("hello");
-        System.out.println(customer.getBirthdayTxt());
         customerService.updateCustomer(customer);
-        System.out.println("success");
         return "customerHome";
     }
 
@@ -127,7 +127,7 @@ public class CustomerController {
     }
 
     @RequestMapping("/comment")
-    public String SeeOrAddComment(String id, ModelMap modelMap) {
+    public String seeOrAddComment(String id, ModelMap modelMap) {
         Orders orders = ordersService.findOrdersById(id);
         if (orders.getComment() == null) {
             modelMap.put("orderid", orders.getId());
@@ -139,7 +139,7 @@ public class CustomerController {
     }
 
     @RequestMapping("/addcomment")
-    public String AddComment(String id, String comment) {
+    public String addComment(String id, String comment) {
         Orders orders = ordersService.findOrdersById(id);
         orders.setComment(comment);
         ordersService.updateOrders(orders);

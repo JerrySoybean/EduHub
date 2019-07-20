@@ -10,4 +10,6 @@ public interface OrdersService {
     Orders findOrdersById(String id);
 
     void updateOrders(Orders orders);
+
+    List<Orders> findAllOrders();
 }

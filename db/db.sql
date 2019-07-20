@@ -55,7 +55,7 @@ CREATE TABLE `orders` (
                         `id` varchar(64) NOT NULL PRIMARY KEY,
                         `customer_id` varchar(64),
                         `goods_id` varchar(64),
-                        `status`  boolean default 0,
+                        `status`  boolean default 0 not null,
                         `create_time` datetime  not null,
                         `finish_time` datetime default null,
                         `comment` varchar(256)  default null,

@@ -18,4 +18,6 @@ public interface OrdersMapper {
     int updateByPrimaryKey(Orders record);
 
     List<Orders> selectByCustomerId(String customer_id);
+
+    List<Orders> selectAllOrders();
 }

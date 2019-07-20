@@ -27,4 +27,9 @@ public class OrdersServiceImpl implements OrdersService {
     public void updateOrders(Orders orders) {
         ordersMapper.updateByPrimaryKey(orders);
     }
+
+    @Override
+    public List<Orders> findAllOrders() {
+        return ordersMapper.selectAllOrders();
+    }
 }

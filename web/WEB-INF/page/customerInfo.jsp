@@ -140,6 +140,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <script src="${pageContext.request.contextPath}/template/js/simpleCart.min.js"> </script>
 <!-- slide -->
 <script src="${pageContext.request.contextPath}/template/js/bootstrap.min.js"></script>
+<script src="${pageContext.request.contextPath}/template/layer/layer.js"></script>
 <!--light-box-files -->
 <script src="${pageContext.request.contextPath}/template/js/jquery.chocolat.js"></script>
 <link rel="stylesheet" href="${pageContext.request.contextPath}/template/css/chocolat.css" type="text/css" media="screen" charset="utf-8">

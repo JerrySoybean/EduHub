@@ -60,7 +60,7 @@ public class Orders {
     }
 
     public String getCreateTimeTxt() {
-        return DateUtil.parseDateToStr(createTime, DateUtil.DATE_FORMAT_YYYY_MM_DD);
+        return DateUtil.parseDateToStr(createTime, DateUtil.DATE_TIME_FORMAT_YYYY_MM_DD_HH_MI_SS);
     }
 
     public void setCreateTime(Date createTime) {
@@ -71,11 +71,21 @@ public class Orders {
         return finishTime;
     }
 
+    public String getFinishTimeTxt() {
+        if (finishTime == null) {
+            return null;
+        }
+        return DateUtil.parseDateToStr(finishTime, DateUtil.DATE_TIME_FORMAT_YYYY_MM_DD_HH_MI_SS);
+    }
+
     public void setFinishTime(Date finishTime) {
         this.finishTime = finishTime;
     }
 
     public String getComment() {
+        if (comment == null) {
+            return null;
+        }
         return comment;
     }
 

@@ -53,7 +53,7 @@
                     <div class="collapse navbar-collapse" id="bs-megadropdown-tabs">
                         <ul class="nav navbar-nav nav_1">
                             <li><a class="header-button" href="${pageContext.request.contextPath}/customer/home">Home</a></li>
-                            <li><a class="header-button" href="${pageContext.request.contextPath}/customer/info?id=19071920-6fe4f54928c1eaf0c64af04">Personal Information</a></li>
+                            <li><a class="header-button" href="${pageContext.request.contextPath}/customer/info">Personal Information</a></li>
                             <li class="dropdown mega-dropdown active">
                                 <a class="color1" href="#" class="dropdown-toggle" data-toggle="dropdown">Product Class<span class="caret"></span></a>
                                 <div class="dropdown-menu ">
