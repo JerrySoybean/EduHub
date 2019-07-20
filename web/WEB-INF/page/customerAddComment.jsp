@@ -1,8 +1,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <html>
 <head>
-    <title>Comment</title>
+    <title>Add Comment</title>
     <link href="${pageContext.request.contextPath}/template/css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
     <!-- Custom Theme files -->
     <!--theme-style-->
@@ -16,8 +15,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     <!--theme-style-->
     <link href="${pageContext.request.contextPath}/template/css/style4.css" rel="stylesheet" type="text/css" media="all" />
     <!--//theme-style-->
-    <script src="${pageContext.request.contextPath}/template/js/jquery.min.js"></script>
-    <%--<script src="http://apps.bdimg.com/libs/jquery/1.11.1/jquery.min.js"></script>--%>
+    <script src="http://apps.bdimg.com/libs/jquery/1.11.1/jquery.min.js"></script>
     <!--- start-rate---->
     <script src="${pageContext.request.contextPath}/template/js/jstarbox.js"></script>
     <link rel="stylesheet" href="${pageContext.request.contextPath}/template/css/jstarbox.css" type="text/css" media="screen" charset="utf-8" />
@@ -45,50 +43,21 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     <!---//End-rate---->
 </head>
 <body>
-<jsp:include page="/WEB-INF/page/common/customerHeader.jsp"/>
-
+<!--login-->
 <div class="container">
-    <div class="check-out">
-        <div class="bs-example4" data-example-id="simple-responsive-table">
-            <div class="table-responsive">
-                <table class="table-heading simpleCart_shelfItem" id="cartTable">
-                    <tr>
-                        <th class="table-grid">Orders</th>
-                        <th>Prices</th>
-                        <th>Status</th>
-                        <th>Created time</th>
-                        <th>Comment</th>
-                    </tr>
-                    <c:forEach items="${orders}" var="order" varStatus="loop">
-                        <tr class="cart-header" id="${order.id}">
-                            <td class="ring-in"><a href="single.jsp" class="at-in"><img src="${pageContext.request.contextPath}/template/images/ch.jpg" class="img-responsive" alt=""></a>
-                                <div class="sed">
-                                    <h5><a href="single.jsp">${goods_in_orders[loop.count-1].name}</a></h5>
-                                    <p>${goods_in_orders[loop.count-1].introduction}</p>
-                                </div>
-                                <div class="clearfix"> </div>
-                            </td>
-                            <td>$${goods_in_orders[loop.count-1].price}</td>
-                            <td>${order.statusTxt}</td>
-                            <td class="item_price">${order.createTimeTxt}</td>
-                            <td class="add-check">
-                                <%--<a href="${pageContext.request.contextPath}/customer/comment?id=${order.id}" class="item_add hvr-skew-backward">Comment</a>--%>
-                                <button class="item_add hvr-skew-backward btn_seeadd">comment</button>
-                            </td>
-                        </tr>
-                    </c:forEach>
-                </table>
-            </div>
-        </div>
+    <div class="login">
+        <textarea type="text" placeholder="Please add your comment here ..." style="width: 100%; height: 70%"></textarea>
     </div>
+    <div align="right">
+        <br>
+        <button id="${orderid}" class="item_add hvr-skew-backward btn_submit">Submit</button>
+    </div>
+
 </div>
 
 <!--//login-->
-</div>
 
-</div>
 <!--//content-->
-<jsp:include page="/WEB-INF/page/common/footer.jsp"/>
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 
 <script src="${pageContext.request.contextPath}/template/js/simpleCart.min.js"> </script>
@@ -98,18 +67,18 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
 <script>
     $(function () {
-        $(".btn_seeadd").click(function () {
-            var $tr = $(this).parents("tr");
-            var order_idvalue = $tr.attr("id");
-            layer.open({
-                type: 2,
-                title: 'Comment',
-                shadeClose: true,
-                shade: 0.5,
-                area: ['500px', '600px'],
-                content: '${pageContext.request.contextPath}/customer/comment?id=' + order_idvalue
-            })
-        });
+        $(".btn_submit").click(function () {
+            var orderid = $(this).attr("id");
+            var comment = $(this).parent().prev().children().val();
+            $.ajax({
+                type: "POST",
+                url: "${pageContext.request.contextPath}/customer/addcomment",
+                data: {id: orderid, comment: comment},
+                dataType: "json"
+            });
+            var index = parent.layer.getFrameIndex(window.name); //先得到当前iframe层的索引
+            parent.layer.close(index); //再执行关闭
+        })
     })
 </script>
 </body>

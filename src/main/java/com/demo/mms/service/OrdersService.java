@@ -6,4 +6,8 @@ import java.util.List;
 
 public interface OrdersService {
     List<Orders> findOrdersIdByCustomerId(String customer_id);
+
+    Orders findOrdersById(String id);
+
+    void updateOrders(Orders orders);
 }

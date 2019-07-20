@@ -55,7 +55,8 @@ public class CartController {
         Cart item = new Cart();
         item.setId(IDGenerator.getId());
         item.setCustomerId(curr_customer_id);
-        item.setGoodsId(goods_id);cartService.addItem(item);
+        item.setGoodsId(goods_id);
+        cartService.addItem(item);
         Map<String, Object> map = new HashMap<>();
         map.put("ok", true);
         return map;

@@ -62,7 +62,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <!--login-->
 <div class="container">
     <div class="login">
-
+        <p class="login-box-msg" style="color: orangered">&nbsp;&nbsp;&nbsp;&nbsp;${msg}</p><br>
         <form action="/customer/login">
             <div class="col-md-6 login-do">
                 <div class="login-mail">
@@ -85,7 +85,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
                 <p>Pellentesque neque leo, dictum sit amet accumsan non, dignissim ac mauris. Mauris rhoncus, lectus tincidunt tempus aliquam, odio
                     libero tincidunt metus, sed euismod elit enim ut mi. Nulla porttitor et dolor sed condimentum. Praesent porttitor lorem dui, in pulvinar enim rhoncus vitae. Curabitur tincidunt, turpis ac lobortis hendrerit, ex elit vestibulum est, at faucibus erat ligula non neque.</p>
-                <a href="register.jsp" class=" hvr-skew-backward">Register</a>
+                <a href="${pageContext.request.contextPath}/customer/toregister" class=" hvr-skew-backward">Register</a>
 
             </div>
 

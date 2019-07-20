@@ -17,12 +17,8 @@ public class CartServiceImpl implements CartService {
         return cartMapper.selectByCustomerId(customer_id);
     }
 
-    @Override
     @Transactional
     public int addItem(Cart item) {
-        System.out.println(item.getId());
-        System.out.println(item.getGoodsId());
-        System.out.println(item.getCustomerId());
         return cartMapper.insert(item);
     }
 

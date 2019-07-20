@@ -108,7 +108,7 @@ public class CustomerController {
         return "customerHome";
     }
 
-    @RequestMapping("orders")
+    @RequestMapping("/orders")
     public String lookOrders(ModelMap modelMap, HttpSession session) {
         if (session.getAttribute("curr_customer") == null) {
             return "customerLogin";
@@ -123,6 +123,26 @@ public class CustomerController {
         }
         modelMap.put("orders", orders_list);
         modelMap.put("goods_in_orders", all_goods_in_orders);
+        return "customerOrders";
+    }
+
+    @RequestMapping("/comment")
+    public String SeeOrAddComment(String id, ModelMap modelMap) {
+        Orders orders = ordersService.findOrdersById(id);
+        if (orders.getComment() == null) {
+            modelMap.put("orderid", orders.getId());
+            return "customerAddComment";
+        } else {
+            modelMap.put("comment", orders.getComment());
+            return "customerSeeComment";
+        }
+    }
+
+    @RequestMapping("/addcomment")
+    public String AddComment(String id, String comment) {
+        Orders orders = ordersService.findOrdersById(id);
+        orders.setComment(comment);
+        ordersService.updateOrders(orders);
         return "customerOrders";
     }
 }
