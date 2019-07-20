@@ -30,7 +30,7 @@
 <body class="hold-transition login-page">
 <div class="login-box">
     <div class="login-logo">
-        <a href="../../index2.html"><b>登录</b></a>
+        <a href="../../index2.html"><b>Admin login</b></a>
     </div>
     <!-- /.login-logo -->
     <div class="login-box-body">
@@ -38,17 +38,18 @@
 
         <form action="${pageContext.request.contextPath}/admin/login" method="post">
             <div class="form-group has-feedback">
-                <input type="text" class="form-control" placeholder="用户名" name="name">
+                <input type="text" class="form-control" placeholder="Admin name" name="name">
                 <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
             </div>
             <div class="form-group has-feedback">
-                <input type="password" class="form-control" placeholder="密码" name="password">
+                <input type="password" class="form-control" placeholder="Password" name="password">
                 <span class="glyphicon glyphicon-lock form-control-feedback"></span>
             </div>
             <div class="row">
                 <!-- /.col -->
                 <div class="col-xs-12">
-                    <button type="submit" class="btn btn-primary btn-block btn-flat">登录</button>
+                    <button type="submit" class="btn btn-primary btn-block btn-flat">Login</button><br>
+                    <a href="${pageContext.request.contextPath}/" class="btn btn-primary btn-block btn-flat">Client-side</a>
                 </div>
                 <!-- /.col -->
             </div>

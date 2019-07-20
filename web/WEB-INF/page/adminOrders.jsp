@@ -40,7 +40,7 @@
                 <small>advanced tables</small>
             </h1>
             <ol class="breadcrumb">
-                <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
+                <li><a href="#"><i class="fa fa-dashboard"></i>Home</a></li>
                 <li><a href="#">Tables</a></li>
                 <li class="active">Data tables</li>
             </ol>
@@ -107,6 +107,7 @@
 <script src="${pageContext.request.contextPath}/adminlte/dist/js/adminlte.min.js"></script>
 <!-- AdminLTE for demo purposes -->
 <script src="${pageContext.request.contextPath}/adminlte/dist/js/demo.js"></script>
+<script src="${pageContext.request.contextPath}/template/layer/layer.js"></script>
 <!-- page script -->
 <script>
     $(function () {
@@ -114,14 +115,7 @@
 
         $(".btn_comment").click(function () {
             var comment = $(this).attr("id");
-            layer.open({
-                type: 2,
-                title: 'Comment',
-                shadeClose: true,
-                shade: 0.5,
-                area: ['500px', '600px'],
-                content: comment
-            })
+            layer.alert(comment)
         });
     })
 </script>

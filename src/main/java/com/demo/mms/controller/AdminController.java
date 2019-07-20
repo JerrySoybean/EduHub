@@ -31,7 +31,8 @@ public class AdminController {
     private GoodsService goodsService;
 
     @RequestMapping("/tologin")
-    public String login() {
+    public String toLogin(HttpSession session) {
+        // session.setAttribute("curr_admin", null);
         return "adminLogin";
     }
     @RequestMapping("/login")
@@ -41,7 +42,7 @@ public class AdminController {
         if (admin == null) {
             msg = "User name doesn't exist";
             modelMap.put("msg", msg);
-            return "customerLogin";
+            return "adminLogin";
         } else {
             String pwd = admin.getPassword();
             if (pwd != null && pwd.equals(password)) {
@@ -52,7 +53,7 @@ public class AdminController {
             } else {
                 msg = "Password error";
                 modelMap.put("msg", msg);
-                return "customerLogin";
+                return "adminLogin";
             }
         }
     }
@@ -127,5 +128,10 @@ public class AdminController {
 
         }
         return allOrders(modelMap, session);
+    }
+
+    @RequestMapping("/alterinfo")
+    public String updateAdmin(HttpSession session) {
+        return null;
     }
 }

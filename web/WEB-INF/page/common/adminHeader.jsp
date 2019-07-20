@@ -1,11 +1,12 @@
+<%@ page import="com.demo.mms.common.domain.Admin" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <header class="main-header">
     <!-- Logo -->
-    <a href="../../index2.html" class="logo">
+    <a href="${pageContext.request.contextPath}/" class="logo">
         <!-- mini logo for sidebar mini 50x50 pixels -->
-        <span class="logo-mini"><b>A</b>LT</span>
+        <span class="logo-mini"><b>E</b>H</span>
         <!-- logo for regular state and mobile devices -->
-        <span class="logo-lg"><b>Admin</b>LTE</span>
+        <span class="logo-lg"><b>Edu</b>Hub</span>
     </a>
     <!-- Header Navbar: style can be found in header.less -->
     <nav class="navbar navbar-static-top">
@@ -221,7 +222,7 @@
                 <li class="dropdown user user-menu">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                         <img src="${pageContext.request.contextPath}/adminlte/dist/img/user2-160x160.jpg" class="user-image" alt="User Image">
-                        <span class="hidden-xs">Alexander Pierce</span>
+                        <span class="hidden-xs">${curr_admin.name}</span>
                     </a>
                     <ul class="dropdown-menu">
                         <!-- User image -->
@@ -229,7 +230,7 @@
                             <img src="${pageContext.request.contextPath}/adminlte/dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
 
                             <p>
-                                Alexander Pierce - Web Developer
+                                ${curr_admin.name} - Web Developer
                                 <small>Member since Nov. 2012</small>
                             </p>
                         </li>
@@ -251,10 +252,10 @@
                         <!-- Menu Footer-->
                         <li class="user-footer">
                             <div class="pull-left">
-                                <a href="#" class="btn btn-default btn-flat">Profile</a>
+                                <a href="${pageContext.request.contextPath}/admin/alterinfo" class="btn btn-default btn-flat">Profile</a>
                             </div>
                             <div class="pull-right">
-                                <a href="#" class="btn btn-default btn-flat">Sign out</a>
+                                <a href="${pageContext.request.contextPath}/admin/tologin" class="btn btn-default btn-flat">Sign out</a>
                             </div>
                         </li>
                     </ul>
