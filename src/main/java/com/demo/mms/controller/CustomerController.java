@@ -100,7 +100,7 @@ public class CustomerController {
 
     @RequestMapping("/infoupdate")
     public String infoToupdate(Customer customer){
-        System.out.println(customer.getBirthdayTxt());
+                                                    System.out.println(customer.getBirthdayTxt());
         customerService.updateCustomer(customer);
         return "customerHome";
     }
@@ -120,6 +120,7 @@ public class CustomerController {
             return "customerLogin";
         }
         List<Goods> goods = goodsService.findGoodsByGclassId("video");
+        System.out.println("video");
         Customer customer = (Customer) temp;
         int size = goods.size();
         if (customer.getPrivilege() == false) {
@@ -131,12 +132,11 @@ public class CustomerController {
                 }
             }
         }
-        List<String> classname = new ArrayList<>(size);
-        for (int i = 0; i < size; i++) {
-            classname.add("E book");
-        }
+        int row_num = size/4;
+        int last_col_num = size%4;
+        modelMap.put("rownum",row_num);
+        modelMap.put("lcolnum",last_col_num);
         modelMap.put("goods", goods);
-        modelMap.put("classname", classname);
         return "customerLearnvideo";
     }
 
@@ -146,7 +146,7 @@ public class CustomerController {
         if (temp == null) {
             return "customerLogin";
         }
-        List<Goods> goods = goodsService.findGoodsByGclassId("ebook");
+        List<Goods> goods = goodsService.findGoodsByGclassId("ebooks");
         Customer customer = (Customer) temp;
         int size = goods.size();
         if (customer.getPrivilege() == false) {
@@ -158,15 +158,13 @@ public class CustomerController {
                 }
             }
         }
-        List<String> classname = new ArrayList<>(size);
-        for (int i = 0; i < size; i++) {
-            classname.add("E book");
-        }
+        int row_num = size/4;
+        int last_col_num = size%4;
+        modelMap.put("rownum",row_num);
+        modelMap.put("lcolnum",last_col_num);
         modelMap.put("goods", goods);
-        modelMap.put("classname", classname);
         return "customerEbook";
     }
-
     @RequestMapping("/paper")
     public String toPaper(ModelMap modelMap, HttpSession session){
         Object temp = session.getAttribute("curr_customer");
@@ -185,15 +183,13 @@ public class CustomerController {
                 }
             }
         }
-        List<String> classname = new ArrayList<>(size);
-        for (int i = 0; i < size; i++) {
-            classname.add("E book");
-        }
-        modelMap.put("goods", goods);
-        modelMap.put("classname", classname);
+        int row_num = size/4;
+        int last_col_num = size%4;
+        modelMap.put("rownum",row_num);
+        modelMap.put("lcolnum",last_col_num);
+        modelMap.put("goods_size",size);
         return "customerPaper";
     }
-
     @RequestMapping("/flowchart")
     public String toFlowchart(ModelMap modelMap, HttpSession session){
         Object temp = session.getAttribute("curr_customer");
@@ -212,12 +208,11 @@ public class CustomerController {
                 }
             }
         }
-        List<String> classname = new ArrayList<>(size);
-        for (int i = 0; i < size; i++) {
-            classname.add("E book");
-        }
-        modelMap.put("goods", goods);
-        modelMap.put("classname", classname);
+        int row_num = size/4;
+        int last_col_num = size%4;
+        modelMap.put("rownum",row_num);
+        modelMap.put("lcolnum",last_col_num);
+        modelMap.put("goods_size",size);
         return "customerFlowchart";
     }
     @RequestMapping("/protocol")
@@ -238,15 +233,13 @@ public class CustomerController {
                 }
             }
         }
-        List<String> classname = new ArrayList<>(size);
-        for (int i = 0; i < size; i++) {
-            classname.add("E book");
-        }
-        modelMap.put("goods", goods);
-        modelMap.put("classname", classname);
+        int row_num = size/4;
+        int last_col_num = size%4;
+        modelMap.put("rownum",row_num);
+        modelMap.put("lcolnum",last_col_num);
+        modelMap.put("goods_size",size);
         return "customerProtocol";
     }
-
     @RequestMapping("/studynote")
     public String toStudynote(ModelMap modelMap, HttpSession session){
         Object temp = session.getAttribute("curr_customer");
@@ -265,12 +258,11 @@ public class CustomerController {
                 }
             }
         }
-        List<String> classname = new ArrayList<>(size);
-        for (int i = 0; i < size; i++) {
-            classname.add("E book");
-        }
-        modelMap.put("goods", goods);
-        modelMap.put("classname", classname);
+        int row_num = size/4;
+        int last_col_num = size%4;
+        modelMap.put("rownum",row_num);
+        modelMap.put("lcolnum",last_col_num);
+        modelMap.put("goods_size",size);
         return "customerStudynote";
     }
 

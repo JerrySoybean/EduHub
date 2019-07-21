@@ -52,9 +52,52 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <!--content-->
 <!--products-->
 <div class="content-mid">
-    <h3>Experiment Protocols</h3>
+    <h3>Experiment Protocol</h3>
     <label class="line"></label>
-    <div class="mid-popular">
+    <c:if test="${rownum > 1}">
+        <c:forEach  begin="1" end="${rownum}">
+            <%--<p>hello</p>--%>
+            <div class="mid-popular">
+                <c:forEach begin="1" end="4">
+                    <div class="col-md-3 item-grid simpleCart_shelfItem">
+                        <div class=" mid-pop">
+                            <div class="pro-img">
+                                <img src="${pageContext.request.contextPath}/template/images/pc.jpg" class="img-responsive" alt="">
+                                <div class="zoom-icon ">
+                                    <a class="picture" href="${pageContext.request.contextPath}/template/images/pc.jpg" rel="title" class="b-link-stripe b-animate-go  thickbox"><i class="glyphicon glyphicon-search icon "></i></a>
+                                    <a href="${pageContext.request.contextPath}/customer/item"><i class="glyphicon glyphicon-menu-right icon"></i></a>
+                                </div>
+                            </div>
+                            <div class="mid-1">
+                                <div class="women">
+                                    <div class="women-top">
+                                        <span>Women</span>
+                                        <h6><a href="${pageContext.request.contextPath}/customer/item">Sed ut perspiciati</a></h6>
+                                    </div>
+                                    <div class="img item_add">
+                                        <a href="#"><img src="${pageContext.request.contextPath}/template/images/ca.png" alt=""></a>
+                                    </div>
+                                    <div class="clearfix"></div>
+                                </div>
+                                <div class="mid-2">
+                                    <p ><label>$100.00</label><em class="item_price">$70.00</em></p>
+                                    <div class="block">
+                                        <div class="starbox small ghosting"> </div>
+                                    </div>
+
+                                    <div class="clearfix"></div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </c:forEach>
+            </div>
+            <div class="clearfix"></div>
+        </c:forEach>
+    </c:if>
+
+    <c:forEach begin="1" end="${lcolnum}">
         <div class="col-md-3 item-grid simpleCart_shelfItem">
             <div class=" mid-pop">
                 <div class="pro-img">
@@ -87,105 +130,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                 </div>
             </div>
         </div>
-        <div class="col-md-3 item-grid simpleCart_shelfItem">
-            <div class=" mid-pop">
-                <div class="pro-img">
-                    <img src="${pageContext.request.contextPath}/template/images/pc1.jpg" class="img-responsive" alt="">
-                    <div class="zoom-icon ">
-                        <a class="picture" href="${pageContext.request.contextPath}/template/images/pc1.jpg" rel="title" class="b-link-stripe b-animate-go  thickbox"><i class="glyphicon glyphicon-search icon "></i></a>
-                        <a href="${pageContext.request.contextPath}/customer/item"><i class="glyphicon glyphicon-menu-right icon"></i></a>
-                    </div>
-                </div>
-                <div class="mid-1">
-                    <div class="women">
-                        <div class="women-top">
-                            <span>Women</span>
-                            <h6><a href="${pageContext.request.contextPath}/customer/item">At vero eos</a></h6>
-                        </div>
-                        <div class="img item_add">
-                            <a href="#"><img src="${pageContext.request.contextPath}/template/images/ca.png" alt=""></a>
-                        </div>
-                        <div class="clearfix"></div>
-                    </div>
-                    <div class="mid-2">
-                        <p ><label>$100.00</label><em class="item_price">$70.00</em></p>
-                        <div class="block">
-                            <div class="starbox small ghosting"> </div>
-                        </div>
-
-                        <div class="clearfix"></div>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-        <div class="col-md-3 item-grid simpleCart_shelfItem">
-            <div class=" mid-pop">
-                <div class="pro-img">
-                    <img src="${pageContext.request.contextPath}/template/images/pc2.jpg" class="img-responsive" alt="">
-                    <div class="zoom-icon ">
-                        <a class="picture" href="${pageContext.request.contextPath}/template/images/pc2.jpg" rel="title" class="b-link-stripe b-animate-go  thickbox"><i class="glyphicon glyphicon-search icon "></i></a>
-                        <a href="${pageContext.request.contextPath}/customer/item"><i class="glyphicon glyphicon-menu-right icon"></i></a>
-                    </div>
-                </div>
-                <div class="mid-1">
-                    <div class="women">
-                        <div class="women-top">
-                            <span>Men</span>
-                            <h6><a href="${pageContext.request.contextPath}/customer/item">Sed ut perspiciati</a></h6>
-                        </div>
-                        <div class="img item_add">
-                            <a href="#"><img src="${pageContext.request.contextPath}/template/images/ca.png" alt=""></a>
-                        </div>
-                        <div class="clearfix"></div>
-                    </div>
-                    <div class="mid-2">
-                        <p ><label>$100.00</label><em class="item_price">$70.00</em></p>
-                        <div class="block">
-                            <div class="starbox small ghosting"> </div>
-                        </div>
-
-                        <div class="clearfix"></div>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-        <div class="col-md-3 item-grid simpleCart_shelfItem">
-            <div class=" mid-pop">
-                <div class="pro-img">
-                    <img src="${pageContext.request.contextPath}/template/images/pc3.jpg" class="img-responsive" alt="">
-                    <div class="zoom-icon ">
-                        <a class="picture" href="${pageContext.request.contextPath}/template/images/pc3.jpg" rel="title" class="b-link-stripe b-animate-go  thickbox"><i class="glyphicon glyphicon-search icon "></i></a>
-                        <a href="${pageContext.request.contextPath}/customer/item"><i class="glyphicon glyphicon-menu-right icon"></i></a>
-                    </div>
-                </div>
-                <div class="mid-1">
-                    <div class="women">
-                        <div class="women-top">
-                            <span>Women</span>
-                            <h6><a href="${pageContext.request.contextPath}/customer/item">On the other</a></h6>
-                        </div>
-                        <div class="img item_add">
-                            <a href="#"><img src="${pageContext.request.contextPath}/template/images/ca.png" alt=""></a>
-                        </div>
-                        <div class="clearfix"></div>
-                    </div>
-                    <div class="mid-2">
-                        <p ><label>$100.00</label><em class="item_price">$70.00</em></p>
-                        <div class="block">
-                            <div class="starbox small ghosting"> </div>
-                        </div>
-
-                        <div class="clearfix"></div>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-        <div class="clearfix"></div>
-    </div>
-    <div class="mid-popular">
+    </c:forEach>
+    <div class="clearfix"></div>
+    <%--<div class="mid-popular">
         <div class="col-md-3 item-grid simpleCart_shelfItem">
             <div class=" mid-pop">
                 <div class="pro-img">
@@ -295,10 +242,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                     <div class="women">
                         <div class="women-top">
                             <span>Men</span>
-                            <h6><a href="${pageContext.request.contextPath}/customer/item">Sed ut perspiciati</a></h6>
-                        </div>
-                        <div class="img item_add">
-                            <a href="#"><img src="${pageContext.request.contextPath}/template/images/ca.png" alt=""></a>
+                            <h6><a href="${pageContext.request.contextPath}/customer/item?id=${goods[0].id}/template/images/ca.png" alt=""></a></h6>
                         </div>
                         <div class="clearfix"></div>
                     </div>
@@ -315,7 +259,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
             </div>
         </div>
         <div class="clearfix"></div>
-    </div>
+    </div>--%>
 </div>
 <!--//products-->
 <!--//content-->
