@@ -85,16 +85,14 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                     <h3>${item.name}</h3>
                     <p class="in-para"> There are many variations of passages of Lorem Ipsum.</p>
                     <div class="price_single">
-                        <span class="reducedfrom item_price">$140.00</span>
-                        <a href="#">click for offer</a>
+                        <span class="reducedfrom item_price">$${item.price}</span>
                         <div class="clearfix"></div>
                     </div>
                     <h4 class="quick">Quick Overview:</h4>
-                    <p class="quick_desc"> Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Typi non habent claritatem insitam; es</p>
+                    <p class="quick_desc">${item.introduction}</p>
                     <div class="wish-list">
                         <ul>
-                            <li class="wish"><a href="/collections/addwish?id=${item.id}"><span class="glyphicon glyphicon-check" aria-hidden="true"></span>Add to Wishlist</a></li>
-                            <li class="compare"><a href="#"><span class="glyphicon glyphicon-resize-horizontal" aria-hidden="true"></span>Add to Compare</a></li>
+                            <li class="wish"><a href="/collections/addwish?id=${item.id}"><span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span>Add to Wishlist</a></li>
                         </ul>
                     </div>
                     <div class="quantity">
@@ -347,6 +345,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
             animation: "slide",
             controlNav: "thumbnails"
         });
+    });
+    $(".wish-list").on("click",".wish",function(){
+
     });
 </script>
 
