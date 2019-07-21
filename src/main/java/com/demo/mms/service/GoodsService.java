@@ -12,4 +12,6 @@ public interface GoodsService {
     void updateItem(Goods item);
 
     List<Goods> findGoodsByGclassId(String gclassId);
+
+    void addGoods(Goods item);
 }

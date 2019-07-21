@@ -6,7 +6,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Modify Item</title>
+    <title>Add Item</title>
     <!-- Tell the browser to be responsive to screen width -->
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
     <!-- Bootstrap 3.3.7 -->
@@ -36,7 +36,7 @@
         <section class="content-header">
             <h1>
                 Data Tables
-                <small>advanced tables</small>
+                <small>Add item</small>
             </h1>
             <ol class="breadcrumb">
                 <li><a href="#"><i class="fa fa-dashboard"></i>Home</a></li>
@@ -51,34 +51,30 @@
                 <div class="col-xs-12">
                     <div class="box box-info">
                         <div class="box-header with-border">
-                            <h3 class="box-title">Modify item</h3>
+                            <h3 class="box-title">Add item</h3>
                         </div>
                         <!-- /.box-header -->
                         <!-- form start -->
-                        <form class="form-horizontal" action="${pageContext.request.contextPath}/admin/updateitem" method="post">
-
-                            <input class="form-control" type="hidden" name="id" value="${item.id}">
-                            <input class="form-control" type="hidden" name="picturePath" value="${item.picturePath}">
-                            <input class="form-control" type="hidden" name="uploadDate" value="${item.uploadDate}">
-
+                        <form class="form-horizontal" id="form" action="${pageContext.request.contextPath}/admin/additem" method="post">
+                            <br><p class="login-box-msg" style="color: orangered">${msg}</p>
                             <div class="box-body">
                                 <div class="form-group">
                                     <label class="col-sm-2 control-label" for="itemName">Name</label>
                                     <div class="col-sm-10">
-                                        <input class="form-control" id="itemName" type="text" name="name" value="${item.name}">
+                                        <input class="form-control" id="itemName" type="text" name="name" placeholder="Name">
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label class="col-sm-2 control-label" for="itemClass">Class</label>
                                     <div class="col-sm-10">
                                         <select id="itemClass" class="form-control" name="gclassId">
-                                            <option value="ebook" <s:if test="${item.gclassId=='ebook'}"> selected="selected" </s:if>>Electronic book</option>
-                                            <option value="video" <s:if test="${item.gclassId=='video'}"> selected="selected" </s:if>>Learning video</option>
-                                            <option value="paper" <s:if test="${item.gclassId=='paper'}"> selected="selected" </s:if>>Test Paper Analysis</option>
-                                            <option value="flowchart" <s:if test="${item.gclassId=='flowchart'}"> selected="selected" </s:if>>Flowchart</option>
-                                            <option value="protocol" <s:if test="${item.gclassId=='protocol'}"> selected="selected" </s:if>>Protocol</option>
-                                            <option value="note" <s:if test="${item.gclassId=='note'}"> selected="selected" </s:if>>Study notes</option>
-                                            <option value="vip" <s:if test="${item.gclassId=='vip'}"> selected="selected" </s:if>>Vip</option>
+                                            <option value="ebook" selected="selected">Electronic book</option>
+                                            <option value="video">Learning video</option>
+                                            <option value="paper">Test Paper Analysis</option>
+                                            <option value="flowchart">Flowchart</option>
+                                            <option value="protocol">Protocol</option>
+                                            <option value="note">Study notes</option>
+                                            <option value="vip">Vip</option>
                                         </select>
                                     </div>
                                 </div>
@@ -86,24 +82,24 @@
                                     <label class="col-sm-2 control-label" for="itemFormat">Format</label>
                                     <div class="col-sm-10">
                                         <select id="itemFormat" class="form-control" name="gformatId">
-                                            <option value="mp4" <s:if test="${item.gformatId=='mp4'}"> selected="selected" </s:if>>mp4</option>
-                                            <option value="pdf" <s:if test="${item.gformatId=='pdf'}"> selected="selected" </s:if>>pdf</option>
-                                            <option value="png" <s:if test="${item.gformatId=='png'}"> selected="selected" </s:if>>png</option>
-                                            <option value="txt" <s:if test="${item.gformatId=='txt'}"> selected="selected" </s:if>>txt</option>
-                                            <option value="word" <s:if test="${item.gformatId=='word'}"> selected="selected" </s:if>>word</option>
+                                            <option value="mp4" selected="selected">mp4</option>
+                                            <option value="pdf">pdf</option>
+                                            <option value="png">png</option>
+                                            <option value="txt">txt</option>
+                                            <option value="word">word</option>
                                         </select>
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label class="col-sm-2 control-label" for="itemPrice">Price</label>
                                     <div class="col-sm-10">
-                                        <input class="form-control" id="itemPrice" type="text" name="price" value="${item.price}">
+                                        <input class="form-control" id="itemPrice" type="text" name="price" placeholder="Price">
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label class="col-sm-2 control-label" for="itemIntroduction">Introduction</label>
                                     <div class="col-sm-10">
-                                        <textarea class="form-control" id="itemIntroduction" type="text" name="introduction" style="width: 100%; height: 100%">${item.introduction}</textarea>
+                                        <textarea class="form-control" id="itemIntroduction" type="text" name="introduction" style="width: 100%; height: 100%" placeholder="Introduction..."></textarea>
                                     </div>
                                 </div>
                                 <div class="form-group">
@@ -115,39 +111,21 @@
                                 <div class="form-group">
                                     <label class="col-sm-2 control-label" for="itemSize">Size</label>
                                     <div class="col-sm-10">
-                                        <input class="form-control" id="itemSize" type="number" name="size" value="${item.size}">
+                                        <input class="form-control" id="itemSize" type="number" name="size" placeholder="Size">
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label class="col-sm-2 control-label">Visible</label>
                                     <div class="col-sm-10">
-                                        <c:if test="${item.visible==true}">
-                                            On sale: <input name="visible" type="radio" checked="checked" value="true">&nbsp;&nbsp;
-                                            Off sale: <input name="visible" type="radio" value="false">
-                                        </c:if>
-                                        <c:if test="${item.visible==false}">
-                                            On sale: <input name="visible" type="radio" value="true">&nbsp;&nbsp;
-                                            Off sale: <input name="visible" type="radio" checked="checked" value="false">
-                                        </c:if>
+                                        On sale: <input name="visible" type="radio" checked="checked" value="true">&nbsp;&nbsp;
+                                        Off sale: <input name="visible" type="radio" value="false">
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label class="col-sm-2 control-label">Restriction</label>
                                     <div class="col-sm-10">
-                                        <c:if test="${item.restriction==true}">
-                                            Vip: <input name="restriction" type="radio" checked="checked" value="true">&nbsp;&nbsp;
-                                            Non vip: <input name="restriction" type="radio" value="false">
-                                        </c:if>
-                                        <c:if test="${item.restriction==false}">
-                                            Vip: <input name="restriction" type="radio" value="true">&nbsp;&nbsp;
-                                            Non vip: <input name="restriction" type="radio" checked="checked" value="false">
-                                        </c:if>
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <label class="col-sm-2 control-label" for="itemUploadTime">Upload time</label>
-                                    <div class="col-sm-10">
-                                        <input class="form-control" id="itemUploadTime" type="text" name="uploadDateTxt" value="${item.uploadDateTxt}" readonly="true">
+                                        Vip: <input name="restriction" type="radio" value="true">&nbsp;&nbsp;
+                                        Non vip: <input name="restriction" type="radio" checked="checked" value="false">
                                     </div>
                                 </div>
                             </div>
@@ -201,8 +179,46 @@
         $(".btn_quxiao").click(function () {
             window.history.go(-1);
         });
+
+        //自定义validate验证输入的数字小数点位数不能大于两位
+        jQuery.validator.addMethod("minNumber",function(value, element){
+            var returnVal = true;
+            inputZ = value;
+            var ArrMen= inputZ.split(".");    //截取字符串
+            if(ArrMen.length==2){
+                if(ArrMen[1].length>2){    //判断小数点后面的字符串长度
+                    returnVal = false;
+                    return false;
+                }
+            }
+            return returnVal;
+        },"小数点后最多为两位");         //验证错误信息
+
+
+        //提交表单验证，并ajax传值
+        $("#form").validate({
+
+            //验证规则
+            rules: {
+                cash: {
+                    required: true,    //要求输入不能为空
+                    number: true,     //输入必须是数字
+                    min: 0.01,          //输入的数字最小值为0.01，不能为0或者负数
+                    minNumber: $("#itemPrice").val()    //调用自定义验证
+                }
+            },
+
+            //错误提示信息
+            messages: {
+                cash: {
+                    required: "请填写充值金额",
+                    number: "请正确输入金额",
+                    min: "输入最小金额为0.01",
+                    length: "输入数字最多小数点后两位"
+                }
+            }
+        });
     });
 </script>
-
 </body>
 </html>

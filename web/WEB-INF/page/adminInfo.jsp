@@ -76,7 +76,7 @@
                                     <label for="adminTel" class="col-sm-2 control-label">Tel</label>
 
                                     <div class="col-sm-10">
-                                        <input class="form-control" id="adminTel" type="text" name="tel" value="${curr_admin.tel}">
+                                        <input class="form-control" id="adminTel" type="tel" name="tel" value="${curr_admin.tel}">
                                     </div>
                                 </div>
                             </div>

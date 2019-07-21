@@ -32,4 +32,10 @@ public class GoodsServiceImpl implements GoodsService {
     public List<Goods> findGoodsByGclassId(String gclassId) {
         return goodsMapper.selectByGclassId(gclassId);
     }
+
+    @Override
+    @Transactional
+    public void addGoods(Goods item) {
+        goodsMapper.insert(item);
+    }
 }

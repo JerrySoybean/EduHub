@@ -25,7 +25,7 @@
                 </a>
                 <ul class="treeview-menu">
                     <li><a href="${pageContext.request.contextPath}/admin/orders"><i class="fa fa-circle-o"></i>All orders</a></li>
-                    <li><a href="../../index2.html"><i class="fa fa-circle-o"></i>Dashboard v2</a></li>
+                    <li><a href="${pageContext.request.contextPath}/admin/bill"><i class="fa fa-circle-o"></i>Bill</a></li>
                 </ul>
             </li>
             <li class="treeview">
@@ -47,14 +47,14 @@
                         <ul class="treeview-menu">
                             <li><a href="${pageContext.request.contextPath}/admin/ebook"><i class="fa fa-square-o"></i>Electronic book</a></li>
                             <li><a href="${pageContext.request.contextPath}/admin/learnvideo"><i class="fa fa-square-o"></i>Learning video</a></li>
-                            <li><a href="${pageContext.request.contextPath}/admin/paper"><i class="fa fa-square-o"></i>Test Paper Analysis</a></li>
+                            <li><a href="${pageContext.request.contextPath}/admin/paper"><i class="fa fa-square-o"></i>Test paper analysis</a></li>
                             <li><a href="${pageContext.request.contextPath}/admin/flowchart"><i class="fa fa-square-o"></i>Flowchart</a></li>
-                            <li><a href="${pageContext.request.contextPath}/admin/protocol"><i class="fa fa-square-o"></i>Protocol</a></li>
+                            <li><a href="${pageContext.request.contextPath}/admin/protocol"><i class="fa fa-square-o"></i>Experimental protocol</a></li>
                             <li><a href="${pageContext.request.contextPath}/admin/studynote"><i class="fa fa-square-o"></i>Study notes</a></li>
                             <li><a href="${pageContext.request.contextPath}/admin/vip"><i class="fa fa-square-o"></i>Vip</a></li>
                         </ul>
                     </li>
-                    <li><a href="${pageContext.request.contextPath}/admin/orders"><i class="fa fa-circle-o"></i>Add</a></li>
+                    <li><a href="${pageContext.request.contextPath}/admin/toadd"><i class="fa fa-circle-o"></i>Add</a></li>
                 </ul>
             </li>
         </ul>

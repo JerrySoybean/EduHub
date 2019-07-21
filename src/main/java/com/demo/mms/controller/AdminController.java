@@ -1,14 +1,15 @@
 package com.demo.mms.controller;
 
 import com.demo.mms.common.domain.*;
+import com.demo.mms.common.utils.IDGenerator;
 import com.demo.mms.service.*;
-import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import javax.servlet.http.HttpSession;
+import java.math.BigDecimal;
 import java.util.*;
 
 @Controller
@@ -126,7 +127,7 @@ public class AdminController {
     }
 
     @RequestMapping("/alterinfo")
-    public String alterInfo(ModelMap modelMap, HttpSession session) {
+    public String alterInfo(HttpSession session) {
         if(session.getAttribute("curr_admin") == null) {
             return "adminLogin";
         }
@@ -153,6 +154,39 @@ public class AdminController {
             item.setPicturePath(newPicturePath);
         }
         goodsService.updateItem(item);
+        return allGoods(modelMap, session);
+    }
+
+    @RequestMapping("/toadd")
+    public String toAdd(HttpSession session) {
+        if(session.getAttribute("curr_admin") == null) {
+            return "adminLogin";
+        }
+        return "adminAdditem";
+    }
+
+    @RequestMapping("/additem")
+    public String addItem(ModelMap modelMap, Goods item, HttpSession session) {
+        String msg = null;
+        if (item.getName() == "") {
+            msg = "Name cannot be empty";
+            modelMap.put("msg", msg);
+            return "adminAdditem";
+        }
+        if (item.getPrice() == null) {
+            msg = "Price cannot be empty";
+            modelMap.put("msg", msg);
+            return "adminAdditem";
+        }
+        if (item.getSize() == null) {
+            msg = "Size cannot be empty";
+            modelMap.put("msg", msg);
+            return "adminAdditem";
+        }
+        item.setId(IDGenerator.getId());
+        item.setUploadDate(new Date());
+        item.setThumbUp(0);
+        goodsService.addGoods(item);
         return allGoods(modelMap, session);
     }
 
@@ -282,5 +316,20 @@ public class AdminController {
         modelMap.put("goods", goods);
         modelMap.put("classname", classname);
         return "adminVip";
+    }
+
+    @RequestMapping("/bill")
+    public String Bill(ModelMap modelMap, HttpSession session) {
+        if(session.getAttribute("curr_admin") == null) {
+            return "adminLogin";
+        }
+        List<Orders> orders = ordersService.findAllOrders();
+        int size = orders.size();
+        BigDecimal total = new BigDecimal("0");
+        for (int i = 0; i < size; i++) {
+            total = total.add(goodsService.findGoodsById(orders.get(i).getGoodsId()).getPrice());
+        }
+        modelMap.put("total", total);
+        return "adminBill";
     }
 }
