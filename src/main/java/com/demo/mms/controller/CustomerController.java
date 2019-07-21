@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 import javax.servlet.http.HttpSession;
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 
 @Controller
@@ -99,7 +100,7 @@ public class CustomerController {
 
     @RequestMapping("/infoupdate")
     public String infoToupdate(Customer customer){
-                                                    System.out.println(customer.getBirthdayTxt());
+        System.out.println(customer.getBirthdayTxt());
         customerService.updateCustomer(customer);
         return "customerHome";
     }
@@ -112,28 +113,164 @@ public class CustomerController {
 
 
     @RequestMapping("/learnvideo")
-    public String toLearnvideo(){
+    public String toLearnvideo(ModelMap modelMap, HttpSession session){
+
+        Object temp = session.getAttribute("curr_customer");
+        if (temp == null) {
+            return "customerLogin";
+        }
+        List<Goods> goods = goodsService.findGoodsByGclassId("video");
+        Customer customer = (Customer) temp;
+        int size = goods.size();
+        if (customer.getPrivilege() == false) {
+            for (int i = 0; i < size; i++) {
+                if (goods.get(i).getRestriction() == true) {
+                    goods.remove(i);
+                    size--;
+                    i--;
+                }
+            }
+        }
+        List<String> classname = new ArrayList<>(size);
+        for (int i = 0; i < size; i++) {
+            classname.add("E book");
+        }
+        modelMap.put("goods", goods);
+        modelMap.put("classname", classname);
         return "customerLearnvideo";
     }
 
     @RequestMapping("/ebook")
-    public String toEbook(){
+    public String toEbook(ModelMap modelMap, HttpSession session){
+        Object temp = session.getAttribute("curr_customer");
+        if (temp == null) {
+            return "customerLogin";
+        }
+        List<Goods> goods = goodsService.findGoodsByGclassId("ebook");
+        Customer customer = (Customer) temp;
+        int size = goods.size();
+        if (customer.getPrivilege() == false) {
+            for (int i = 0; i < size; i++) {
+                if (goods.get(i).getRestriction() == true) {
+                    goods.remove(i);
+                    size--;
+                    i--;
+                }
+            }
+        }
+        List<String> classname = new ArrayList<>(size);
+        for (int i = 0; i < size; i++) {
+            classname.add("E book");
+        }
+        modelMap.put("goods", goods);
+        modelMap.put("classname", classname);
         return "customerEbook";
     }
+
     @RequestMapping("/paper")
-    public String toPaper(){
+    public String toPaper(ModelMap modelMap, HttpSession session){
+        Object temp = session.getAttribute("curr_customer");
+        if (temp == null) {
+            return "customerLogin";
+        }
+        List<Goods> goods = goodsService.findGoodsByGclassId("paper");
+        Customer customer = (Customer) temp;
+        int size = goods.size();
+        if (customer.getPrivilege() == false) {
+            for (int i = 0; i < size; i++) {
+                if (goods.get(i).getRestriction() == true) {
+                    goods.remove(i);
+                    size--;
+                    i--;
+                }
+            }
+        }
+        List<String> classname = new ArrayList<>(size);
+        for (int i = 0; i < size; i++) {
+            classname.add("E book");
+        }
+        modelMap.put("goods", goods);
+        modelMap.put("classname", classname);
         return "customerPaper";
     }
+
     @RequestMapping("/flowchart")
-    public String toFlowchart(){
+    public String toFlowchart(ModelMap modelMap, HttpSession session){
+        Object temp = session.getAttribute("curr_customer");
+        if (temp == null) {
+            return "customerLogin";
+        }
+        List<Goods> goods = goodsService.findGoodsByGclassId("flowchart");
+        Customer customer = (Customer) temp;
+        int size = goods.size();
+        if (customer.getPrivilege() == false) {
+            for (int i = 0; i < size; i++) {
+                if (goods.get(i).getRestriction() == true) {
+                    goods.remove(i);
+                    size--;
+                    i--;
+                }
+            }
+        }
+        List<String> classname = new ArrayList<>(size);
+        for (int i = 0; i < size; i++) {
+            classname.add("E book");
+        }
+        modelMap.put("goods", goods);
+        modelMap.put("classname", classname);
         return "customerFlowchart";
     }
     @RequestMapping("/protocol")
-    public String toProtocol(){
+    public String toProtocol(ModelMap modelMap, HttpSession session){
+        Object temp = session.getAttribute("curr_customer");
+        if (temp == null) {
+            return "customerLogin";
+        }
+        List<Goods> goods = goodsService.findGoodsByGclassId("protocol");
+        Customer customer = (Customer) temp;
+        int size = goods.size();
+        if (customer.getPrivilege() == false) {
+            for (int i = 0; i < size; i++) {
+                if (goods.get(i).getRestriction() == true) {
+                    goods.remove(i);
+                    size--;
+                    i--;
+                }
+            }
+        }
+        List<String> classname = new ArrayList<>(size);
+        for (int i = 0; i < size; i++) {
+            classname.add("E book");
+        }
+        modelMap.put("goods", goods);
+        modelMap.put("classname", classname);
         return "customerProtocol";
     }
+
     @RequestMapping("/studynote")
-    public String toStudynote(){
+    public String toStudynote(ModelMap modelMap, HttpSession session){
+        Object temp = session.getAttribute("curr_customer");
+        if (temp == null) {
+            return "customerLogin";
+        }
+        List<Goods> goods = goodsService.findGoodsByGclassId("note");
+        Customer customer = (Customer) temp;
+        int size = goods.size();
+        if (customer.getPrivilege() == false) {
+            for (int i = 0; i < size; i++) {
+                if (goods.get(i).getRestriction() == true) {
+                    goods.remove(i);
+                    size--;
+                    i--;
+                }
+            }
+        }
+        List<String> classname = new ArrayList<>(size);
+        for (int i = 0; i < size; i++) {
+            classname.add("E book");
+        }
+        modelMap.put("goods", goods);
+        modelMap.put("classname", classname);
         return "customerStudynote";
     }
 
