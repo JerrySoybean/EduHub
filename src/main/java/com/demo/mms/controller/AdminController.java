@@ -131,7 +131,17 @@ public class AdminController {
     }
 
     @RequestMapping("/alterinfo")
-    public String updateAdmin(HttpSession session) {
-        return null;
+    public String alterInfo(ModelMap modelMap, HttpSession session) {
+        if(session.getAttribute("curr_admin") == null) {
+            return "adminLogin";
+        }
+        return "adminInfo";
+    }
+
+    @RequestMapping("/submitnewinfo")
+    public String updateAdmin(Admin admin, HttpSession session) {
+        adminService.updateAdmin(admin);
+        session.setAttribute("curr_admin", admin);
+        return "adminHome";
     }
 }

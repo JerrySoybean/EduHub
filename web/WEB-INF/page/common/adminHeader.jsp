@@ -1,4 +1,3 @@
-<%@ page import="com.demo.mms.common.domain.Admin" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <header class="main-header">
     <!-- Logo -->

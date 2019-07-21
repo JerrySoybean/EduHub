@@ -84,7 +84,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
         <div class="content-top">
             <div class="col-md-6 col-md1">
                 <div class="col-3">
-                    <a href="${pageContext.request.contextPath}/single"><img src="${pageContext.request.contextPath}/template/images/pi1.jpg" class="img-responsive" alt="">
+                    <a href="${pageContext.request.contextPath}/customer/learnvideo"><img src="${pageContext.request.contextPath}/template/images/pi1.jpg" class="img-responsive" alt="">
                         <div class="col-pic">
                             <p>Lorem Ipsum</p>
                             <label></label>
@@ -92,7 +92,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                         </div></a>
                 </div>
                 <div class="col-3">
-                    <a href="${pageContext.request.contextPath}/single"><img src="${pageContext.request.contextPath}/template/images/pi2.jpg" class="img-responsive" alt="">
+                    <a href="${pageContext.request.contextPath}/customer/ebook"><img src="${pageContext.request.contextPath}/template/images/pi2.jpg" class="img-responsive" alt="">
                         <div class="col-pic">
                             <p>Lorem Ipsum</p>
                             <label></label>
@@ -100,7 +100,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                         </div></a>
                 </div>
                 <div class="col-3">
-                    <a href="${pageContext.request.contextPath}/single"><img src="${pageContext.request.contextPath}/template/images/pi3.jpg" class="img-responsive" alt="">
+                    <a href="${pageContext.request.contextPath}/customer/protocol"><img src="${pageContext.request.contextPath}/template/images/pi3.jpg" class="img-responsive" alt="">
                         <div class="col-pic">
                             <p>Lorem Ipsum</p>
                             <label></label>
@@ -110,7 +110,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
             </div>
             <div class="col-md-6 col-md1">
                 <div class="col-3">
-                    <a href="${pageContext.request.contextPath}/single"><img src="${pageContext.request.contextPath}/template/images/pi1.jpg" class="img-responsive" alt="">
+                    <a href="${pageContext.request.contextPath}/customer/paper"><img src="${pageContext.request.contextPath}/template/images/pi1.jpg" class="img-responsive" alt="">
                         <div class="col-pic">
                             <p>Lorem Ipsum</p>
                             <label></label>
@@ -118,7 +118,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                         </div></a>
                 </div>
                 <div class="col-3">
-                    <a href="${pageContext.request.contextPath}/single"><img src="${pageContext.request.contextPath}/template/images/pi2.jpg" class="img-responsive" alt="">
+                    <a href="${pageContext.request.contextPath}/customer/flowchart"><img src="${pageContext.request.contextPath}/template/images/pi2.jpg" class="img-responsive" alt="">
                         <div class="col-pic">
                             <p>Lorem Ipsum</p>
                             <label></label>
@@ -126,7 +126,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                         </div></a>
                 </div>
                 <div class="col-3">
-                    <a href="${pageContext.request.contextPath}/single"><img src="${pageContext.request.contextPath}/template/images/pi3.jpg" class="img-responsive" alt="">
+                    <a href="${pageContext.request.contextPath}/customer/studynote"><img src="${pageContext.request.contextPath}/template/images/pi3.jpg" class="img-responsive" alt="">
                         <div class="col-pic">
                             <p>Lorem Ipsum</p>
                             <label></label>
