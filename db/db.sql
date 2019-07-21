@@ -29,7 +29,7 @@ CREATE TABLE `gclass` (
 
 DROP TABLE IF EXISTS `gformat`; -- 文件类型表
 CREATE TABLE `gformat` (
-                        `id` varchar(64) NOT NULL PRIMARY KEY,
+                        `id` varchar(64) NOT NULL PRIMARY KEY
 ) ENGINE=InnoDB ;
 
 DROP TABLE IF EXISTS `goods`; -- 商品表
