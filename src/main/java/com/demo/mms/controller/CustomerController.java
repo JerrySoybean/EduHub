@@ -139,7 +139,9 @@ public class CustomerController {
     }
 
     @RequestMapping("/item")
-    public String toItem(){
+    public String toItem(ModelMap modelMap,String id){
+        Goods goods = goodsService.findGoodsById(id);
+        modelMap.put("item",goods);
         return "customerItem";
     }
 

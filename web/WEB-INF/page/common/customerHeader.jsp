@@ -4,7 +4,7 @@
     <div class="container">
         <div class="head">
             <div class=" logo">
-                <a href="${pageContext.request.contextPath}/index"><img src="${pageContext.request.contextPath}/template/images/EduHub_logo3.png" alt="EduHub_logo" width="165" height="85"></a>
+                <a href="${pageContext.request.contextPath}/customer/home"><img src="${pageContext.request.contextPath}/template/images/EduHub_logo3.png" alt="EduHub_logo" width="165" height="85"></a>
             </div>
         </div>
     </div>
