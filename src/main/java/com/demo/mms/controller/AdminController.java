@@ -1,22 +1,15 @@
 package com.demo.mms.controller;
 
-import com.demo.mms.common.domain.Admin;
-import com.demo.mms.common.domain.Goods;
-import com.demo.mms.common.domain.Orders;
-import com.demo.mms.service.AdminService;
-import com.demo.mms.service.GoodsService;
-import com.demo.mms.service.OrdersService;
+import com.demo.mms.common.domain.*;
+import com.demo.mms.service.*;
+import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
-import com.demo.mms.common.domain.Customer;
-import com.demo.mms.service.CustomerService;
 
 import javax.servlet.http.HttpSession;
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.List;
+import java.util.*;
 
 @Controller
 @RequestMapping("/admin")
@@ -29,6 +22,8 @@ public class AdminController {
     private OrdersService ordersService;
     @Autowired
     private GoodsService goodsService;
+    @Autowired
+    private GclassService gclassService;
 
     @RequestMapping("/tologin")
     public String toLogin(HttpSession session) {
@@ -76,7 +71,7 @@ public class AdminController {
     }
 
 
-    @RequestMapping("submit")
+    @RequestMapping("/submit")
     public String submit(ModelMap modelMap, Customer customer){
         customerService.updateCustomer(customer);
         modelMap.put("cus", customer);
@@ -143,5 +138,149 @@ public class AdminController {
         adminService.updateAdmin(admin);
         session.setAttribute("curr_admin", admin);
         return "adminHome";
+    }
+
+    @RequestMapping("/item")
+    public String toItem(ModelMap modelMap, String id) {
+        Goods item = goodsService.findGoodsById(id);
+        modelMap.put("item", item);
+        return "adminItem";
+    }
+
+    @RequestMapping("/updateitem")
+    public String updateItem(Goods item, String newPicturePath, ModelMap modelMap, HttpSession session) {
+        if (!newPicturePath.equals("")) {
+            item.setPicturePath(newPicturePath);
+        }
+        goodsService.updateItem(item);
+        return allGoods(modelMap, session);
+    }
+
+    @RequestMapping("/allgoods")
+    public String allGoods(ModelMap modelMap, HttpSession session) {
+        if(session.getAttribute("curr_admin") == null) {
+            return "adminLogin";
+        }
+        List<Goods> goods = goodsService.findAllGoods();
+        int size = goods.size();
+        List<String> classname = new ArrayList<>(size);
+        for (int i = 0; i < size; i++) {
+            classname.add(gclassService.findGclassById(goods.get(i).getGclassId()).getCname());
+        }
+        modelMap.put("goods", goods);
+        modelMap.put("classname", classname);
+        return "adminAllgoods";
+    }
+
+    @RequestMapping("/ebook")
+    public String ebook(ModelMap modelMap, HttpSession session) {
+        if(session.getAttribute("curr_admin") == null) {
+            return "adminLogin";
+        }
+        List<Goods> goods = goodsService.findGoodsByGclassId("ebook");
+        int size = goods.size();
+        List<String> classname = new ArrayList<>(size);
+        for (int i = 0; i < size; i++) {
+            classname.add("E book");
+        }
+        modelMap.put("goods", goods);
+        modelMap.put("classname", classname);
+        return "adminEbook";
+    }
+
+    @RequestMapping("/learnvideo")
+    public String learnvideo(ModelMap modelMap, HttpSession session) {
+        if(session.getAttribute("curr_admin") == null) {
+            return "adminLogin";
+        }
+        List<Goods> goods = goodsService.findGoodsByGclassId("video");
+        int size = goods.size();
+        List<String> classname = new ArrayList<>(size);
+        for (int i = 0; i < size; i++) {
+            classname.add("Learning Video");
+        }
+        modelMap.put("goods", goods);
+        modelMap.put("classname", classname);
+        return "adminLearnvideo";
+    }
+
+    @RequestMapping("/paper")
+    public String paper(ModelMap modelMap, HttpSession session) {
+        if(session.getAttribute("curr_admin") == null) {
+            return "adminLogin";
+        }
+        List<Goods> goods = goodsService.findGoodsByGclassId("paper");
+        int size = goods.size();
+        List<String> classname = new ArrayList<>(size);
+        for (int i = 0; i < size; i++) {
+            classname.add("Test Paper Analysis");
+        }
+        modelMap.put("goods", goods);
+        modelMap.put("classname", classname);
+        return "adminPaper";
+    }
+
+    @RequestMapping("/flowchart")
+    public String flowchart(ModelMap modelMap, HttpSession session) {
+        if(session.getAttribute("curr_admin") == null) {
+            return "adminLogin";
+        }
+        List<Goods> goods = goodsService.findGoodsByGclassId("flowchart");
+        int size = goods.size();
+        List<String> classname = new ArrayList<>(size);
+        for (int i = 0; i < size; i++) {
+            classname.add("Flowchart");
+        }
+        modelMap.put("goods", goods);
+        modelMap.put("classname", classname);
+        return "adminFlowchart";
+    }
+
+    @RequestMapping("/protocol")
+    public String protocol(ModelMap modelMap, HttpSession session) {
+        if(session.getAttribute("curr_admin") == null) {
+            return "adminLogin";
+        }
+        List<Goods> goods = goodsService.findGoodsByGclassId("protocol");
+        int size = goods.size();
+        List<String> classname = new ArrayList<>(size);
+        for (int i = 0; i < size; i++) {
+            classname.add("Experiment Protocol");
+        }
+        modelMap.put("goods", goods);
+        modelMap.put("classname", classname);
+        return "adminProtocol";
+    }
+
+    @RequestMapping("/studynote")
+    public String studynote(ModelMap modelMap, HttpSession session) {
+        if(session.getAttribute("curr_admin") == null) {
+            return "adminLogin";
+        }
+        List<Goods> goods = goodsService.findGoodsByGclassId("note");
+        int size = goods.size();
+        List<String> classname = new ArrayList<>(size);
+        for (int i = 0; i < size; i++) {
+            classname.add("Study Notes");
+        }
+        modelMap.put("goods", goods);
+        modelMap.put("classname", classname);
+        return "adminStudynote";
+    }
+
+    @RequestMapping("/vip")
+    public String vip(ModelMap modelMap, HttpSession session) {
+        if(session.getAttribute("curr_admin") == null) {
+            return "adminLogin";
+        }
+        List<Goods> goods = goodsService.findGoodsByGclassId("vip");
+        int size = goods.size();
+        List<String> classname = new ArrayList<>(size);
+        for (int i = 0; i < size; i++) {
+            classname.add("Vip");
+        }
+        modelMap.put("goods", goods);
+        modelMap.put("classname", classname);
+        return "adminVip";
     }
 }

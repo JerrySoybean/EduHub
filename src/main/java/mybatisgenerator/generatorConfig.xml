@@ -69,8 +69,8 @@
         <!--<table tableName="cart" domainObjectName="Cart" enableCountByExample="false" enableUpdateByExample="false"-->
                <!--enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false"/>-->
 
-        <table tableName="collections" domainObjectName="Collections" enableCountByExample="false" enableUpdateByExample="false"
-               enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false"/>
+        <!--<table tableName="collections" domainObjectName="Collections" enableCountByExample="false" enableUpdateByExample="false"-->
+               <!--enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false"/>-->
 
         <!-- 有些表的字段需要指定java类型
          <table schema="" tableName="">

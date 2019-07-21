@@ -1,5 +1,7 @@
 package com.demo.mms.common.domain;
 
+import com.demo.mms.common.utils.DateUtil;
+
 import java.math.BigDecimal;
 import java.util.Date;
 
@@ -21,6 +23,8 @@ public class Goods {
     private Integer size;
 
     private Integer thumbUp;
+
+    private Boolean visible;
 
     private Boolean restriction;
 
@@ -98,6 +102,14 @@ public class Goods {
         this.thumbUp = thumbUp;
     }
 
+    public Boolean getVisible() {
+        return visible;
+    }
+
+    public void setVisible(Boolean visible) {
+        this.visible = visible;
+    }
+
     public Boolean getRestriction() {
         return restriction;
     }
@@ -108,6 +120,10 @@ public class Goods {
 
     public Date getUploadDate() {
         return uploadDate;
+    }
+
+    public String getUploadDateTxt() {
+        return DateUtil.parseDateToStr(uploadDate, DateUtil.DATE_TIME_FORMAT_YYYY_MM_DD_HH_MI_SS);
     }
 
     public void setUploadDate(Date uploadDate) {

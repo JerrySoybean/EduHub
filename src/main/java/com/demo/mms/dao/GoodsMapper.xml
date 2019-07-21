@@ -11,18 +11,30 @@
     <result column="picture_path" jdbcType="VARCHAR" property="picturePath" />
     <result column="size" jdbcType="INTEGER" property="size" />
     <result column="thumb_up" jdbcType="INTEGER" property="thumbUp" />
+    <result column="visible" jdbcType="BIT" property="visible" />
     <result column="restriction" jdbcType="BIT" property="restriction" />
     <result column="upload_date" jdbcType="TIMESTAMP" property="uploadDate" />
   </resultMap>
   <sql id="Base_Column_List">
-    id, name, gclass_id, gformat_id, price, introduction, picture_path, size, thumb_up, 
-    restriction, upload_date
+    id, name, gclass_id, gformat_id, price, introduction, picture_path, size, thumb_up,
+    visible, restriction, upload_date
   </sql>
   <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="BaseResultMap">
     select 
     <include refid="Base_Column_List" />
     from goods
     where id = #{id,jdbcType=VARCHAR}
+  </select>
+  <select id="selectAllGoods"  resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List" />
+    from goods
+  </select>
+  <select id="selectByGclassId" parameterType="java.lang.String" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List" />
+    from goods
+    where gclass_id = #{gclassId,jdbcType=VARCHAR}
   </select>
   <delete id="deleteByPrimaryKey" parameterType="java.lang.String">
     delete from goods
@@ -32,11 +44,11 @@
     insert into goods (id, name, gclass_id, 
       gformat_id, price, introduction, 
       picture_path, size, thumb_up, 
-      restriction, upload_date)
+      visible, restriction, upload_date)
     values (#{id,jdbcType=VARCHAR}, #{name,jdbcType=VARCHAR}, #{gclassId,jdbcType=VARCHAR}, 
       #{gformatId,jdbcType=VARCHAR}, #{price,jdbcType=DECIMAL}, #{introduction,jdbcType=VARCHAR}, 
       #{picturePath,jdbcType=VARCHAR}, #{size,jdbcType=INTEGER}, #{thumbUp,jdbcType=INTEGER}, 
-      #{restriction,jdbcType=BIT}, #{uploadDate,jdbcType=TIMESTAMP})
+      #{visible,jdbcType=BIT}, #{restriction,jdbcType=BIT}, #{uploadDate,jdbcType=TIMESTAMP})
   </insert>
   <insert id="insertSelective" parameterType="com.demo.mms.common.domain.Goods">
     insert into goods
@@ -67,6 +79,9 @@
       </if>
       <if test="thumbUp != null">
         thumb_up,
+      </if>
+      <if test="visible != null">
+        visible,
       </if>
       <if test="restriction != null">
         restriction,
@@ -103,6 +118,9 @@
       <if test="thumbUp != null">
         #{thumbUp,jdbcType=INTEGER},
       </if>
+      <if test="visible != null">
+        #{visible,jdbcType=BIT},
+      </if>
       <if test="restriction != null">
         #{restriction,jdbcType=BIT},
       </if>
@@ -138,6 +156,9 @@
       <if test="thumbUp != null">
         thumb_up = #{thumbUp,jdbcType=INTEGER},
       </if>
+      <if test="visible != null">
+        visible #{visible,jdbcType=BIT},
+      </if>
       <if test="restriction != null">
         restriction = #{restriction,jdbcType=BIT},
       </if>
@@ -157,6 +178,7 @@
       picture_path = #{picturePath,jdbcType=VARCHAR},
       size = #{size,jdbcType=INTEGER},
       thumb_up = #{thumbUp,jdbcType=INTEGER},
+      visible = #{visible,jdbcType=INTEGER},
       restriction = #{restriction,jdbcType=BIT},
       upload_date = #{uploadDate,jdbcType=TIMESTAMP}
     where id = #{id,jdbcType=VARCHAR}

@@ -12,7 +12,6 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import javax.annotation.RegEx;
 import javax.servlet.http.HttpSession;
 import java.util.ArrayList;
 import java.util.List;
@@ -87,7 +86,7 @@ public class CustomerController {
     }
 
     @RequestMapping("/info")
-    public String info(ModelMap modelMap,String id,HttpSession session){
+    public String info(ModelMap modelMap, String id, HttpSession session){
         if (session.getAttribute("curr_customer") == null) {
             return "customerLogin";
         }

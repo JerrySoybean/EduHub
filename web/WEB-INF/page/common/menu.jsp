@@ -28,6 +28,35 @@
                     <li><a href="../../index2.html"><i class="fa fa-circle-o"></i>Dashboard v2</a></li>
                 </ul>
             </li>
+            <li class="treeview">
+                <a href="#">
+                    <i class="fa fa-book"></i> <span>Commodities</span>
+                    <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+                </a>
+                <ul class="treeview-menu">
+                    <li><a href="${pageContext.request.contextPath}/admin/allgoods"><i class="fa fa-circle-o"></i>All goods</a></li>
+                    <li class="treeview">
+                        <a href="#">
+                            <i class="fa fa-circle-o"></i>Classes
+                            <span class="pull-right-container">
+                                <i class="fa fa-angle-left pull-right"></i>
+                            </span>
+                        </a>
+                        <ul class="treeview-menu">
+                            <li><a href="${pageContext.request.contextPath}/admin/ebook"><i class="fa fa-square-o"></i>Electronic book</a></li>
+                            <li><a href="${pageContext.request.contextPath}/admin/learnvideo"><i class="fa fa-square-o"></i>Learning video</a></li>
+                            <li><a href="${pageContext.request.contextPath}/admin/paper"><i class="fa fa-square-o"></i>Test Paper Analysis</a></li>
+                            <li><a href="${pageContext.request.contextPath}/admin/flowchart"><i class="fa fa-square-o"></i>Flowchart</a></li>
+                            <li><a href="${pageContext.request.contextPath}/admin/protocol"><i class="fa fa-square-o"></i>Protocol</a></li>
+                            <li><a href="${pageContext.request.contextPath}/admin/studynote"><i class="fa fa-square-o"></i>Study notes</a></li>
+                            <li><a href="${pageContext.request.contextPath}/admin/vip"><i class="fa fa-square-o"></i>Vip</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="${pageContext.request.contextPath}/admin/orders"><i class="fa fa-circle-o"></i>Add</a></li>
+                </ul>
+            </li>
         </ul>
     </section>
     <!-- /.sidebar -->

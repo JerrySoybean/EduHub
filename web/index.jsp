@@ -122,7 +122,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                         <div class="col-pic">
                             <p>Lorem Ipsum</p>
                             <label></label>
-                            <h5>Flow Chart</h5>
+                            <h5>Flowchart</h5>
                         </div></a>
                 </div>
                 <div class="col-3">
@@ -130,7 +130,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                         <div class="col-pic">
                             <p>Lorem Ipsum</p>
                             <label></label>
-                            <h5>Studying Notes</h5>
+                            <h5>Study Notes</h5>
                         </div></a>
                 </div>
             </div>

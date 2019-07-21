@@ -8,10 +8,4 @@ public interface GformatMapper {
     int insert(Gformat record);
 
     int insertSelective(Gformat record);
-
-    Gformat selectByPrimaryKey(String id);
-
-    int updateByPrimaryKeySelective(Gformat record);
-
-    int updateByPrimaryKey(Gformat record);
 }

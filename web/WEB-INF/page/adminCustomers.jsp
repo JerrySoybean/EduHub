@@ -37,7 +37,7 @@
         <section class="content-header">
             <h1>
                 Data Tables
-                <small>advanced tables</small>
+                <small>All customers</small>
             </h1>
             <ol class="breadcrumb">
                 <li><a href="#"><i class="fa fa-dashboard"></i>Home</a></li>
@@ -53,12 +53,12 @@
                     <table class="table"id="cusTable">
                         <thead>
                         <tr>
-                            <th>name</th>
-                            <th>email</th>
-                            <th>tel</th>
-                            <th>sex</th>
-                            <th>birthday</th>
-                            <th>privilege</th>
+                            <th>Name</th>
+                            <th>Email</th>
+                            <th>Tel</th>
+                            <th>Sex</th>
+                            <th>Birthday</th>
+                            <th>Privilege</th>
                             <th>Operate</th>
                         </tr>
                         </thead>

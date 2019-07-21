@@ -5,7 +5,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Orders</title>
+    <title>All Goods</title>
     <!-- Tell the browser to be responsive to screen width -->
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
     <!-- Bootstrap 3.3.7 -->
@@ -37,7 +37,7 @@
         <section class="content-header">
             <h1>
                 Data Tables
-                <small>All orders</small>
+                <small>All goods</small>
             </h1>
             <ol class="breadcrumb">
                 <li><a href="#"><i class="fa fa-dashboard"></i>Home</a></li>
@@ -50,30 +50,32 @@
         <section class="content">
             <div class="row">
                 <div class="col-xs-12">
-                    <table class="table" id="allOrders">
+                    <table class="table"id="cusTable">
                         <thead>
                         <tr>
-                            <th>Customer</th>
-                            <th>Item</th>
+                            <th>Name</th>
+                            <th>Class</th>
+                            <th>Format</th>
                             <th>Price</th>
-                            <th>Status</th>
-                            <th>Create time</th>
-                            <th>Finish time</th>
-                            <th>Comment</th>
+                            <th>Size</th>
+                            <th>Visible</th>
+                            <th>Restriction</th>
+                            <th>Upload time</th>
                             <th>Operate</th>
                         </tr>
                         </thead>
                         <tbody>
-                        <c:forEach items="${all_orders}" var="order" varStatus="loop">
+                        <c:forEach items="${goods}" var="good" varStatus="loop">
                             <tr>
-                                <td>${all_customers[loop.count-1].name}</td>
-                                <td>${all_goods[loop.count-1].name}</td>
-                                <td>$${all_goods[loop.count-1].price}</td>
-                                <td>${order.statusTxt}</td>
-                                <td>${order.createTimeTxt}</td>
-                                <td>${order.finishTimeTxt}</td>
-                                <td><button class="btn btn-link btn-xs btn-flat btn_comment" id="${order.comment}"><i class="fa fa-comment-o"></i>See comment</button></td>
-                                <td><a href="${pageContext.request.contextPath}/admin/order?id=${order.id}" class="btn btn-link btn-xs btn-flat"><i class="fa fa-edit"></i>Modify</a></td>
+                                <td>${good.name}</td>
+                                <td>${classname[loop.count-1]}</td>
+                                <td>${good.gformatId}</td>
+                                <td>$${good.price}</td>
+                                <td>${good.size}</td>
+                                <td>${good.visible}</td>
+                                <td>${good.restriction}</td>
+                                <td>${good.uploadDateTxt}</td>
+                                <td><a href="${pageContext.request.contextPath}/admin/item?id=${good.id}" class="btn btn-link btn-xs btn-flat"><i class="fa fa-edit"></i>Modify</a></td>
                             </tr>
                         </c:forEach>
                         </tbody>
@@ -107,16 +109,10 @@
 <script src="${pageContext.request.contextPath}/adminlte/dist/js/adminlte.min.js"></script>
 <!-- AdminLTE for demo purposes -->
 <script src="${pageContext.request.contextPath}/adminlte/dist/js/demo.js"></script>
-<script src="${pageContext.request.contextPath}/template/layer/layer.js"></script>
 <!-- page script -->
 <script>
     $(function () {
-        $('#allOrders').DataTable();
-
-        $(".btn_comment").click(function () {
-            var comment = $(this).attr("id");
-            layer.alert(comment)
-        });
+        $('#cusTable').DataTable();
     })
 </script>
 </body>

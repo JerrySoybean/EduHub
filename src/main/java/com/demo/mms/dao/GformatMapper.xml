@@ -3,24 +3,14 @@
 <mapper namespace="com.demo.mms.dao.GformatMapper">
   <resultMap id="BaseResultMap" type="com.demo.mms.common.domain.Gformat">
     <id column="id" jdbcType="VARCHAR" property="id" />
-    <result column="fname" jdbcType="VARCHAR" property="fname" />
   </resultMap>
-  <sql id="Base_Column_List">
-    id, fname
-  </sql>
-  <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="BaseResultMap">
-    select 
-    <include refid="Base_Column_List" />
-    from gformat
-    where id = #{id,jdbcType=VARCHAR}
-  </select>
   <delete id="deleteByPrimaryKey" parameterType="java.lang.String">
     delete from gformat
     where id = #{id,jdbcType=VARCHAR}
   </delete>
   <insert id="insert" parameterType="com.demo.mms.common.domain.Gformat">
-    insert into gformat (id, fname)
-    values (#{id,jdbcType=VARCHAR}, #{fname,jdbcType=VARCHAR})
+    insert into gformat (id)
+    values (#{id,jdbcType=VARCHAR})
   </insert>
   <insert id="insertSelective" parameterType="com.demo.mms.common.domain.Gformat">
     insert into gformat
@@ -28,31 +18,11 @@
       <if test="id != null">
         id,
       </if>
-      <if test="fname != null">
-        fname,
-      </if>
     </trim>
     <trim prefix="values (" suffix=")" suffixOverrides=",">
       <if test="id != null">
         #{id,jdbcType=VARCHAR},
       </if>
-      <if test="fname != null">
-        #{fname,jdbcType=VARCHAR},
-      </if>
     </trim>
   </insert>
-  <update id="updateByPrimaryKeySelective" parameterType="com.demo.mms.common.domain.Gformat">
-    update gformat
-    <set>
-      <if test="fname != null">
-        fname = #{fname,jdbcType=VARCHAR},
-      </if>
-    </set>
-    where id = #{id,jdbcType=VARCHAR}
-  </update>
-  <update id="updateByPrimaryKey" parameterType="com.demo.mms.common.domain.Gformat">
-    update gformat
-    set fname = #{fname,jdbcType=VARCHAR}
-    where id = #{id,jdbcType=VARCHAR}
-  </update>
 </mapper>

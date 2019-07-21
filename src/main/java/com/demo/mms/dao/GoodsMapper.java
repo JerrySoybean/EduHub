@@ -2,6 +2,8 @@ package com.demo.mms.dao;
 
 import com.demo.mms.common.domain.Goods;
 
+import java.util.List;
+
 public interface GoodsMapper {
     int deleteByPrimaryKey(String id);
 
@@ -14,4 +16,8 @@ public interface GoodsMapper {
     int updateByPrimaryKeySelective(Goods record);
 
     int updateByPrimaryKey(Goods record);
+
+    List<Goods> selectAllGoods();
+
+    List<Goods> selectByGclassId(String gclassId);
 }

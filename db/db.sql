@@ -30,7 +30,6 @@ CREATE TABLE `gclass` (
 DROP TABLE IF EXISTS `gformat`; -- 文件类型表
 CREATE TABLE `gformat` (
                         `id` varchar(64) NOT NULL PRIMARY KEY,
-                        `fname` varchar(64) NOT NULL -- 文件类型名
 ) ENGINE=InnoDB ;
 
 DROP TABLE IF EXISTS `goods`; -- 商品表
@@ -44,7 +43,8 @@ CREATE TABLE `goods` (
                           `picture_path`  varchar(128) default null,
                           `size` int(16) not null ,
                           `thumb_up`  int(8)  default 0,
-                          `restriction` boolean default 0,
+                          `visible` boolean default 1 not null,
+                          `restriction` boolean default 0 not null,
                           `upload_date` datetime not null,
                           foreign key (gclass_id) references gclass(id), -- 商品类型
                           foreign key (gformat_id) references gformat(id)

@@ -61,12 +61,12 @@
                                         <div class="col1">
                                             <div class="h_nav">
                                                 <ul>
-                                                    <li><a href="${pageContext.request.contextPath}/customer/learnvideo"><h4>Leaning Video</h4></a></li>
+                                                    <li><a href="${pageContext.request.contextPath}/customer/learnvideo"><h4>Learning Video</h4></a></li>
                                                     <li><a href="${pageContext.request.contextPath}/customer/ebook"><h4>Electronic Books</h4></a></li>
                                                     <li><a href="${pageContext.request.contextPath}/customer/paper"><h4>Test Paper Analysis</h4></a></li>
-                                                    <li><a href="${pageContext.request.contextPath}/customer/flowchart"><h4>Flow Chart</h4></a></li>
+                                                    <li><a href="${pageContext.request.contextPath}/customer/flowchart"><h4>Flowchart</h4></a></li>
                                                     <li><a href="${pageContext.request.contextPath}/customer/protocol"><h4>Experiment Protocol</h4></a></li>
-                                                    <li><a href="${pageContext.request.contextPath}/customer/studynote"><h4>Studying Notes</h4></a></li>
+                                                    <li><a href="${pageContext.request.contextPath}/customer/studynote"><h4>Study Notes</h4></a></li>
                                                 </ul>
                                             </div>
                                         </div>
