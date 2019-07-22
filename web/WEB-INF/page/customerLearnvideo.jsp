@@ -61,11 +61,12 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
         <c:forEach  begin="1" end="${rownum}">
             <%--<p>hello</p>--%>
             <div class="mid-popular">
+            <div class="mid-popular">
                 <c:forEach begin="1" end="4">
                     <div class="col-md-3 item-grid simpleCart_shelfItem" <%=count++%>>
                         <div class=" mid-pop">
                             <div class="pro-img">
-                                <img src="${pageContext.request.contextPath}<%=goods.get(count).getPicturePath()%>" class="img-responsive" alt="">
+                                <img src="${pageContext.request.contextPath}\template\<%=goods.get(count).getPicturePath()%>" class="img-responsive" alt="">
                                 <div class="zoom-icon ">
                                     <a class="picture" href="${pageContext.request.contextPath}/template/images/pc.jpg" rel="title" class="b-link-stripe b-animate-go  thickbox"><i class="glyphicon glyphicon-search icon "></i></a>
                                     <a href="${pageContext.request.contextPath}/customer/item?id=<%=goods.get(count).getId()%>"><i class="glyphicon glyphicon-menu-right icon"></i></a>
@@ -104,7 +105,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
         <div class="col-md-3 item-grid simpleCart_shelfItem" <%=count++%>>
             <div class=" mid-pop">
                 <div class="pro-img">
-                    <img src="${pageContext.request.contextPath}<%=goods.get(count).getPicturePath()%>" class="img-responsive" alt="">
+                    <img src="${pageContext.request.contextPath}\template\<%=goods.get(count).getPicturePath()%>" class="img-responsive" alt="">
                     <div class="zoom-icon ">
                         <a class="picture" href="${pageContext.request.contextPath}/template/images/pc.jpg" rel="title" class="b-link-stripe b-animate-go  thickbox"><i class="glyphicon glyphicon-search icon "></i></a>
                         <a href="${pageContext.request.contextPath}/customer/item?id=<%=goods.get(count).getId()%>"><i class="glyphicon glyphicon-menu-right icon"></i></a>
@@ -113,7 +114,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                 <div class="mid-1">
                     <div class="women">
                         <div class="women-top">
-                            <span>Women</span>
+                            <span>Women \template\<%=goods.get(count).getPicturePath()%></span>
                             <h6><a href="${pageContext.request.contextPath}/customer/item?id=<%=goods.get(count).getId()%>"><%=goods.get(count).getName()%></a></h6>
                         </div>
                         <div class="img item_add">

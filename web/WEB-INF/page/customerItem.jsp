@@ -68,8 +68,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
             <div class="col-md-5 grid">
                 <div class="flexslider">
                     <ul class="slides">
-                        <li data-thumb="${pageContext.request.contextPath}${item.picturePath}">
-                            <div class="thumb-image"> <img src="${pageContext.request.contextPath}${item.picturePath}" data-imagezoom="true" class="img-responsive"> </div>
+                        <li data-thumb="${pageContext.request.contextPath}/template/${item.picturePath}">
+                            <div class="thumb-image"> <img src="${pageContext.request.contextPath}/template/${item.picturePath}" data-imagezoom="true" class="img-responsive"> </div>
                         </li>
                         <%--<li data-thumb="${pageContext.request.contextPath}/template/images/si1.jpg">
                             <div class="thumb-image"> <img src="${pageContext.request.contextPath}/template/images/si1.jpg" data-imagezoom="true" class="img-responsive"> </div>
@@ -186,48 +186,12 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
             <div class=" rsidebar span_1_of_left">
                 <h4 class="cate">Categories</h4>
                 <ul class="menu-drop">
-                    <li class="item1"><a href="/customer/learnvideo">Learning Video</a>
-                        <ul class="cute">
-                            <li class="subitem1"><a href="product.jsp">Cute Kittens </a></li>
-                            <li class="subitem2"><a href="product.jsp">Strange Stuff </a></li>
-                            <li class="subitem3"><a href="product.jsp">Automatic Fails </a></li>
-                        </ul>
-                    </li>
-                    <li class="item2"><a href="/customer/ebook">Electronic Books</a>
-                        <ul class="cute">
-                            <li class="subitem1"><a href="product.jsp">Cute Kittens </a></li>
-                            <li class="subitem2"><a href="product.jsp">Strange Stuff </a></li>
-                            <li class="subitem3"><a href="product.jsp">Automatic Fails </a></li>
-                        </ul>
-                    </li>
-                    <li class="item3"><a href="/customer/paper">Test Paper Analysis</a>
-                        <ul class="cute">
-                            <li class="subitem1"><a href="product.jsp">Cute Kittens </a></li>
-                            <li class="subitem2"><a href="product.jsp">Strange Stuff </a></li>
-                            <li class="subitem3"><a href="product.jsp">Automatic Fails</a></li>
-                        </ul>
-                    </li>
-                    <li class="item4"><a href="/customer/protocol">Experiment Protocol</a>
-                        <ul class="cute">
-                            <li class="subitem1"><a href="product.jsp">Cute Kittens </a></li>
-                            <li class="subitem2"><a href="product.jsp">Strange Stuff </a></li>
-                            <li class="subitem3"><a href="product.jsp">Automatic Fails</a></li>
-                        </ul>
-                    </li>
-                    <li class="item4"><a href="/customer/flowchart">Flow Chart</a>
-                        <ul class="cute">
-                            <li class="subitem1"><a href="product.jsp">Cute Kittens </a></li>
-                            <li class="subitem2"><a href="product.jsp">Strange Stuff </a></li>
-                            <li class="subitem3"><a href="product.jsp">Automatic Fails</a></li>
-                        </ul>
-                    </li>
-                    <li class="item4"><a href="/customer/studynote">Studying Note</a>
-                        <ul class="cute">
-                            <li class="subitem1"><a href="product.jsp">Cute Kittens </a></li>
-                            <li class="subitem2"><a href="product.jsp">Strange Stuff </a></li>
-                            <li class="subitem3"><a href="product.jsp">Automatic Fails </a></li>
-                        </ul>
-                    </li>
+                    <li class="item_cate"><a href="${pageContext.request.contextPath}/customer/learnvideo">Learning Video</a></li>
+                    <li class="item_cate"><a href="${pageContext.request.contextPath}/customer/ebook">Electronic Books</a></li>
+                    <li class="item_cate"><a href="${pageContext.request.contextPath}/customer/paper">Test Paper Analysis</a></li>
+                    <li class="item_cate"><a href="${pageContext.request.contextPath}/customer/protocol">Experiment Protocol</a></li>
+                    <li class="item_cate"><a href="${pageContext.request.contextPath}/customer/flowchart">Flow Chart</a></li>
+                    <li class="item_cate"><a href="${pageContext.request.contextPath}/customer/studynote">Studying Note</a></li>
                 </ul>
             </div>
             <!--initiate accordion-->
@@ -237,7 +201,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                         menu_a  = $('.menu-drop > li > a');
                     menu_ul.hide();
                     menu_a.click(function(e) {
-                        e.preventDefault();
+                        // e.preventDefault();
                         if(!$(this).hasClass('active')) {
                             menu_a.removeClass('active');
                             menu_ul.filter(':visible').slideUp('normal');
@@ -250,58 +214,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
                 });
             </script>
-            <!--//menu-->
-            <section  class="sky-form">
-                <h4 class="cate">Discounts</h4>
-                <div class="row row1 scroll-pane">
-                    <div class="col col-4">
-                        <label class="checkbox"><input type="checkbox" name="checkbox" checked=""><i></i>Upto - 10% (20)</label>
-                    </div>
-                    <div class="col col-4">
-                        <label class="checkbox"><input type="checkbox" name="checkbox"><i></i>40% - 50% (5)</label>
-                        <label class="checkbox"><input type="checkbox" name="checkbox"><i></i>30% - 20% (7)</label>
-                        <label class="checkbox"><input type="checkbox" name="checkbox"><i></i>10% - 5% (2)</label>
-                        <label class="checkbox"><input type="checkbox" name="checkbox"><i></i>Other(50)</label>
-                    </div>
-                </div>
-            </section>
 
-
-            <!---->
-            <section  class="sky-form">
-                <h4 class="cate">Type</h4>
-                <div class="row row1 scroll-pane">
-                    <div class="col col-4">
-                        <label class="checkbox"><input type="checkbox" name="checkbox" checked=""><i></i>Sofa Cum Beds (30)</label>
-                    </div>
-                    <div class="col col-4">
-                        <label class="checkbox"><input type="checkbox" name="checkbox"><i></i>Bags  (30)</label>
-                        <label class="checkbox"><input type="checkbox" name="checkbox"><i></i>Caps & Hats (30)</label>
-                        <label class="checkbox"><input type="checkbox" name="checkbox"><i></i>Jackets & Coats   (30)</label>
-                        <label class="checkbox"><input type="checkbox" name="checkbox"><i></i>Jeans  (30)</label>
-                        <label class="checkbox"><input type="checkbox" name="checkbox"><i></i>Shirts   (30)</label>
-                        <label class="checkbox"><input type="checkbox" name="checkbox"><i></i>Sunglasses  (30)</label>
-                        <label class="checkbox"><input type="checkbox" name="checkbox"><i></i>Swimwear  (30)</label>
-                    </div>
-                </div>
-            </section>
-            <section  class="sky-form">
-                <h4 class="cate">Brand</h4>
-                <div class="row row1 scroll-pane">
-                    <div class="col col-4">
-                        <label class="checkbox"><input type="checkbox" name="checkbox" checked=""><i></i>Roadstar</label>
-                    </div>
-                    <div class="col col-4">
-                        <label class="checkbox"><input type="checkbox" name="checkbox"><i></i>Levis</label>
-                        <label class="checkbox"><input type="checkbox" name="checkbox"><i></i>Persol</label>
-                        <label class="checkbox"><input type="checkbox" name="checkbox"><i></i>Nike</label>
-                        <label class="checkbox"><input type="checkbox" name="checkbox"><i></i>Edwin</label>
-                        <label class="checkbox"><input type="checkbox" name="checkbox" ><i></i>New Balance</label>
-                        <label class="checkbox"><input type="checkbox" name="checkbox"><i></i>Paul Smith</label>
-                        <label class="checkbox"><input type="checkbox" name="checkbox"><i></i>Ray-Ban</label>
-                    </div>
-                </div>
-            </section>
         </div>
         <div class="clearfix"> </div>
     </div>

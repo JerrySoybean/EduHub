@@ -11,13 +11,9 @@
             <div class="col-md-3 footer-middle-in">
                 <h6>Information</h6>
                 <ul class=" in">
-                    <li><a href="${pageContext.request.contextPath}/404">About</a></li>
                     <li><a href="${pageContext.request.contextPath}/contact">Contact Us</a></li>
-                    <li><a href="#">Returns</a></li>
-                    <li><a href="${pageContext.request.contextPath}/contact">Site Map</a></li>
                 </ul>
                 <ul class="in in1">
-                    <li><a href="#">Order History</a></li>
                     <li><a href="${pageContext.request.contextPath}/wishlist">Wish List</a></li>
                     <li><a href="${pageContext.request.contextPath}/login">Login</a></li>
                 </ul>
