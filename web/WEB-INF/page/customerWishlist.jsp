@@ -76,7 +76,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                         <th>BalaBala</th>
                     </tr>
                     <c:forEach items="${wish_list}" var="good" varStatus="loop">
-                        <tr class="cart-header" id="${good.goodsId}">
+                        <tr class="cart-header" id="${good.id}">
                             <td class="ring-in"><a href="customerItem.jsp" class="at-in"><img src="${pageContext.request.contextPath}/template/images/ch.jpg" class="img-responsive" alt=""></a>
                                 <div class="sed">
                                     <h5><a href="customerItem.jsp">${goods_in_wishlist[loop.count-1].name}</a></h5>
@@ -164,7 +164,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                 data: {goods_id: goods_idvalue},
                 success: function (msg) {
                     if (msg["ok"]) {
-                        layer.msg('Added successfully!');
+                        layer.msg('Added successfully!', {time: 700});
                     }
                 },
                 dataType: "json"

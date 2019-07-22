@@ -81,7 +81,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                 </div>
             </div>
             <div class="col-md-7 single-top-in">
-                <div class="span_2_of_a1 simpleCart_shelfItem">
+                <div class="span_2_of_a1 simpleCart_shelfItem" id="${item.id}">
                     <h3>${item.name}</h3>
                     <p class="in-para"> There are many variations of passages of Lorem Ipsum.</p>
                     <div class="price_single">
@@ -92,7 +92,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                     <p class="quick_desc">${item.introduction}</p>
                     <div class="wish-list">
                         <ul>
-                            <li class="wish"><a href="/collections/addwish?id=${item.id}"><span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span>Add to Wishlist</a></li>
+                            <li class="wish"><button class="add-to item_add hvr-skew-backward btn_addwish"><span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span>Add to Wishlist</button></li>
                         </ul>
                     </div>
                     <div class="quantity">
@@ -116,7 +116,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                     </script>
                     <!--quantity-->
 
-                    <a href="/cart/addcart?id=${item.id}" class="add-to item_add hvr-skew-backward">Add to cart</a>
+                    <button class="add-to item_add hvr-skew-backward btn_addcart">Add to cart</button>
                     <div class="clearfix"> </div>
                 </div>
 
@@ -337,7 +337,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 <script defer src="${pageContext.request.contextPath}/template/js/jquery.flexslider.js"></script>
 <link rel="stylesheet" href="${pageContext.request.contextPath}/template/css/flexslider.css" type="text/css" media="screen" />
-
+<script src="${pageContext.request.contextPath}/template/layer/layer.js "></script>
 <script>
     // Can also be used with $(document).ready()
     $(window).load(function() {
@@ -347,7 +347,38 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
         });
     });
     $(".wish-list").on("click",".wish",function(){
+    });
 
+    $(".btn_addcart").click(function () {
+        var $div = $(this).parent("div");
+        var goods_idvalue = $div.attr("id");
+        $.ajax({
+            type: "POST",
+            url: "${pageContext.request.contextPath}/cart/addcart",
+            data: {goods_id: goods_idvalue},
+            success: function (msg) {
+                if (msg["ok"]) {
+                    layer.msg('Added successfully!', {time: 700});
+                }
+            },
+            dataType: "json"
+        });
+    });
+
+    $(".btn_addwish").click(function () {
+        var $div = $(this).parent("div").parent("div");
+        var goods_idvalue = $div.attr("id");
+        $.ajax({
+            type: "POST",
+            url: "${pageContext.request.contextPath}/collections/addwish",
+            data: {goods_id: goods_idvalue},
+            success: function (msg) {
+                if (msg["ok"]) {
+                    layer.msg('Added successfully!', {time: 700});
+                }
+            },
+            dataType: "json"
+        });
     });
 </script>
 

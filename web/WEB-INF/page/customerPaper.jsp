@@ -55,7 +55,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <div class="content-mid">
     <h3>Test Paper Analysis</h3>
     <label class="line"></label>
-    <c:if test="${rownum > 1}">
+    <c:if test="${rownum > 0}">
         <c:forEach  begin="1" end="${rownum}">
             <%--<p>hello</p>--%>
             <div class="mid-popular">

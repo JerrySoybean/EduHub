@@ -61,6 +61,7 @@ public class CollectionsController {
     @RequestMapping("/del")
     @ResponseBody
     public Object delCollection(String id) {
+        System.out.print(id);
         collectionsService.deleteCollectionById(id);
         Map<String, Object> map = new HashMap<>();
         map.put("ok", true);

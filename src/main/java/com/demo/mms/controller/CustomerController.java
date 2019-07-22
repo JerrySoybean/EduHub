@@ -120,7 +120,6 @@ public class CustomerController {
             return "customerLogin";
         }
         List<Goods> goods = goodsService.findGoodsByGclassId("video");
-        System.out.println("video");
         Customer customer = (Customer) temp;
         int size = goods.size();
         if (customer.getPrivilege() == false) {
@@ -267,9 +266,9 @@ public class CustomerController {
     }
 
     @RequestMapping("/item")
-    public String toItem(ModelMap modelMap,String id){
+    public String toItem(ModelMap modelMap, String id) {
         Goods goods = goodsService.findGoodsById(id);
-        modelMap.put("item",goods);
+        modelMap.put("item", goods);
         return "customerItem";
     }
 
