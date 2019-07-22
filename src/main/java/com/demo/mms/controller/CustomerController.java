@@ -114,7 +114,6 @@ public class CustomerController {
 
     @RequestMapping("/learnvideo")
     public String toLearnvideo(ModelMap modelMap, HttpSession session){
-
         Object temp = session.getAttribute("curr_customer");
         if (temp == null) {
             return "customerLogin";
@@ -145,7 +144,7 @@ public class CustomerController {
         if (temp == null) {
             return "customerLogin";
         }
-        List<Goods> goods = goodsService.findGoodsByGclassId("ebooks");
+        List<Goods> goods = goodsService.findGoodsByGclassId("ebook");
         Customer customer = (Customer) temp;
         int size = goods.size();
         if (customer.getPrivilege() == false) {
@@ -184,9 +183,9 @@ public class CustomerController {
         }
         int row_num = size/4;
         int last_col_num = size%4;
-        modelMap.put("rownum",row_num);
-        modelMap.put("lcolnum",last_col_num);
-        modelMap.put("goods_size",size);
+        modelMap.put("rownum", row_num);
+        modelMap.put("lcolnum", last_col_num);
+        modelMap.put("goods", goods);
         return "customerPaper";
     }
     @RequestMapping("/flowchart")
@@ -209,9 +208,9 @@ public class CustomerController {
         }
         int row_num = size/4;
         int last_col_num = size%4;
-        modelMap.put("rownum",row_num);
-        modelMap.put("lcolnum",last_col_num);
-        modelMap.put("goods_size",size);
+        modelMap.put("rownum", row_num);
+        modelMap.put("lcolnum", last_col_num);
+        modelMap.put("goods", goods);
         return "customerFlowchart";
     }
     @RequestMapping("/protocol")
@@ -234,9 +233,9 @@ public class CustomerController {
         }
         int row_num = size/4;
         int last_col_num = size%4;
-        modelMap.put("rownum",row_num);
-        modelMap.put("lcolnum",last_col_num);
-        modelMap.put("goods_size",size);
+        modelMap.put("rownum", row_num);
+        modelMap.put("lcolnum", last_col_num);
+        modelMap.put("goods", goods);
         return "customerProtocol";
     }
     @RequestMapping("/studynote")
@@ -259,9 +258,9 @@ public class CustomerController {
         }
         int row_num = size/4;
         int last_col_num = size%4;
-        modelMap.put("rownum",row_num);
-        modelMap.put("lcolnum",last_col_num);
-        modelMap.put("goods_size",size);
+        modelMap.put("rownum", row_num);
+        modelMap.put("lcolnum", last_col_num);
+        modelMap.put("goods", goods);
         return "customerStudynote";
     }
 

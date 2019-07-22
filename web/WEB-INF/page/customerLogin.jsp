@@ -63,7 +63,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <div class="container">
     <div class="login">
         <p class="login-box-msg" style="color: orangered">&nbsp;&nbsp;&nbsp;&nbsp;${msg}</p><br>
-        <form action="/customer/login">
+        <form action="${pageContext.request.contextPath}/customer/login">
             <div class="col-md-6 login-do">
                 <div class="login-mail">
                     <input type="text" placeholder="Username" name="name">

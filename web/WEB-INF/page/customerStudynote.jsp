@@ -1,8 +1,10 @@
+<%@ page import="com.demo.mms.common.domain.Goods" %>
+<%@ page import="java.util.List" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <html>
 <head>
-    <title>Customer Information</title>
+    <title>Study Notes</title>
     <link href="${pageContext.request.contextPath}/template/css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
     <!-- Custom Theme files -->
     <!--theme-style-->
@@ -52,27 +54,28 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <!--content-->
 <!--products-->
 <div class="content-mid">
-    <h3>Studying Notes</h3>
+    <h3>Study Notes</h3>
     <label class="line"></label>
+    <% int count = -1; List<Goods> goods = (List<Goods>) request.getAttribute("goods"); %>
     <c:if test="${rownum > 0}">
         <c:forEach  begin="1" end="${rownum}">
             <%--<p>hello</p>--%>
             <div class="mid-popular">
                 <c:forEach begin="1" end="4">
-                    <div class="col-md-3 item-grid simpleCart_shelfItem">
+                    <div class="col-md-3 item-grid simpleCart_shelfItem" <%=count++%>>
                         <div class=" mid-pop">
                             <div class="pro-img">
-                                <img src="${pageContext.request.contextPath}/template/images/pc.jpg" class="img-responsive" alt="">
+                                <img src="${pageContext.request.contextPath}<%=goods.get(count).getPicturePath()%>" class="img-responsive" alt="">
                                 <div class="zoom-icon ">
                                     <a class="picture" href="${pageContext.request.contextPath}/template/images/pc.jpg" rel="title" class="b-link-stripe b-animate-go  thickbox"><i class="glyphicon glyphicon-search icon "></i></a>
-                                    <a href="${pageContext.request.contextPath}/customer/item"><i class="glyphicon glyphicon-menu-right icon"></i></a>
+                                    <a href="${pageContext.request.contextPath}/customer/item?id=<%=goods.get(count).getId()%>"><i class="glyphicon glyphicon-menu-right icon"></i></a>
                                 </div>
                             </div>
                             <div class="mid-1">
                                 <div class="women">
                                     <div class="women-top">
                                         <span>Women</span>
-                                        <h6><a href="${pageContext.request.contextPath}/customer/item">Sed ut perspiciati</a></h6>
+                                        <h6><a href="${pageContext.request.contextPath}/customer/item?id=<%=goods.get(count).getId()%>"><%=goods.get(count).getName()%></a></h6>
                                     </div>
                                     <div class="img item_add">
                                         <a href="#"><img src="${pageContext.request.contextPath}/template/images/ca.png" alt=""></a>
@@ -80,7 +83,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                     <div class="clearfix"></div>
                                 </div>
                                 <div class="mid-2">
-                                    <p ><label>$100.00</label><em class="item_price">$70.00</em></p>
+                                    <p ><label>$100.00</label><em class="item_price">$<%=goods.get(count).getPrice()%></em></p>
                                     <div class="block">
                                         <div class="starbox small ghosting"> </div>
                                     </div>
@@ -98,20 +101,20 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     </c:if>
 
     <c:forEach begin="1" end="${lcolnum}">
-        <div class="col-md-3 item-grid simpleCart_shelfItem">
+        <div class="col-md-3 item-grid simpleCart_shelfItem" <%=count++%>>
             <div class=" mid-pop">
                 <div class="pro-img">
-                    <img src="${pageContext.request.contextPath}/template/images/pc.jpg" class="img-responsive" alt="">
+                    <img src="${pageContext.request.contextPath}<%=goods.get(count).getPicturePath()%>" class="img-responsive" alt="">
                     <div class="zoom-icon ">
                         <a class="picture" href="${pageContext.request.contextPath}/template/images/pc.jpg" rel="title" class="b-link-stripe b-animate-go  thickbox"><i class="glyphicon glyphicon-search icon "></i></a>
-                        <a href="${pageContext.request.contextPath}/customer/item"><i class="glyphicon glyphicon-menu-right icon"></i></a>
+                        <a href="${pageContext.request.contextPath}/customer/item?id=<%=goods.get(count).getId()%>"><i class="glyphicon glyphicon-menu-right icon"></i></a>
                     </div>
                 </div>
                 <div class="mid-1">
                     <div class="women">
                         <div class="women-top">
                             <span>Women</span>
-                            <h6><a href="${pageContext.request.contextPath}/customer/item">Sed ut perspiciati</a></h6>
+                            <h6><a href="${pageContext.request.contextPath}/customer/item?id=<%=goods.get(count).getId()%>"><%=goods.get(count).getName()%></a></h6>
                         </div>
                         <div class="img item_add">
                             <a href="#"><img src="${pageContext.request.contextPath}/template/images/ca.png" alt=""></a>
@@ -119,7 +122,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                         <div class="clearfix"></div>
                     </div>
                     <div class="mid-2">
-                        <p ><label>$100.00</label><em class="item_price">$70.00</em></p>
+                        <p ><label>$100.00</label><em class="item_price">$<%=goods.get(count).getPrice()%></em></p>
                         <div class="block">
                             <div class="starbox small ghosting"> </div>
                         </div>

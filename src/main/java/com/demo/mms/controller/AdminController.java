@@ -166,7 +166,7 @@ public class AdminController {
     }
 
     @RequestMapping("/additem")
-    public String addItem(ModelMap modelMap, Goods item, HttpSession session) {
+    public String addItem(ModelMap modelMap, Goods item, String newPicturePath, HttpSession session) {
         String msg = null;
         if (item.getName() == "") {
             msg = "Name cannot be empty";
@@ -186,9 +186,8 @@ public class AdminController {
         item.setId(IDGenerator.getId());
         item.setUploadDate(new Date());
         item.setThumbUp(0);
-        String pic_path = item.getPicturePath();
-        if (!pic_path.equals("")) {
-            item.setPicturePath(pic_path.substring(pic_path.indexOf("EduHub") + 10));
+        if (!newPicturePath.equals("")) {
+            item.setPicturePath(newPicturePath.substring(newPicturePath.indexOf("EduHub") + 10));
         }
         goodsService.addGoods(item);
         return allGoods(modelMap, session);

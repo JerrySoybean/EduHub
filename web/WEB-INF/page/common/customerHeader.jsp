@@ -24,7 +24,7 @@
                     <li><a href="#"><i class="ic1"></i></a></li>
                     <li><a href="#"><i class="ic2"></i></a></li>
                     <li><a href="#"><i class="ic3"></i></a></li>
-                    <li><a href="/admin/tologin"><i class="ic4"></i></a></li>
+                    <li><a href="${pageContext.request.contextPath}/admin/tologin"><i class="ic4"></i></a></li>
                 </ul>
 
             </div>
