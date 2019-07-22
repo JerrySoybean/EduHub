@@ -68,15 +68,15 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
             <div class="col-md-5 grid">
                 <div class="flexslider">
                     <ul class="slides">
-                        <li data-thumb="${pageContext.request.contextPath}/template/images/si.jpg">
-                            <div class="thumb-image"> <img src="${pageContext.request.contextPath}/template/images/si.jpg" data-imagezoom="true" class="img-responsive"> </div>
+                        <li data-thumb="${pageContext.request.contextPath}${item.picturePath}">
+                            <div class="thumb-image"> <img src="${pageContext.request.contextPath}${item.picturePath}" data-imagezoom="true" class="img-responsive"> </div>
                         </li>
-                        <li data-thumb="${pageContext.request.contextPath}/template/images/si1.jpg">
+                        <%--<li data-thumb="${pageContext.request.contextPath}/template/images/si1.jpg">
                             <div class="thumb-image"> <img src="${pageContext.request.contextPath}/template/images/si1.jpg" data-imagezoom="true" class="img-responsive"> </div>
                         </li>
                         <li data-thumb="${pageContext.request.contextPath}/template/images/si2.jpg">
                             <div class="thumb-image"> <img src="${pageContext.request.contextPath}/template/images/si2.jpg" data-imagezoom="true" class="img-responsive"> </div>
-                        </li>
+                        </li>--%>
                     </ul>
                 </div>
             </div>
@@ -366,8 +366,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     });
 
     $(".btn_addwish").click(function () {
-        var $div = $(this).parent("div").parent("div");
+        var $div = $(this).parent().parent().parent().parent("div");
         var goods_idvalue = $div.attr("id");
+        alert(goods_idvalue)
         $.ajax({
             type: "POST",
             url: "${pageContext.request.contextPath}/collections/addwish",

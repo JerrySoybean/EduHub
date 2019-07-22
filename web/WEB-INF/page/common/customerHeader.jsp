@@ -20,6 +20,7 @@
 
             <div class="col-sm-5 header-social">
                 <ul >
+                    <li><a href="${pageContext.request.contextPath}/vip/test"><img src="${pageContext.request.contextPath}/images/vip.jpg"></li>
                     <li><a href="#"><i></i></a></li>
                     <li><a href="#"><i class="ic1"></i></a></li>
                     <li><a href="#"><i class="ic2"></i></a></li>

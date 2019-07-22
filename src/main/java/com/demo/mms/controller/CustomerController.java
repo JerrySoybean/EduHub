@@ -14,7 +14,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 import javax.servlet.http.HttpSession;
 import java.util.ArrayList;
-import java.util.Iterator;
 import java.util.List;
 
 @Controller
@@ -94,13 +93,11 @@ public class CustomerController {
         String customer_id = ((Customer) session.getAttribute("curr_customer")).getId();
         Customer customer = customerService.findCustomerById(id);
         modelMap.put("cus",customer);
-        System.out.println(customer.getBirthday());
         return "customerInfo";
     }
 
     @RequestMapping("/infoupdate")
     public String infoToupdate(Customer customer){
-                                                    System.out.println(customer.getBirthdayTxt());
         customerService.updateCustomer(customer);
         return "customerHome";
     }

@@ -151,7 +151,12 @@ public class AdminController {
     @RequestMapping("/updateitem")
     public String updateItem(Goods item, String newPicturePath, ModelMap modelMap, HttpSession session) {
         if (!newPicturePath.equals("")) {
-            item.setPicturePath(newPicturePath.substring(newPicturePath.indexOf("EduHub") + 10));
+            int last_index = newPicturePath.lastIndexOf('\\');
+            if (last_index != -1) {
+                item.setPicturePath("\\images\\" + newPicturePath.substring(last_index + 1));
+            } else {
+                item.setPicturePath("\\images\\" + newPicturePath);
+            }
         }
         goodsService.updateItem(item);
         return allGoods(modelMap, session);
@@ -187,7 +192,12 @@ public class AdminController {
         item.setUploadDate(new Date());
         item.setThumbUp(0);
         if (!newPicturePath.equals("")) {
-            item.setPicturePath(newPicturePath.substring(newPicturePath.indexOf("EduHub") + 10));
+            int last_index = newPicturePath.lastIndexOf('\\');
+            if (last_index != -1) {
+                item.setPicturePath("\\images\\" + newPicturePath.substring(last_index + 1));
+            } else {
+                item.setPicturePath("\\images\\" + newPicturePath);
+            }
         }
         goodsService.addGoods(item);
         return allGoods(modelMap, session);
