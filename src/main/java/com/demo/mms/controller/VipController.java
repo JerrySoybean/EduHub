@@ -1,7 +1,9 @@
 package com.demo.mms.controller;
 
 import com.demo.mms.common.domain.Customer;
+import com.demo.mms.common.domain.Goods;
 import com.demo.mms.service.CustomerService;
+import com.demo.mms.service.GoodsService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
@@ -14,6 +16,8 @@ import javax.servlet.http.HttpSession;
 public class VipController {
     @Autowired
     private CustomerService customerService;
+    @Autowired
+    private GoodsService goodsService;
     @RequestMapping("/test")
     public String testVip(HttpSession session, ModelMap modelMap) {
         if (session.getAttribute("curr_customer") == null) {
@@ -22,11 +26,11 @@ public class VipController {
         String customer_id = ((Customer) session.getAttribute("curr_customer")).getId();
         Customer customer = customerService.findCustomerById(customer_id);
         if (customer.getPrivilege()) {
-
-            //modelMap.put("item", item);
-            return "customerItem";
-        } else {
             return "customerHome";
+        } else {
+            Goods item = goodsService.findGoodsById("vip");
+            modelMap.put("item", item);
+            return "customerItem";
         }
     }
 }

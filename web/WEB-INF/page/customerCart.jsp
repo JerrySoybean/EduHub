@@ -43,7 +43,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     </script>
     <!---//End-rate---->
 </head>
-<body>
+<>
 <jsp:include page="/WEB-INF/page/common/customerHeader.jsp"/>
 <!--banner-->
 <div class="banner-top">
@@ -62,23 +62,28 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                 <table class="table-heading simpleCart_shelfItem" id="cartTable">
                     <tr>
                         <th class="table-grid">Item</th>
-
                         <th>Prices</th>
                         <th>Size</th>
-                        <th>BalaBala</th>
+                        <th>Check</th>
                     </tr>
                     <c:forEach items="${cart_list}" var="item" varStatus="loop">
                         <tr class="cart-header" id="${item.id}">
-                            <td class="ring-in"><a href="customerItem.jsp" class="at-in"><img src="${pageContext.request.contextPath}/template/images/ch.jpg" class="img-responsive" alt=""></a>
+                            <td class="ring-in"><a href="${pageContext.request.contextPath}/customer/item?id=${item.goodsId}" class="at-in"><img src="${pageContext.request.contextPath}${goods_in_cart[loop.count-1].picturePath}" class="img-responsive" alt=""></a>
                                 <div class="sed">
-                                    <h5><a href="customerItem.jsp">${goods_in_cart[loop.count-1].name}</a></h5>
+                                    <h5><a href="${pageContext.request.contextPath}/customer/item?id=${item.goodsId}">${goods_in_cart[loop.count-1].name}</a></h5>
                                     <p>${goods_in_cart[loop.count-1].introduction}</p>
                                 </div>
                                 <div class="clearfix"> </div>
                             </td>
                             <td>$${goods_in_cart[loop.count-1].price}</td>
-                            <td>${goods_in_cart[loop.count-1].size}</td>
-                            <td class="item_price">balabala</td>
+                            <td>${goods_in_cart[loop.count-1].size} KB</td>
+                            <td class="item_price">
+                                <div class="checkbox">
+                                    <label>
+                                        <input id="checkbox" type="checkbox" checked="checked" value="${goods_in_cart[loop.count-1].price}">
+                                    </label>
+                                </div>
+                            </td>
                             <td class="add-check">
                                 <a class="item_add hvr-skew-backward" href="#">Buy</a>
                                 <button class="item_add hvr-skew-backward btn_del">Delete</button>
@@ -89,34 +94,16 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
             </div>
         </div>
         <div class="produced">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Total: ${countTotal}</h3>
+                </div>
+            </div>
             <button class="hvr-skew-backward buy_all" id="${goods_in_cart}">Buy all</button>
         </div>
     </div>
 </div>
-
-<!--//login-->
-<!--brand-->
-<div class="container">
-    <div class="brand">
-        <div class="col-md-3 brand-grid">
-            <img src="${pageContext.request.contextPath}/template/images/ic.png" class="img-responsive" alt="">
-        </div>
-        <div class="col-md-3 brand-grid">
-            <img src="${pageContext.request.contextPath}/template/images/ic1.png" class="img-responsive" alt="">
-        </div>
-        <div class="col-md-3 brand-grid">
-            <img src="${pageContext.request.contextPath}/template/images/ic2.png" class="img-responsive" alt="">
-        </div>
-        <div class="col-md-3 brand-grid">
-            <img src="${pageContext.request.contextPath}/template/images/ic3.png" class="img-responsive" alt="">
-        </div>
-        <div class="clearfix"></div>
-    </div>
-</div>
-<!--//brand-->
-</div>
-
-</div>
+<br>
 <!--//content-->
 <jsp:include page="/WEB-INF/page/common/footer.jsp"/>
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
@@ -167,6 +154,17 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                 dataType: "json"
             });
         });
+        
+        function countTotal() {
+            var $priceObj = $('#checkbox');
+            var total = 0;
+            $.each($priceObj, function (i, e) {
+                if (e.attr("checked") == true) {
+                    total += e.attr("value");
+                }
+            })
+            return total;
+        }
     })
 </script>
 </body>

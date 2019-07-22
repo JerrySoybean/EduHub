@@ -14,13 +14,13 @@
                 <ul >
                     <li><a href="${pageContext.request.contextPath}/customer/tologin">Login</a></li>
                     <li><a href="${pageContext.request.contextPath}/customer/toregister">Register</a></li>
-                    <li><a href="${pageContext.request.contextPath}/cart/cart">Checkout</a></li>
+                    <li><a href="${pageContext.request.contextPath}/vip/test">Vip</a></li>
                 </ul>
             </div>
 
             <div class="col-sm-5 header-social">
                 <ul >
-                    <li><a href="${pageContext.request.contextPath}/vip/test"><img src="${pageContext.request.contextPath}/images/vip.jpg"></li>
+                    <%--<li><a href="${pageContext.request.contextPath}/vip/test"><img src="${pageContext.request.contextPath}/images/vip.jpg" width="20" height="20"></a></li>--%>
                     <li><a href="#"><i></i></a></li>
                     <li><a href="#"><i class="ic1"></i></a></li>
                     <li><a href="#"><i class="ic2"></i></a></li>

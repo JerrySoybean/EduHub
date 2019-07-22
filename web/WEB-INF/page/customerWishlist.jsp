@@ -77,15 +77,15 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                     </tr>
                     <c:forEach items="${wish_list}" var="good" varStatus="loop">
                         <tr class="cart-header" id="${good.id}">
-                            <td class="ring-in"><a href="customerItem.jsp" class="at-in"><img src="${pageContext.request.contextPath}/template/images/ch.jpg" class="img-responsive" alt=""></a>
+                            <td class="ring-in"><a href="${pageContext.request.contextPath}/customer/item?id=${good.goodsId}" class="at-in"><img src="${pageContext.request.contextPath}${goods_in_wishlist[loop.count-1].picturePath}" class="img-responsive" alt=""></a>
                                 <div class="sed">
-                                    <h5><a href="customerItem.jsp">${goods_in_wishlist[loop.count-1].name}</a></h5>
+                                    <h5><a href="${pageContext.request.contextPath}/customer/item?id=${good.goodsId}">${goods_in_wishlist[loop.count-1].name}</a></h5>
                                     <p>${goods_in_wishlist[loop.count-1].introduction}</p>
                                 </div>
                                 <div class="clearfix"> </div>
                             </td>
                             <td>$${goods_in_wishlist[loop.count-1].price}</td>
-                            <td>${goods_in_wishlist[loop.count-1].size}</td>
+                            <td>${goods_in_wishlist[loop.count-1].size} KB</td>
                             <td class="item_price">balabala</td>
                             <td class="add-check">
                                 <a class="item_add hvr-skew-backward" href="#">Buy</a>
@@ -100,29 +100,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     </div>
 </div>
 
-<!--//login-->
-<!--brand-->
-<div class="container">
-    <div class="brand">
-        <div class="col-md-3 brand-grid">
-            <img src="${pageContext.request.contextPath}/template/images/ic.png" class="img-responsive" alt="">
-        </div>
-        <div class="col-md-3 brand-grid">
-            <img src="${pageContext.request.contextPath}/template/images/ic1.png" class="img-responsive" alt="">
-        </div>
-        <div class="col-md-3 brand-grid">
-            <img src="${pageContext.request.contextPath}/template/images/ic2.png" class="img-responsive" alt="">
-        </div>
-        <div class="col-md-3 brand-grid">
-            <img src="${pageContext.request.contextPath}/template/images/ic3.png" class="img-responsive" alt="">
-        </div>
-        <div class="clearfix"></div>
-    </div>
-</div>
-<!--//brand-->
-</div>
-
-</div>
 <!--//content-->
 <jsp:include page="/WEB-INF/page/common/footer.jsp"/>
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
