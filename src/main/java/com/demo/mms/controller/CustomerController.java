@@ -305,4 +305,12 @@ public class CustomerController {
         ordersService.updateOrders(orders);
         return "customerOrders";
     }
+
+    @RequestMapping("/search")
+    public String searchGoods(String name,ModelMap modelMap){
+        List<Goods> goods = goodsService.findGoodsByName(name);
+        System.out.println(goods.get(0).getName());
+        modelMap.put("goods",goods);
+        return "searchresult";
+    }
 }

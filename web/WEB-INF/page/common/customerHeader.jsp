@@ -218,11 +218,11 @@
                 <link href="${pageContext.request.contextPath}/template/css/popuo-box.css" rel="stylesheet" type="text/css" media="all"/>
                 <script src="${pageContext.request.contextPath}/template/js/jquery.magnific-popup.js" type="text/javascript"></script>
                 <!---//pop-up-box---->
-                <div id="small-dialog" class="mfp-hide">
+                <div id="small-dialog" class="mfp-hide" action="${pageContext.request.contextPath}/customer/search">
                     <div class="search-top">
                         <div class="login-search">
                             <input type="submit" value="">
-                            <input type="text" value="Search.." onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Search..';}">
+                            <input type="text" value="Search.." onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Search..';}" name="name">
                         </div>
                         <p>Shopin</p>
                     </div>

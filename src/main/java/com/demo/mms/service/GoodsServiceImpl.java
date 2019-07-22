@@ -38,4 +38,10 @@ public class GoodsServiceImpl implements GoodsService {
     public void addGoods(Goods item) {
         goodsMapper.insert(item);
     }
+
+    @Override
+    public List<Goods> findGoodsByName(String name) {
+        System.out.println("hello");
+        return goodsMapper.selectGoodsByName(name);
+    }
 }

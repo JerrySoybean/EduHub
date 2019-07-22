@@ -20,4 +20,6 @@ public interface GoodsMapper {
     List<Goods> selectAllGoods();
 
     List<Goods> selectByGclassId(String gclassId);
+
+    List<Goods> selectGoodsByName(String name);
 }
