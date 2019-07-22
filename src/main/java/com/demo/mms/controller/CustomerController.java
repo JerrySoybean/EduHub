@@ -86,12 +86,12 @@ public class CustomerController {
     }
 
     @RequestMapping("/info")
-    public String info(ModelMap modelMap, String id, HttpSession session){
+    public String info(ModelMap modelMap, HttpSession session){
         if (session.getAttribute("curr_customer") == null) {
             return "customerLogin";
         }
         String customer_id = ((Customer) session.getAttribute("curr_customer")).getId();
-        Customer customer = customerService.findCustomerById(id);
+        Customer customer = customerService.findCustomerById(customer_id);
         modelMap.put("cus",customer);
         return "customerInfo";
     }

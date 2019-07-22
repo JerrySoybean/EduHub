@@ -41,9 +41,21 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
             });
         });
     </script>
+
+    <script type="text/javascript">
+        function compute(obj) {
+            var total = 0;
+            var checkboxes = document.getElementsByName("checkbox");
+            for (var index = 0; index < checkboxes.length; index++) {
+                if (checkboxes[index].checked) {
+                    total += parseFloat(checkboxes[index].value);
+                }
+            }
+            myspan.innerHTML = "$" + total;
+        }
+    </script>
     <!---//End-rate---->
 </head>
-<>
 <jsp:include page="/WEB-INF/page/common/customerHeader.jsp"/>
 <!--banner-->
 <div class="banner-top">
@@ -62,8 +74,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                 <table class="table-heading simpleCart_shelfItem" id="cartTable">
                     <tr>
                         <th class="table-grid">Item</th>
-                        <th>Prices</th>
+                        <th>Format</th>
                         <th>Size</th>
+                        <th>Prices</th>
                         <th>Check</th>
                     </tr>
                     <c:forEach items="${cart_list}" var="item" varStatus="loop">
@@ -75,17 +88,18 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                 </div>
                                 <div class="clearfix"> </div>
                             </td>
-                            <td>$${goods_in_cart[loop.count-1].price}</td>
+                            <td>${goods_in_cart[loop.count-1].gformatId}</td>
                             <td>${goods_in_cart[loop.count-1].size} KB</td>
+                            <td>$${goods_in_cart[loop.count-1].price}</td>
                             <td class="item_price">
                                 <div class="checkbox">
                                     <label>
-                                        <input id="checkbox" type="checkbox" checked="checked" value="${goods_in_cart[loop.count-1].price}">
+                                        <input hidden="hidden" value="${goods_in_cart[loop.count-1]}">
+                                        <input name="checkbox" type="checkbox" onchange="compute(this)" value="${goods_in_cart[loop.count-1].price}">
                                     </label>
                                 </div>
                             </td>
                             <td class="add-check">
-                                <a class="item_add hvr-skew-backward" href="#">Buy</a>
                                 <button class="item_add hvr-skew-backward btn_del">Delete</button>
                             </td>
                         </tr>
@@ -96,10 +110,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
         <div class="produced">
             <div class="panel panel-default">
                 <div class="panel-heading">
-                    <h3 class="panel-title">Total: ${countTotal}</h3>
+                    <h3 class="panel-title">Total: <span id="myspan">$0</span></h3>
                 </div>
             </div>
-            <button class="hvr-skew-backward buy_all" id="${goods_in_cart}">Buy all</button>
+            <button class="hvr-skew-backward btn_buy">Buy</button>
         </div>
     </div>
 </div>
@@ -135,37 +149,26 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
             });
             layer.close(index);
         })
-    })
-</script>
-<script>
-    $(function () {
-        $(".buy_all").click(function () {
-            var goods_list = $(this).attr("id");
-            console.info(goods_list);
+    });
+
+    $(".btn_buy").click(function () {
+        var goods_list = [];
+        var itemId_list = [];
+        $("input[name='checkbox']:checked").each(function (i) {
+            goods_list[i] = $(this).prev().attr("value");
+            itemId_list[i] = $(this).parents("tr").attr("id");
+        })
+        layer.confirm('Do you want to buy these?', {icon: 3, title: "Confirm"}, function(index) {
             $.ajax({
                 type: "POST",
-                url: "${pageContext.request.contextPath}/pay",
-                data: {goods: goods_list},
-                // success: function (msg) {
-                //     if (msg["ok"]) {
-                //         layer.msg('Added successfully!');
-                //     }
-                // },
+                url: "${pageContext.request.contextPath}/pay/topay",
+                data: {goods_list: goods_list, itemId_list: itemId_list},
                 dataType: "json"
             });
+
+            layer.close(index);
         });
-        
-        function countTotal() {
-            var $priceObj = $('#checkbox');
-            var total = 0;
-            $.each($priceObj, function (i, e) {
-                if (e.attr("checked") == true) {
-                    total += e.attr("value");
-                }
-            })
-            return total;
-        }
-    })
+    });
 </script>
 </body>
 </html>

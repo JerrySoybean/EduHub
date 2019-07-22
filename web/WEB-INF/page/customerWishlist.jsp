@@ -71,9 +71,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                 <table class="table-heading simpleCart_shelfItem" id="cartTable">
                     <tr>
                         <th class="table-grid">Item</th>
-                        <th>Prices</th>
+                        <th>Format</th>
                         <th>Size</th>
-                        <th>BalaBala</th>
+                        <th>Prices</th>
                     </tr>
                     <c:forEach items="${wish_list}" var="good" varStatus="loop">
                         <tr class="cart-header" id="${good.id}">
@@ -84,11 +84,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                 </div>
                                 <div class="clearfix"> </div>
                             </td>
-                            <td>$${goods_in_wishlist[loop.count-1].price}</td>
+                            <td class="item_price">${goods_in_wishlist[loop.count-1].gformatId}</td>
                             <td>${goods_in_wishlist[loop.count-1].size} KB</td>
-                            <td class="item_price">balabala</td>
+                            <td>$${goods_in_wishlist[loop.count-1].price}</td>
                             <td class="add-check">
-                                <a class="item_add hvr-skew-backward" href="#">Buy</a>
                                 <button class="item_add hvr-skew-backward btn_add">Add to cart</button>
                                 <button class="item_add hvr-skew-backward btn_del">Delete</button>
                             </td>
