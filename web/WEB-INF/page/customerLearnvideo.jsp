@@ -4,7 +4,7 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <html>
 <head>
-    <title>Learning Videos</title>
+    <title>Learning Video</title>
     <link href="${pageContext.request.contextPath}/template/css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
     <!-- Custom Theme files -->
     <!--theme-style-->
@@ -114,7 +114,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                 <div class="mid-1">
                     <div class="women">
                         <div class="women-top">
-                            <span>Women \template\<%=goods.get(count).getPicturePath()%></span>
+                            <span>Women</span>
                             <h6><a href="${pageContext.request.contextPath}/customer/item?id=<%=goods.get(count).getId()%>"><%=goods.get(count).getName()%></a></h6>
                         </div>
                         <div class="img item_add">

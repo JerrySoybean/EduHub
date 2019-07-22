@@ -309,7 +309,11 @@ public class CustomerController {
     @RequestMapping("/search")
     public String searchGoods(String name,ModelMap modelMap){
         List<Goods> goods = goodsService.findGoodsByName(name);
-        System.out.println(goods.get(0).getName());
+        int size = goods.size();
+        int row_num = size/4;
+        int last_col_num = size%4;
+        modelMap.put("rownum", row_num);
+        modelMap.put("lcolnum", last_col_num);
         modelMap.put("goods",goods);
         return "searchresult";
     }

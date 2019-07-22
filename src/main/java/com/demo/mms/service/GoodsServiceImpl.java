@@ -41,7 +41,7 @@ public class GoodsServiceImpl implements GoodsService {
 
     @Override
     public List<Goods> findGoodsByName(String name) {
-        System.out.println("hello");
+//        System.out.println("hello");
         return goodsMapper.selectGoodsByName(name);
     }
 }
