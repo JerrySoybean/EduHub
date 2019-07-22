@@ -154,6 +154,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     $(".btn_buy").click(function () {
         var goods_list = [];
         var itemId_list = [];
+        // var a = ["1", "12", "123"];
         $("input[name='checkbox']:checked").each(function (i) {
             goods_list[i] = $(this).prev().attr("value");
             itemId_list[i] = $(this).parents("tr").attr("id");
@@ -162,10 +163,15 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
             $.ajax({
                 type: "POST",
                 url: "${pageContext.request.contextPath}/pay/topay",
-                data: {goods_list: goods_list, itemId_list: itemId_list},
+                data: JSON.stringify(itemId_list),
+                // data: {itemId_list: JSON.stringify(itemId_list)},
+                // data: {itemId_list: itemId_list},
+                // data: {goods_list: goods_list, itemId_list: itemId_list},
+                // data: {goods_list: JSON.stringify(goods_list), itemId_list: JSON.stringify(itemId_list)},
+                //traditional: true,
+                contentType:"application/json;charset=utf-8",
                 dataType: "json"
             });
-
             layer.close(index);
         });
     });
