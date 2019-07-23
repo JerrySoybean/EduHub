@@ -27,4 +27,9 @@ public class CartServiceImpl implements CartService {
     public int deleteItemById(String id) {
         return cartMapper.deleteByPrimaryKey(id);
     }
+
+    @Override
+    public Cart findItemById(String id) {
+        return cartMapper.selectByPrimaryKey(id);
+    }
 }

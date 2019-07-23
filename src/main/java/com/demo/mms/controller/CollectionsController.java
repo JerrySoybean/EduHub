@@ -47,6 +47,9 @@ public class CollectionsController {
     @RequestMapping("/addwish")
     @ResponseBody
     public Object addWish(String goods_id, HttpSession session){
+        if (session.getAttribute("curr_customer") == null) {
+            return "customerLogin";
+        }
         String curr_customer_id = ((Customer) session.getAttribute("curr_customer")).getId();
         Collections collection = new Collections();
         collection.setId(IDGenerator.getId());

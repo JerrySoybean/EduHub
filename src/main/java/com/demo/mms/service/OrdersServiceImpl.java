@@ -37,4 +37,10 @@ public class OrdersServiceImpl implements OrdersService {
     public List<Orders> findOrdersByGoodsId(String goods_id) {
         return ordersMapper.selectByGoodsId(goods_id);
     }
+
+    @Override
+    @Transactional
+    public void insertOrder(Orders orders) {
+        ordersMapper.insert(orders);
+    }
 }

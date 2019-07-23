@@ -152,21 +152,22 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     });
 
     $(".btn_buy").click(function () {
-        var itemId_list = [];
-        // var a = ["1", "12", "123"];
+        var parm = "";
         $("input[name='checkbox']:checked").each(function (i) {
-            itemId_list[i] = $(this).parents("tr").attr("id");
+           // itemId_list[i] = $(this).parents("tr").attr("id");
+            parm = parm + ("itemId_list=" + $(this).parents("tr").attr("id") + "&");
         });
-        console.info(goods_list);
         layer.confirm('Do you want to buy these?', {icon: 3, title: "Confirm"}, function(index) {
-            $.ajax({
+           /* $.ajax({
                 type: "POST",
-                url: "${pageContext.request.contextPath}/pay/topay",
+                url: "${pageContext.request.contextPath}/customer/topay",
                 data: JSON.stringify(itemId_list),
                 contentType:"application/json;charset=utf-8",
                 dataType: "json"
-            });
+            });*/
             layer.close(index);
+            // console.info(parm);
+            window.location.href = "${pageContext.request.contextPath}/customer/topay?" + parm
         });
     });
 </script>

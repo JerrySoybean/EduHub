@@ -14,4 +14,6 @@ public interface OrdersService {
     List<Orders> findAllOrders();
 
     List<Orders> findOrdersByGoodsId(String goods_id);
+
+    void insertOrder(Orders orders);
 }

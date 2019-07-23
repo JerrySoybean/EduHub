@@ -114,6 +114,10 @@ public class Goods {
         return restriction;
     }
 
+    public String getRestrictionTxt() {
+        return restriction ? "Vip item" : "Not vip item";
+    }
+
     public void setRestriction(Boolean restriction) {
         this.restriction = restriction;
     }

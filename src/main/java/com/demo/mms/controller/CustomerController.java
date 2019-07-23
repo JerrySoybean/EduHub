@@ -4,17 +4,17 @@ import com.demo.mms.common.domain.Customer;
 import com.demo.mms.common.domain.Goods;
 import com.demo.mms.common.domain.Orders;
 import com.demo.mms.common.utils.IDGenerator;
-import com.demo.mms.service.CustomerService;
-import com.demo.mms.service.GclassService;
-import com.demo.mms.service.GoodsService;
-import com.demo.mms.service.OrdersService;
+import com.demo.mms.service.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import javax.servlet.http.HttpSession;
+import java.math.BigDecimal;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 @Controller
@@ -28,6 +28,8 @@ public class CustomerController {
     private OrdersService ordersService;
     @Autowired
     private GclassService gclassService;
+    @Autowired
+    private CartService cartService;
 
     @RequestMapping("/tologin")
     public String toLogin() {
@@ -114,14 +116,10 @@ public class CustomerController {
 
     @RequestMapping("/learnvideo")
     public String toLearnvideo(ModelMap modelMap, HttpSession session){
-        Object temp = session.getAttribute("curr_customer");
-        if (temp == null) {
-            return "customerLogin";
-        }
         List<Goods> goods = goodsService.findGoodsByGclassId("video");
-        Customer customer = (Customer) temp;
         int size = goods.size();
-        if (customer.getPrivilege() == false) {
+        Object temp = session.getAttribute("curr_customer");
+        if (temp == null || ((Customer) temp).getPrivilege() == false) {
             for (int i = 0; i < size; i++) {
                 if (goods.get(i).getRestriction() == true) {
                     goods.remove(i);
@@ -140,14 +138,10 @@ public class CustomerController {
 
     @RequestMapping("/ebook")
     public String toEbook(ModelMap modelMap, HttpSession session){
-        Object temp = session.getAttribute("curr_customer");
-        if (temp == null) {
-            return "customerLogin";
-        }
         List<Goods> goods = goodsService.findGoodsByGclassId("ebook");
-        Customer customer = (Customer) temp;
         int size = goods.size();
-        if (customer.getPrivilege() == false) {
+        Object temp = session.getAttribute("curr_customer");
+        if (temp == null || ((Customer) temp).getPrivilege() == false) {
             for (int i = 0; i < size; i++) {
                 if (goods.get(i).getRestriction() == true) {
                     goods.remove(i);
@@ -165,14 +159,10 @@ public class CustomerController {
     }
     @RequestMapping("/paper")
     public String toPaper(ModelMap modelMap, HttpSession session){
-        Object temp = session.getAttribute("curr_customer");
-        if (temp == null) {
-            return "customerLogin";
-        }
         List<Goods> goods = goodsService.findGoodsByGclassId("paper");
-        Customer customer = (Customer) temp;
         int size = goods.size();
-        if (customer.getPrivilege() == false) {
+        Object temp = session.getAttribute("curr_customer");
+        if (temp == null || ((Customer) temp).getPrivilege() == false) {
             for (int i = 0; i < size; i++) {
                 if (goods.get(i).getRestriction() == true) {
                     goods.remove(i);
@@ -190,14 +180,10 @@ public class CustomerController {
     }
     @RequestMapping("/flowchart")
     public String toFlowchart(ModelMap modelMap, HttpSession session){
-        Object temp = session.getAttribute("curr_customer");
-        if (temp == null) {
-            return "customerLogin";
-        }
         List<Goods> goods = goodsService.findGoodsByGclassId("flowchart");
-        Customer customer = (Customer) temp;
         int size = goods.size();
-        if (customer.getPrivilege() == false) {
+        Object temp = session.getAttribute("curr_customer");
+        if (temp == null || ((Customer) temp).getPrivilege() == false) {
             for (int i = 0; i < size; i++) {
                 if (goods.get(i).getRestriction() == true) {
                     goods.remove(i);
@@ -215,14 +201,10 @@ public class CustomerController {
     }
     @RequestMapping("/protocol")
     public String toProtocol(ModelMap modelMap, HttpSession session){
-        Object temp = session.getAttribute("curr_customer");
-        if (temp == null) {
-            return "customerLogin";
-        }
         List<Goods> goods = goodsService.findGoodsByGclassId("protocol");
-        Customer customer = (Customer) temp;
         int size = goods.size();
-        if (customer.getPrivilege() == false) {
+        Object temp = session.getAttribute("curr_customer");
+        if (temp == null || ((Customer) temp).getPrivilege() == false) {
             for (int i = 0; i < size; i++) {
                 if (goods.get(i).getRestriction() == true) {
                     goods.remove(i);
@@ -240,14 +222,10 @@ public class CustomerController {
     }
     @RequestMapping("/studynote")
     public String toStudynote(ModelMap modelMap, HttpSession session){
-        Object temp = session.getAttribute("curr_customer");
-        if (temp == null) {
-            return "customerLogin";
-        }
         List<Goods> goods = goodsService.findGoodsByGclassId("note");
-        Customer customer = (Customer) temp;
         int size = goods.size();
-        if (customer.getPrivilege() == false) {
+        Object temp = session.getAttribute("curr_customer");
+        if (temp == null || ((Customer) temp).getPrivilege() == false) {
             for (int i = 0; i < size; i++) {
                 if (goods.get(i).getRestriction() == true) {
                     goods.remove(i);
@@ -265,7 +243,10 @@ public class CustomerController {
     }
 
     @RequestMapping("/item")
-    public String toItem(ModelMap modelMap, String id) {
+    public String toItem(ModelMap modelMap, String id, HttpSession session) {
+        if (session.getAttribute("curr_customer") == null) {
+            return "customerLogin";
+        }
         Goods goods = goodsService.findGoodsById(id);
         String category = gclassService.findGclassById(goods.getGclassId()).getCname();
         List<Orders> orders = ordersService.findOrdersByGoodsId(id);
@@ -313,8 +294,48 @@ public class CustomerController {
         return "customerOrders";
     }
 
+    @RequestMapping("/topay")
+    public String toPay(ModelMap modelMap, @RequestParam("itemId_list") String[] itemId_list, HttpSession session) {
+        if (session.getAttribute("curr_customer") == null) {
+            return "customerLogin";
+        }
+        int size = itemId_list.length;
+        List<Goods> goods_list = new ArrayList<>(size);
+        List<String> class_list = new ArrayList<>(size);
+        BigDecimal total_price = new BigDecimal("0");
+        int total_size = 0;
+        for (int i = 0; i < size; i++) {
+            Goods goods = goodsService.findGoodsById(cartService.findItemById(itemId_list[i]).getGoodsId());
+            class_list.add(gclassService.findGclassById(goods.getGclassId()).getCname());
+            goods_list.add(goods);
+            total_price = total_price.add(goods.getPrice());
+            total_size += goods.getSize();
+        }
+        modelMap.put("itemId_list", itemId_list);
+        modelMap.put("goods_list", goods_list);
+        modelMap.put("total_size", total_size);
+        modelMap.put("total_price", total_price);
+        return "pay";
+    }
+
+    @RequestMapping("/pay")
+    public String paySuccess(ModelMap modelMap, String[] itemId_list, HttpSession session) {
+        int size = itemId_list.length;
+        for (int i = 0; i < size; i++) {
+            Orders order = new Orders();
+            order.setId(IDGenerator.getId());
+            order.setCustomerId(((Customer) session.getAttribute("curr_customer")).getId());
+            order.setGoodsId((cartService.findItemById(itemId_list[i])).getGoodsId());
+            order.setStatus(false);
+            order.setCreateTime(new Date());
+            cartService.deleteItemById(itemId_list[i]);
+            ordersService.insertOrder(order);
+        }
+        return lookOrders(modelMap, session);
+    }
+
     @RequestMapping("/search")
-    public String searchGoods(String name,ModelMap modelMap){
+    public String searchGoods(String name, ModelMap modelMap){
         List<Goods> goods = goodsService.findGoodsByName(name);
         int size = goods.size();
         int row_num = size/4;

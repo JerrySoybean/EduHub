@@ -10,4 +10,6 @@ public interface CartService {
     int addItem(Cart item);
 
     int deleteItemById(String id);
+
+    Cart findItemById(String id);
 }

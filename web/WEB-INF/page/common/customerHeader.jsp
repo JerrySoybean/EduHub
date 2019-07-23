@@ -56,7 +56,7 @@
                             <li><a class="header-button" href="${pageContext.request.contextPath}/customer/home">Home</a></li>
                             <li><a class="header-button" href="${pageContext.request.contextPath}/customer/info">Personal Information</a></li>
                             <li class="dropdown mega-dropdown active">
-                                <a class="color1" href="#" class="dropdown-toggle" data-toggle="dropdown">Product Class<span class="caret"></span></a>
+                                <a class="color1" href="#" class="dropdown-toggle" data-toggle="dropdown">Product Category<span class="caret"></span></a>
                                 <div class="dropdown-menu ">
                                     <div class="menu-top">
                                         <div class="col1">
