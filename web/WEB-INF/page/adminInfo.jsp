@@ -55,7 +55,7 @@
                         <!-- /.box-header -->
                         <!-- form start -->
                         <form class="form-horizontal" action="${pageContext.request.contextPath}/admin/submitnewinfo">
-
+                            <br><p class="login-box-msg" style="color: orangered">${msg}</p>
                             <input class="form-control" type="hidden" name="id" value="${curr_admin.id}">
                             <div class="box-body">
                                 <div class="form-group">
@@ -66,10 +66,24 @@
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <label class="col-sm-2 control-label" for="adminPassword">Password</label>
+                                    <label class="col-sm-2 control-label" for="adminOldPassword">Old password</label>
 
                                     <div class="col-sm-10">
-                                        <input class="form-control" id="adminPassword" type="password" name="password" value="${curr_admin.password}">
+                                        <input class="form-control" id="adminOldPassword" type="password" placeholder="Old password" name="password">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-sm-2 control-label" for="adminNewPassword">New password</label>
+
+                                    <div class="col-sm-10">
+                                        <input class="form-control" id="adminNewPassword" type="password" placeholder="New password" name="password2">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-sm-2 control-label" for="adminNewPassword2">Confirm new password</label>
+
+                                    <div class="col-sm-10">
+                                        <input class="form-control" id="adminNewPassword2" type="password" placeholder="Confirm new password" name="password3">
                                     </div>
                                 </div>
                                 <div class="form-group">
@@ -129,9 +143,6 @@
         });
         $(".btn_quxiao").click(function () {
             window.history.go(-1);
-        });
-        $(".btn_submit").click(function () {
-            alert("Edit successfully!");
         });
     });
 </script>

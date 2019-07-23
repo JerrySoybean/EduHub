@@ -60,7 +60,7 @@ public class CustomerController {
     }
 
     @RequestMapping("/toregister")
-    public String register(){
+    public String toRegister(){
         return "customerRegister";
     }
 
@@ -82,7 +82,7 @@ public class CustomerController {
             modelMap.put("msg", msg);
             return "customerRegister";
         }
-        if (customer.getPassword() != password2) {
+        if (!customer.getPassword().equals(password2)) {
             msg = "Two passwords are different";
             modelMap.put("msg", msg);
             return "customerRegister";
@@ -95,22 +95,35 @@ public class CustomerController {
     }
 
     @RequestMapping("/info")
-    public String info(ModelMap modelMap, HttpSession session){
+    public String info(HttpSession session){
         if (session.getAttribute("curr_customer") == null) {
             return "customerLogin";
         }
-        String customer_id = ((Customer) session.getAttribute("curr_customer")).getId();
-        Customer customer = customerService.findCustomerById(customer_id);
-        modelMap.put("cus",customer);
         return "customerInfo";
     }
 
     @RequestMapping("/infoupdate")
-    public String infoToupdate(Customer customer){
+    public String infoUpdate(ModelMap modelMap, Customer customer, String password2, String password3, HttpSession session){
+        String msg = null;
+        Customer customer_db = (Customer) session.getAttribute("curr_customer");
+        if (!customer.getPassword().equals(customer_db.getPassword())) {
+            msg = "Wrong password";
+            modelMap.put("msg", msg);
+            return "customerInfo";
+        }
+        if (password2 != "") {
+            if (password2.equals(password3)) {
+                customer.setPassword(password2);
+            } else {
+                msg = "Two passwords are different";
+                modelMap.put("msg", msg);
+                return "customerInfo";
+            }
+        }
         customerService.updateCustomer(customer);
+        session.setAttribute("curr_customer", customer);
         return "customerHome";
     }
-//    bug: birthday的月份永远显示的是一月
 
     @RequestMapping("/home")
     public String home(){

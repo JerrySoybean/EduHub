@@ -70,7 +70,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                     <i  class="glyphicon glyphicon-user"></i>
                 </div>
                 <div class="login-mail">
-                    <input type="number" placeholder="Phone Number" name = "tel">
+                    <input type="text" placeholder="Phone Number" name = "tel">
                     <i  class="glyphicon glyphicon-phone"></i>
                 </div>
                 <div class="login-mail">

@@ -135,7 +135,23 @@ public class AdminController {
     }
 
     @RequestMapping("/submitnewinfo")
-    public String updateAdmin(Admin admin, HttpSession session) {
+    public String updateAdmin(ModelMap modelMap, Admin admin, String password2, String password3, HttpSession session) {
+        String msg = null;
+        Admin admin_db = (Admin) session.getAttribute("curr_admin");
+        if (!admin.getPassword().equals(admin_db.getPassword())) {
+            msg = "Wrong password";
+            modelMap.put("msg", msg);
+            return "adminInfo";
+        }
+        if (password2 != "") {
+            if (password2.equals(password3)) {
+                admin.setPassword(password2);
+            } else {
+                msg = "Two passwords are different";
+                modelMap.put("msg", msg);
+                return "adminInfo";
+            }
+        }
         adminService.updateAdmin(admin);
         session.setAttribute("curr_admin", admin);
         return "adminHome";
@@ -376,7 +392,7 @@ public class AdminController {
             modelMap.put("msg", msg);
             return "adminAddAdmin";
         }
-        if (admin.getPassword() != password2) {
+        if (!admin.getPassword().equals(password2)) {
             msg = "Two passwords are different";
             modelMap.put("msg", msg);
             return "adminAddAdmin";

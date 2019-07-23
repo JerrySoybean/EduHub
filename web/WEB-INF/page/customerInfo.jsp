@@ -59,29 +59,42 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                 <%--form--%>
                 <div class="bs-example" data-example-id="simple-horizontal-form">
                     <form class="form-horizontal" action="${pageContext.request.contextPath}/customer/infoupdate">
-                        <input type="hidden" name="id" value="${cus.id}">
+                        <p class="login-box-msg" style="color: orangered">${msg}</p><br>
+                        <input type="hidden" name="id" value="${curr_customer.id}">
                         <div class="form-group">
                             <label for="inputName3" class="col-sm-2 control-label">UserName</label>
                             <div class="col-sm-10">
-                                <input type="text" class="form-control" id="inputName3" placeholder="Name" name="name" value = "${cus.name}">
+                                <input type="text" class="form-control" id="inputName3" placeholder="Name" name="name" value = "${curr_customer.name}">
                             </div>
                         </div>
                         <div class="form-group">
                             <label for="inputEmail3" class="col-sm-2 control-label">Email</label>
                             <div class="col-sm-10">
-                                <input type="email" class="form-control" id="inputEmail3" placeholder="Email" name="email" value="${cus.email}">
+                                <input type="email" class="form-control" id="inputEmail3" placeholder="Email" name="email" value="${curr_customer.email}">
                             </div>
                         </div>
                         <div class="form-group">
                             <label for="inputTel3" class="col-sm-2 control-label">Telephone Number</label>
                             <div class="col-sm-10">
-                                <input type="text" class="form-control" id="inputTel3" placeholder="Tel number" name="tel" value="${cus.tel}">
+                                <input type="tel" class="form-control" id="inputTel3" placeholder="Tel number" name="tel" value="${curr_customer.tel}">
                             </div>
                         </div>
                         <div class="form-group">
-                            <label for="inputPassword3" class="col-sm-2 control-label">Password</label>
+                            <label for="OldPassword" class="col-sm-2 control-label">Old Password</label>
                             <div class="col-sm-10">
-                                <input type="password" class="form-control" id="inputPassword3" placeholder="Password" name="password" value="${cus.password}">
+                                <input type="password" class="form-control" id="OldPassword" placeholder="Old password" name="password">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="NewPassword" class="col-sm-2 control-label">New Password</label>
+                            <div class="col-sm-10">
+                                <input type="password" class="form-control" id="NewPassword" placeholder="New password" name="password2">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="NewPassword2" class="col-sm-2 control-label">Confirm New Password</label>
+                            <div class="col-sm-10">
+                                <input type="password" class="form-control" id="NewPassword2" placeholder="Confirm new password" name="password3">
                             </div>
                         </div>
                         <div class="form-group">
@@ -90,12 +103,12 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                 <%--<input type="radio" name="sex"  checked="checked" value = "1"> Male
                                 &nbsp;&nbsp;&nbsp;&nbsp;
                                 <input type="radio" name="sex"  value = "0"> Female--%>
-                                <c:if test="${cus.sex==true}">
-                                    <input type="radio" name="sex"  checked="checked" value = "1">Male
+                                <c:if test="${curr_customer.sex==true}">
+                                    <input type="radio" name="sex"  checked="checked" value = "1">Male&nbsp;&nbsp;
                                     <input type="radio" name="sex"  value = "0">Female
                                 </c:if>
-                                <c:if test="${cus.sex==false}">
-                                    <input type="radio" name="sex" value = "1">Male
+                                <c:if test="${curr_customer.sex==false}">
+                                    <input type="radio" name="sex" value = "1">Male&nbsp;&nbsp;
                                     <input type="radio" name="sex" checked="checked" value = "0">Female
                                 </c:if>
                             </div>
@@ -103,7 +116,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                         <div class="form-group">
                             <label for="inputBirthday3" class="col-sm-2 control-label">Birthday</label>
                             <div class="col-sm-10">
-                                <input type="text" class="form-control" id="inputBirthday3" placeholder="Birthday" name="birthday" value="${cus.birthdayTxt}">
+                                <input type="text" class="form-control" id="inputBirthday3" placeholder="Birthday" name="birthday" value="${curr_customer.birthdayTxt}">
                             </div>
                         </div>
                         <div class="form-group">
