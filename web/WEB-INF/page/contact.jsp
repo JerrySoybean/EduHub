@@ -1,10 +1,3 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: mxdwa
-  Date: 2019/7/18
-  Time: 11:34
-  To change this template use File | Settings | File Templates.
---%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
@@ -48,6 +41,45 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
         });
     </script>
     <!---//End-rate---->
+    <style type="text/css">
+        .figure-list{
+            margin: 0;
+            padding: 0;
+        }
+        .figure-list:after{
+            content: "";
+            display: block;
+            clear: both;
+            height: 0;
+            overflow: hidden;
+            visibility: hidden;
+        }
+        .figure-list li{
+            list-style: none;
+            float: left;
+            width: 16.6%;
+            margin: 0 0% 0% 0;
+        }
+        .figure-list figure{
+            border: 0px solid #000;
+            position: relative;
+            width: 100%;
+            height: 0;
+            overflow: hidden;
+            margin: 0;
+            padding-bottom: 100%;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        .figure-list figure a{
+            display: block;
+            position: absolute;
+            width: 100%;
+            top: 0;
+            bottom: 0;
+        }
+    </style>
 </head>
 <body>
 <jsp:include page="/WEB-INF/page/common/customerHeader.jsp"/>
@@ -59,30 +91,42 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
         <h2><a href="${pageContext.request.contextPath}/customer/home">Home</a><label>/</label>Contact</h2>
     </div>
 </div>
+<ul class="figure-list">
+    <li>
+        <figure style="background-image:url(${pageContext.request.contextPath}/images/lcr.png)">
+            <a href="#"></a>
+        </figure>
+    </li>
+    <li>
+        <figure style="background-image:url(${pageContext.request.contextPath}/images/hmc.png)">
+            <a href="#"></a>
+        </figure>
+    </li>
+    <li>
+        <figure style="background-image:url(${pageContext.request.contextPath}/images/jby.jpg)">
+            <a href="#"></a>
+        </figure>
+    </li>
+    <li>
+        <figure style="background-image:url(${pageContext.request.contextPath}/images/wsn.jpg)">
+            <a href="#"></a>
+        </figure>
+    </li>
+    <li>
+        <figure style="background-image:url(${pageContext.request.contextPath}/images/htq.jpg)">
+            <a href="#"></a>
+        </figure>
+    </li>
+    <li>
+    <figure style="background-image:url(${pageContext.request.contextPath}/images/lt.jpg)">
+        <a href="#"></a>
+    </figure>
+    </li>
+</ul>
 
 <div class="contact">
     <table align="center">
         <tbody>
-            <tr>
-                <td>
-                    <img src="${pageContext.request.contextPath}/images/lcr.png" height="150" width="150">
-                </td>
-                <td>
-                    <img src="${pageContext.request.contextPath}/images/hmc.png" height="150" width="150">
-                </td>
-                <td>
-                    <img src="${pageContext.request.contextPath}/images/jby.jpg" height="150" width="150">
-                </td>
-                <td>
-                    <img src="${pageContext.request.contextPath}/images/wsn.jpg" height="150" width="150">
-                </td>
-                <td>
-                    <img src="${pageContext.request.contextPath}/images/htq.jpg" height="150" width="150">
-                </td>
-                <td>
-                    <img src="${pageContext.request.contextPath}/images/lt.jpg" height="150" width="150">
-                </td>
-            </tr>
             <tr>
                 <td>
                     李宬睿 Chengrui Li
