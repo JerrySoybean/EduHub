@@ -80,7 +80,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                     <div class="clearfix"></div>
                                 </div>
                                 <div class="mid-2">
-                                    <p ><label>$100.00</label><em class="item_price">$<%=goods.get(count).getPrice()%></em></p>
+                                    <p ><em class="item_price">$<%=goods.get(count).getPrice()%></em></p>
                                     <div class="block">
                                         <div class="starbox small ghosting"> </div>
                                     </div>
@@ -116,7 +116,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                         <div class="clearfix"></div>
                     </div>
                     <div class="mid-2">
-                        <p ><label>$100.00</label><em class="item_price">$<%=goods.get(count).getPrice()%></em></p>
+                        <p ><em class="item_price">$<%=goods.get(count).getPrice()%></em></p>
                         <div class="block">
                             <div class="starbox small ghosting"> </div>
                         </div>
