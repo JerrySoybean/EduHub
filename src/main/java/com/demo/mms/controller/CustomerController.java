@@ -128,6 +128,13 @@ public class CustomerController {
                 }
             }
         }
+        for (int i = 0; i < size; i++) {
+            if (goods.get(i).getVisible() == false) {
+                goods.remove(i);
+                size--;
+                i--;
+            }
+        }
         int row_num = size/4;
         int last_col_num = size%4;
         modelMap.put("rownum",row_num);
@@ -148,6 +155,13 @@ public class CustomerController {
                     size--;
                     i--;
                 }
+            }
+        }
+        for (int i = 0; i < size; i++) {
+            if (goods.get(i).getVisible() == false) {
+                goods.remove(i);
+                size--;
+                i--;
             }
         }
         int row_num = size/4;
@@ -171,6 +185,13 @@ public class CustomerController {
                 }
             }
         }
+        for (int i = 0; i < size; i++) {
+            if (goods.get(i).getVisible() == false) {
+                goods.remove(i);
+                size--;
+                i--;
+            }
+        }
         int row_num = size/4;
         int last_col_num = size%4;
         modelMap.put("rownum", row_num);
@@ -190,6 +211,13 @@ public class CustomerController {
                     size--;
                     i--;
                 }
+            }
+        }
+        for (int i = 0; i < size; i++) {
+            if (goods.get(i).getVisible() == false) {
+                goods.remove(i);
+                size--;
+                i--;
             }
         }
         int row_num = size/4;
@@ -213,6 +241,13 @@ public class CustomerController {
                 }
             }
         }
+        for (int i = 0; i < size; i++) {
+            if (goods.get(i).getVisible() == false) {
+                goods.remove(i);
+                size--;
+                i--;
+            }
+        }
         int row_num = size/4;
         int last_col_num = size%4;
         modelMap.put("rownum", row_num);
@@ -232,6 +267,13 @@ public class CustomerController {
                     size--;
                     i--;
                 }
+            }
+        }
+        for (int i = 0; i < size; i++) {
+            if (goods.get(i).getVisible() == false) {
+                goods.remove(i);
+                size--;
+                i--;
             }
         }
         int row_num = size/4;
