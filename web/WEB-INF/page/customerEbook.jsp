@@ -78,7 +78,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                         <h6><a href="${pageContext.request.contextPath}/customer/item?id=<%=goods.get(count).getId()%>"><%=goods.get(count).getName()%></a></h6>
                                     </div>
                                     <div class="img item_add">
-                                        <a href="#"><img src="${pageContext.request.contextPath}/template/images/ca.png" alt=""></a>
+                                        <a href="${pageContext.request.contextPath}/cart/addcart?goods_id=<%=goods.get(count).getId()%>"><img src="${pageContext.request.contextPath}/template/images/ca.png" alt=""></a>
                                     </div>
                                     <div class="clearfix"></div>
                                 </div>
@@ -117,7 +117,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                             <h6><a href="${pageContext.request.contextPath}/customer/item?id=<%=goods.get(count).getId()%>"><%=goods.get(count).getName()%></a></h6>
                         </div>
                         <div class="img item_add">
-                            <a href="#"><img src="${pageContext.request.contextPath}/template/images/ca.png" alt=""></a>
+                            <a href="${pageContext.request.contextPath}/cart/addcart?goods_id=<%=goods.get(count).getId()%>"><img src="${pageContext.request.contextPath}/template/images/ca.png" alt=""></a>
                         </div>
                         <div class="clearfix"></div>
                     </div>

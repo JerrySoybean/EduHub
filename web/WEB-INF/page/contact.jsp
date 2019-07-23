@@ -126,24 +126,24 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
 <div class="contact">
     <table align="center">
-        <tbody>
+        <tbody align="center">
             <tr>
-                <td>
+                <td width="16.6%">
                     李宬睿 Chengrui Li
                 </td>
-                <td>
+                <td width="16.6%">
                     侯牧村 Mucun Hou
                 </td>
-                <td>
+                <td width="16.6%">
                     焦炳祎 Bingyi Jiao
                 </td>
-                <td>
+                <td width="16.6%">
                     王胜男 Shengnan Wang
                 </td>
-                <td>
+                <td width="16.6%">
                     何天其 Tianqi He
                 </td>
-                <td>
+                <td width="16.6%">
                     刘恬 Tian Liu
                 </td>
             </tr>
