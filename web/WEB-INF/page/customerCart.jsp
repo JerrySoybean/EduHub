@@ -157,18 +157,22 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
            // itemId_list[i] = $(this).parents("tr").attr("id");
             parm = parm + ("itemId_list=" + $(this).parents("tr").attr("id") + "&");
         });
-        layer.confirm('Do you want to buy these?', {icon: 3, title: "Confirm"}, function(index) {
-           /* $.ajax({
-                type: "POST",
-                url: "${pageContext.request.contextPath}/customer/topay",
+        if (parm=="") {
+            layer.alert("Please check those items you want to buy", {icon: 0, title: "Check"});
+        } else {
+            layer.confirm('Do you want to buy these?', {icon: 3, title: "Confirm"}, function(index) {
+                /* $.ajax({
+                     type: "POST",
+                     url: "${pageContext.request.contextPath}/customer/topay",
                 data: JSON.stringify(itemId_list),
                 contentType:"application/json;charset=utf-8",
                 dataType: "json"
             });*/
-            layer.close(index);
-            // console.info(parm);
-            window.location.href = "${pageContext.request.contextPath}/customer/topay?" + parm
-        });
+                layer.close(index);
+                // console.info(parm);
+                window.location.href = "${pageContext.request.contextPath}/customer/topay?" + parm
+            });
+        }
     });
 </script>
 </body>

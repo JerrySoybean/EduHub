@@ -6,4 +6,6 @@ public interface AdminService {
     Admin findAdminByName(String name);
 
     void updateAdmin(Admin admin);
+
+    void addAdmin(Admin admin);
 }

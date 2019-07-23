@@ -345,4 +345,44 @@ public class AdminController {
         modelMap.put("total", total);
         return "adminBill";
     }
+
+    @RequestMapping("/toaddadmin")
+    public String toAddAdmin(HttpSession session) {
+        if(session.getAttribute("curr_admin") == null) {
+            return "adminLogin";
+        }
+        return "adminAddAdmin";
+    }
+
+    @RequestMapping("/addadmin")
+    public String addAdmin(ModelMap modelMap, Admin admin, String password2, HttpSession session) {
+        if(session.getAttribute("curr_admin") == null) {
+            return "adminLogin";
+        }
+        String msg = null;
+        String newName = admin.getName();
+        if (newName == "") {
+            msg = "Name cannot be empty";
+            modelMap.put("msg", msg);
+            return "adminAddAdmin";
+        }
+        if(adminService.findAdminByName(newName) != null) {
+            msg = "This name has been registered";
+            modelMap.put("msg", msg);
+            return "adminAddAdmin";
+        }
+        if (admin.getPassword() == null) {
+            msg = "Password cannot be empty";
+            modelMap.put("msg", msg);
+            return "adminAddAdmin";
+        }
+        if (admin.getPassword() != password2) {
+            msg = "Two passwords are different";
+            modelMap.put("msg", msg);
+            return "adminAddAdmin";
+        }
+        admin.setId(IDGenerator.getId());
+        adminService.addAdmin(admin);
+        return "adminHome";
+    }
 }

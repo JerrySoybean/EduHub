@@ -20,4 +20,10 @@ public class AdminServiceImpl implements AdminService {
     public void updateAdmin(Admin admin) {
         adminMapper.updateByPrimaryKey(admin);
     }
+
+    @Override
+    @Transactional
+    public void addAdmin(Admin admin) {
+        adminMapper.insert(admin);
+    }
 }

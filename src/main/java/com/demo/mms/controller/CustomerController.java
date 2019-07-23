@@ -65,24 +65,28 @@ public class CustomerController {
     }
 
     @RequestMapping("/register")
-    public String register(ModelMap modelMap, Customer customer){
+    public String register(ModelMap modelMap, Customer customer, String password2){
         String msg = null;
         //if the user haven't registered
         String name = customer.getName();
         String tel = customer.getTel();
         String email = customer.getEmail();
         Customer customer_db = customerService.findCustomerByName(name);
-        if (customer_db != null){
-            if (email.equals(customer_db.getEmail())){
+        if (customer_db != null) {
+            if (email.equals(customer_db.getEmail())) {
                 msg = "You have been registered, please do not register again.";
-                modelMap.put("msg",msg);
+                modelMap.put("msg", msg);
                 return "customerRegister";
             }
             msg = "This name has been used, please choose another.";
-            modelMap.put("msg",msg);
+            modelMap.put("msg", msg);
             return "customerRegister";
         }
-        //register
+        if (customer.getPassword() != password2) {
+            msg = "Two passwords are different";
+            modelMap.put("msg", msg);
+            return "customerRegister";
+        }
         customer.setId(IDGenerator.getId());
         customerService.insertCustomer(customer);
         msg = "Register successfully.";

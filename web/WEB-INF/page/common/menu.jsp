@@ -6,14 +6,14 @@
             <li class="header">MAIN NAVIGATION</li>
             <li class="treeview">
                 <a href="#">
-                    <i class="fa fa-dashboard"></i> <span>Customer</span>
+                    <i class="fa fa-dashboard"></i> <span>People</span>
                     <span class="pull-right-container">
               <i class="fa fa-angle-left pull-right"></i>
             </span>
                 </a>
                 <ul class="treeview-menu">
                     <li><a href="${pageContext.request.contextPath}/admin/customers"><i class="fa fa-circle-o"></i>Manage customers</a></li>
-                    <%--<li><a href="../../index2.html"><i class="fa fa-circle-o"></i>Dashboard v2</a></li>--%>
+                    <li><a href="${pageContext.request.contextPath}/admin/toaddadmin"><i class="fa fa-circle-o"></i>Add admin</a></li>
                 </ul>
             </li>
             <li class="treeview">

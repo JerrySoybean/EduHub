@@ -62,7 +62,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <!--login-->
 <div class="container">
     <div class="login">
-        <p class="login-box-msg" style="color: orangered">${msg}</p>
+        <p class="login-box-msg" style="color: orangered">${msg}</p><br>
         <form action = "${pageContext.request.contextPath}/customer/register" method = "post">
             <div class="col-md-6 login-do">
                 <div class="login-mail">
@@ -70,7 +70,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                     <i  class="glyphicon glyphicon-user"></i>
                 </div>
                 <div class="login-mail">
-                    <input type="text" placeholder="Phone Number" name = "tel">
+                    <input type="number" placeholder="Phone Number" name = "tel">
                     <i  class="glyphicon glyphicon-phone"></i>
                 </div>
                 <div class="login-mail">
@@ -79,6 +79,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                 </div>
                 <div class="login-mail">
                     <input type="password" placeholder="Password" name = "password">
+                    <i class="glyphicon glyphicon-lock"></i>
+                </div>
+                <div class="login-mail">
+                    <input type="password" placeholder="Confirm password" name = "password2">
                     <i class="glyphicon glyphicon-lock"></i>
                 </div>
                 <div class="form-group">
