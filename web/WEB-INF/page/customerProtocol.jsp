@@ -113,7 +113,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                 <div class="mid-1">
                     <div class="women">
                         <div class="women-top">
-                            <span>Women</span>
+                            <span><%=goods.get(count).getGclassId()%></span>
                             <h6><a href="${pageContext.request.contextPath}/customer/item?id=<%=goods.get(count).getId()%>"><%=goods.get(count).getName()%></a></h6>
                         </div>
                         <div class="img item_add">

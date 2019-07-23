@@ -57,10 +57,10 @@
                             <li><a class="header-button" href="${pageContext.request.contextPath}/customer/info">Personal Information</a></li>
                             <li class="dropdown mega-dropdown active">
                                 <a class="color1" href="#" class="dropdown-toggle" data-toggle="dropdown">Product Category<span class="caret"></span></a>
-                                <div class="dropdown-menu ">
+                                <div class="dropdown-menu">
                                     <div class="menu-top">
-                                        <div class="col1">
-                                            <div class="h_nav">
+                                        <div class="col1" style="margin-right: 50px; margin-left: 20px">
+                                            <div class="h_nav" style="width: 200px">
                                                 <ul>
                                                     <li><a href="${pageContext.request.contextPath}/customer/learnvideo"><h4>Learning Video</h4></a></li>
                                                     <li><a href="${pageContext.request.contextPath}/customer/ebook"><h4>Electronic Books</h4></a></li>

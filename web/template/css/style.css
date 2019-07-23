@@ -136,7 +136,7 @@ div#bs-megadropdown-tabs {
     width: 20%;
 }
 .menu-top {
-    width: 850px;
+    width: 600px;
 	padding: 1em;
 }
 .col1 ul li{
@@ -1584,7 +1584,7 @@ ul.nav_1 li a {
 @media(max-width:991px){
 
 .menu-top {
-    width: 660px;
+    width: 300px;
     padding: 1em;
 }
 .navbar-nav > li > .dropdown-menu {
