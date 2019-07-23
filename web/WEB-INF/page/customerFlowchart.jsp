@@ -50,7 +50,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 </head>
 <body>
 <jsp:include page="/WEB-INF/page/common/customerHeader.jsp"/>
-
+<hr>
 <!--content-->
 <!--products-->
 <div class="content-mid">
@@ -65,9 +65,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                     <div class="col-md-3 item-grid simpleCart_shelfItem" <%=count++%>>
                         <div class=" mid-pop">
                             <div class="pro-img">
-                                <img src="${pageContext.request.contextPath}\template\\template\<%=goods.get(count).getPicturePath()%>" class="img-responsive" alt="">
+                                <img src="${pageContext.request.contextPath}<%=goods.get(count).getPicturePath()%>" class="img-responsive" alt="">
                                 <div class="zoom-icon ">
-                                    <a class="picture" href="${pageContext.request.contextPath}/template/images/pc.jpg" rel="title" class="b-link-stripe b-animate-go  thickbox"><i class="glyphicon glyphicon-search icon "></i></a>
+                                    <a class="picture" href="${pageContext.request.contextPath}<%=goods.get(count).getPicturePath()%>" rel="title" class="b-link-stripe b-animate-go  thickbox"><i class="glyphicon glyphicon-search icon "></i></a>
                                     <a href="${pageContext.request.contextPath}/customer/item?id=<%=goods.get(count).getId()%>"><i class="glyphicon glyphicon-menu-right icon"></i></a>
                                 </div>
                             </div>
@@ -104,9 +104,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
         <div class="col-md-3 item-grid simpleCart_shelfItem" <%=count++%>>
             <div class=" mid-pop">
                 <div class="pro-img">
-                    <img src="${pageContext.request.contextPath}\template\\template\<%=goods.get(count).getPicturePath()%>" class="img-responsive" alt="">
+                    <img src="${pageContext.request.contextPath}<%=goods.get(count).getPicturePath()%>" class="img-responsive" alt="">
                     <div class="zoom-icon ">
-                        <a class="picture" href="${pageContext.request.contextPath}/template/images/pc.jpg" rel="title" class="b-link-stripe b-animate-go  thickbox"><i class="glyphicon glyphicon-search icon "></i></a>
+                        <a class="picture" href="${pageContext.request.contextPath}<%=goods.get(count).getPicturePath()%>" rel="title" class="b-link-stripe b-animate-go  thickbox"><i class="glyphicon glyphicon-search icon "></i></a>
                         <a href="${pageContext.request.contextPath}/customer/item?id=<%=goods.get(count).getId()%>"><i class="glyphicon glyphicon-menu-right icon"></i></a>
                     </div>
                 </div>

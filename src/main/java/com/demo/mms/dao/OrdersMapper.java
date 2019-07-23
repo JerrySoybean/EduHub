@@ -20,4 +20,6 @@ public interface OrdersMapper {
     List<Orders> selectByCustomerId(String customer_id);
 
     List<Orders> selectAllOrders();
+
+    List<Orders> selectByGoodsId(String goods_id);
 }

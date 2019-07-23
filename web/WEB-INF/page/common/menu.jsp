@@ -13,7 +13,7 @@
                 </a>
                 <ul class="treeview-menu">
                     <li><a href="${pageContext.request.contextPath}/admin/customers"><i class="fa fa-circle-o"></i>Manage customers</a></li>
-                    <li><a href="../../index2.html"><i class="fa fa-circle-o"></i>Dashboard v2</a></li>
+                    <%--<li><a href="../../index2.html"><i class="fa fa-circle-o"></i>Dashboard v2</a></li>--%>
                 </ul>
             </li>
             <li class="treeview">

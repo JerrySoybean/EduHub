@@ -5,6 +5,7 @@ import com.demo.mms.common.domain.Goods;
 import com.demo.mms.common.domain.Orders;
 import com.demo.mms.common.utils.IDGenerator;
 import com.demo.mms.service.CustomerService;
+import com.demo.mms.service.GclassService;
 import com.demo.mms.service.GoodsService;
 import com.demo.mms.service.OrdersService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -25,6 +26,8 @@ public class CustomerController {
     private CustomerService customerService;
     @Autowired
     private OrdersService ordersService;
+    @Autowired
+    private GclassService gclassService;
 
     @RequestMapping("/tologin")
     public String toLogin() {
@@ -264,7 +267,11 @@ public class CustomerController {
     @RequestMapping("/item")
     public String toItem(ModelMap modelMap, String id) {
         Goods goods = goodsService.findGoodsById(id);
+        String category = gclassService.findGclassById(goods.getGclassId()).getCname();
+        List<Orders> orders = ordersService.findOrdersByGoodsId(id);
         modelMap.put("item", goods);
+        modelMap.put("category", category);
+        modelMap.put("orders", orders);
         return "customerItem";
     }
 

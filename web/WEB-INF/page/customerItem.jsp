@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%--
   Created by IntelliJ IDEA.
   User: mxdwa
@@ -48,6 +49,123 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
         });
     </script>
     <!---//End-rate---->
+    <style>
+        * {
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+        }
+        .panel {
+            margin-bottom: 20px;
+            background-color: #fff;
+            border: 1px solid transparent;
+            border-radius: 4px;
+            -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, .05);
+            box-shadow: 0px 1px 1px rgba(0,0,0,0.05);
+        }
+        .panel-info {
+            border-color: #bce8f1;
+        }
+        .col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, .col-xs-3, .col-sm-3, .col-md-3, .col-lg-3, .col-xs-4, .col-sm-4, .col-md-4, .col-lg-4, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, .col-sm-12, .col-md-12, .col-lg-12 {
+            position: relative;
+            min-height: 1px;
+            padding-right: 15px;
+            padding-left: 15px;
+        }
+        /* @media all and (min-width:768px) */
+        .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12 {
+            float: left;
+        }
+        /* @media all and (min-width:768px) */
+        .col-sm-4 {
+            width: 33.33%;
+        }
+        .row {
+            margin-right: -15px;
+            margin-left: -15px;
+        }
+        .page {
+            padding: 4em 0 4em;
+        }
+        .container {
+            padding-right: 15px;
+            padding-left: 15px;
+            margin-right: auto;
+            margin-left: auto;
+        }
+        /* @media all and (min-width:768px) */
+        .container {
+            width: 750px;
+        }
+        /* @media all and (min-width:992px) */
+        .container {
+            width: 970px;
+        }
+        /* @media all and (min-width:1200px) */
+        .container {
+            width: 1170px;
+        }
+        body {
+            margin: 0;
+        }
+        body {
+            font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+            font-size: 14px;
+            line-height: 1.4285;
+            color: #333;
+            background-color: #fff;
+        }
+        html {
+            font-size: 10px;
+            -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+        }
+        html, body {
+            background: #fff;
+            font-size: 100%;
+            font-family: "Oxygen-Regular";
+        }
+        html {
+            font-family: sans-serif;
+            -webkit-text-size-adjust: 100%;
+            -ms-text-size-adjust: 100%;
+        }
+        .panel-heading {
+            padding: 10px 15px;
+            border-bottom: 1px solid transparent;
+            border-top-left-radius: 3px;
+            border-top-right-radius: 3px;
+        }
+        .panel-info > .panel-heading {
+            color: #31708f;
+            background-color: #d9edf7;
+            border-color: #bce8f1;
+        }
+        .panel-body {
+            padding: 15px;
+        }
+        h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+            font-family: inherit;
+            font-weight: 500;
+            line-height: 1.1;
+            color: inherit;
+        }
+        h1, .h1, h2, .h2, h3, .h3 {
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+        h3, .h3 {
+            font-size: 24px;
+        }
+        h1, h2, h3, h4, h5, h6, label, p {
+            margin: 0;
+        }
+        .panel-title {
+            margin-top: 0px;
+            margin-bottom: 0px;
+            font-size: 16px;
+            color: inherit;
+        }
+    </style>
     <link href="${pageContext.request.contextPath}/template/css/form.css" rel="stylesheet" type="text/css" media="all" />
 </head>
 <body>
@@ -68,8 +186,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
             <div class="col-md-5 grid">
                 <div class="flexslider">
                     <ul class="slides">
-                        <li data-thumb="${pageContext.request.contextPath}/template/${item.picturePath}">
-                            <div class="thumb-image"> <img src="${pageContext.request.contextPath}/template/${item.picturePath}" data-imagezoom="true" class="img-responsive"> </div>
+                        <li data-thumb="${pageContext.request.contextPath}${item.picturePath}">
+                            <div class="thumb-image"> <img src="${pageContext.request.contextPath}${item.picturePath}" data-imagezoom="true" class="img-responsive"> </div>
                         </li>
                         <%--<li data-thumb="${pageContext.request.contextPath}/template/images/si1.jpg">
                             <div class="thumb-image"> <img src="${pageContext.request.contextPath}/template/images/si1.jpg" data-imagezoom="true" class="img-responsive"> </div>
@@ -83,13 +201,13 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
             <div class="col-md-7 single-top-in">
                 <div class="span_2_of_a1 simpleCart_shelfItem" id="${item.id}">
                     <h3>${item.name}</h3>
-                    <p class="in-para"> There are many variations of passages of Lorem Ipsum.</p>
+                    <p class="in-para"> Category: ${category}</p>
+                    <h4 class="quick">Quick Overview:</h4>
+                    <p class="quick_desc">${item.introduction}</p>
                     <div class="price_single">
                         <span class="reducedfrom item_price">$${item.price}</span>
                         <div class="clearfix"></div>
                     </div>
-                    <h4 class="quick">Quick Overview:</h4>
-                    <p class="quick_desc">${item.introduction}</p>
                     <div class="wish-list">
                         <ul>
                             <li class="wish"><button class="add-to item_add hvr-skew-backward btn_addwish"><span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span>Add to Wishlist</button></li>
@@ -126,13 +244,13 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
             <div class="tab-head">
                 <nav class="nav-sidebar">
                     <ul class="nav tabs">
-                        <li class="active"><a href="#tab1" data-toggle="tab">Product Description</a></li>
+                        <li class=""><a href="#tab1" data-toggle="tab">Product Description</a></li>
                         <li class=""><a href="#tab2" data-toggle="tab">Additional Information</a></li>
-                        <li class=""><a href="#tab3" data-toggle="tab">Reviews</a></li>
+                        <li class="active"><a href="#tab3" data-toggle="tab">Reviews</a></li>
                     </ul>
                 </nav>
                 <div class="tab-content one">
-                    <div class="tab-pane active text-style" id="tab1">
+                    <div class="tab-pane text-style" id="tab1">
                         <div class="facts">
                             <p > There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined </p>
                             <ul>
@@ -158,20 +276,17 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                         </div>
 
                     </div>
-                    <div class="tab-pane text-style" id="tab3">
-
-                        <div class="facts">
-                            <p > There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined </p>
-                            <ul>
-                                <li><span class="glyphicon glyphicon-ok" aria-hidden="true"></span>Research</li>
-                                <li><span class="glyphicon glyphicon-ok" aria-hidden="true"></span>Design and Development</li>
-                                <li><span class="glyphicon glyphicon-ok" aria-hidden="true"></span>Porting and Optimization</li>
-                                <li><span class="glyphicon glyphicon-ok" aria-hidden="true"></span>System integration</li>
-                                <li><span class="glyphicon glyphicon-ok" aria-hidden="true"></span>Verification, Validation and Testing</li>
-                                <li><span class="glyphicon glyphicon-ok" aria-hidden="true"></span>Maintenance and Support</li>
-                            </ul>
-                        </div>
-
+                    <div class="tab-pane active text-style" id="tab3">
+                        <c:forEach items="${orders}" var="order">
+                            <div class="panel panel-info">
+                                <div class="panel-heading">
+                                    <h3 class="panel-title">${order.finishTimeTxt}</h3>
+                                </div>
+                                <div class="panel-body">
+                                    ${order.comment}
+                                </div>
+                            </div>
+                        </c:forEach>
                     </div>
 
                 </div>
@@ -219,28 +334,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
         <div class="clearfix"> </div>
     </div>
 </div>
-<!--brand-->
-<div class="container">
-    <div class="brand">
-        <div class="col-md-3 brand-grid">
-            <img src="${pageContext.request.contextPath}/template/images/ic.png" class="img-responsive" alt="">
-        </div>
-        <div class="col-md-3 brand-grid">
-            <img src="${pageContext.request.contextPath}/template/images/ic1.png" class="img-responsive" alt="">
-        </div>
-        <div class="col-md-3 brand-grid">
-            <img src="${pageContext.request.contextPath}/template/images/ic2.png" class="img-responsive" alt="">
-        </div>
-        <div class="col-md-3 brand-grid">
-            <img src="${pageContext.request.contextPath}/template/images/ic3.png" class="img-responsive" alt="">
-        </div>
-        <div class="clearfix"></div>
-    </div>
-</div>
-<!--//brand-->
-</div>
-
-</div>
 <!--//content-->
 <!--//footer-->
 <jsp:include page="/WEB-INF/page/common/footer.jsp"/>
@@ -281,7 +374,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     $(".btn_addwish").click(function () {
         var $div = $(this).parent().parent().parent().parent("div");
         var goods_idvalue = $div.attr("id");
-        alert(goods_idvalue)
         $.ajax({
             type: "POST",
             url: "${pageContext.request.contextPath}/collections/addwish",

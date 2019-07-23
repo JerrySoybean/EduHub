@@ -46,6 +46,14 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 </head>
 <body>
 <jsp:include page="/WEB-INF/page/common/customerHeader.jsp"/>
+<!--banner-->
+<div class="banner-top">
+    <div class="container">
+        <h1>Orders</h1>
+        <em></em>
+        <h2><a href="${pageContext.request.contextPath}/customer/home">Home</a><label>/</label>Orders</h2>
+    </div>
+</div>
 
 <div class="container">
     <div class="check-out">

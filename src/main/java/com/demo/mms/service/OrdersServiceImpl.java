@@ -32,4 +32,9 @@ public class OrdersServiceImpl implements OrdersService {
     public List<Orders> findAllOrders() {
         return ordersMapper.selectAllOrders();
     }
+
+    @Override
+    public List<Orders> findOrdersByGoodsId(String goods_id) {
+        return ordersMapper.selectByGoodsId(goods_id);
+    }
 }

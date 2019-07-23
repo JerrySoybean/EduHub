@@ -25,6 +25,12 @@
     from orders
     where customer_id = #{customer_id,jdbcType=VARCHAR}
   </select>
+  <select id="selectByGoodsId" parameterType="java.lang.String" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List" />
+    from orders
+    where goods_id = #{goods_id,jdbcType=VARCHAR}
+  </select>
   <select id="selectAllOrders"  resultMap="BaseResultMap">
     select
     <include refid="Base_Column_List" />

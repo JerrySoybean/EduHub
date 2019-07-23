@@ -113,7 +113,7 @@
                                             </div>
                                         </div>--%>
                                         <div class="col1 col5">
-                                            <img src="${pageContext.request.contextPath}/template/images/me.png" class="img-responsive" alt="">
+                                            <img src="${pageContext.request.contextPath}\images\EduHub_logo4.jpg" class="img-responsive" alt="" width="165" height="85">
                                         </div>
                                         <div class="clearfix"></div>
                                     </div>
@@ -198,19 +198,22 @@
                     <li>
                         <a href="${pageContext.request.contextPath}/collections/wishlist" >
                             <span class="glyphicon glyphicon-heart" aria-hidden="true"></span>
-                        </a></li>
+                        </a>
+                    </li>
                     <li><a class="play-icon popup-with-zoom-anim" href="#small-dialog"><i class="glyphicon glyphicon-search"> </i></a></li>
                 </ul>
-                <div class="cart box_1">
+                <div class="cart box_1" align="center">
                     <a href="${pageContext.request.contextPath}/cart/cart">
-                        <h3> <div class="total">
-                            <span class="simpleCart_total"></span></div>
-                            <img src="${pageContext.request.contextPath}/template/images/cart.png" alt=""/></h3>
+                        <h3>
+                            <%--<div class="total"><span class="simpleCart_total"></span></div>--%>
+                            <img src="${pageContext.request.contextPath}/template/images/cart.png" alt=""/>
+                        </h3>
                     </a>
-                    <p><a href="javascript:;" class="simpleCart_empty">Empty Cart</a></p>
-
+                    <p><a href="javascript:;" class="simpleCart_empty">Cart</a></p>
                 </div>
-                <div class="clearfix"> </div>
+                <div class="clearfix"></div>
+            </div>
+
 
                 <!----->
 

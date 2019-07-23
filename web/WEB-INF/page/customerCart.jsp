@@ -94,7 +94,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                             <td class="item_price">
                                 <div class="checkbox">
                                     <label>
-                                        <input hidden="hidden" value="${goods_in_cart[loop.count-1]}">
+                                        <input hidden="hidden" value="${goods_in_cart[loop.count-1].id}">
                                         <input name="checkbox" type="checkbox" onchange="compute(this)" value="${goods_in_cart[loop.count-1].price}">
                                     </label>
                                 </div>
@@ -152,23 +152,17 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     });
 
     $(".btn_buy").click(function () {
-        var goods_list = [];
         var itemId_list = [];
         // var a = ["1", "12", "123"];
         $("input[name='checkbox']:checked").each(function (i) {
-            goods_list[i] = $(this).prev().attr("value");
             itemId_list[i] = $(this).parents("tr").attr("id");
-        })
+        });
+        console.info(goods_list);
         layer.confirm('Do you want to buy these?', {icon: 3, title: "Confirm"}, function(index) {
             $.ajax({
                 type: "POST",
                 url: "${pageContext.request.contextPath}/pay/topay",
                 data: JSON.stringify(itemId_list),
-                // data: {itemId_list: JSON.stringify(itemId_list)},
-                // data: {itemId_list: itemId_list},
-                // data: {goods_list: goods_list, itemId_list: itemId_list},
-                // data: {goods_list: JSON.stringify(goods_list), itemId_list: JSON.stringify(itemId_list)},
-                //traditional: true,
                 contentType:"application/json;charset=utf-8",
                 dataType: "json"
             });

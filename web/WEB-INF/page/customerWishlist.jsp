@@ -88,7 +88,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                             <td>${goods_in_wishlist[loop.count-1].size} KB</td>
                             <td>$${goods_in_wishlist[loop.count-1].price}</td>
                             <td class="add-check">
-                                <button class="item_add hvr-skew-backward btn_add">Add to cart</button>
+                                <button class="item_add hvr-skew-backward btn_add" value="${good.goodsId}">Add to cart</button>
                                 <button class="item_add hvr-skew-backward btn_del">Delete</button>
                             </td>
                         </tr>
@@ -132,8 +132,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
         });
 
         $(".btn_add").click(function () {
-            var $tr = $(this).parents("tr");
-            var goods_idvalue = $tr.attr("id");
+            var goods_idvalue = $(this).attr("value");
             $.ajax({
                 type: "POST",
                 url: "${pageContext.request.contextPath}/cart/addcart",
