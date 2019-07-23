@@ -36,11 +36,11 @@
     from goods
     where gclass_id = #{gclassId,jdbcType=VARCHAR}
   </select>
-  <select id="selectGoodsByName" parameterType="java.lang.String" resultMap="BaseResultMap">
+  <select id="selectGoodsByNameHas" parameterType="java.lang.String" resultMap="BaseResultMap">
     select
     <include refid="Base_Column_List" />
     from goods
-    where name = #{name,jdbcType=VARCHAR}
+    where name like CONCAT(CONCAT('%', #{name,jdbcType=VARCHAR}), '%')
   </select>
   <delete id="deleteByPrimaryKey" parameterType="java.lang.String">
     delete from goods

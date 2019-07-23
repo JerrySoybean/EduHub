@@ -21,5 +21,5 @@ public interface GoodsMapper {
 
     List<Goods> selectByGclassId(String gclassId);
 
-    List<Goods> selectGoodsByName(String name);
+    List<Goods> selectGoodsByNameHas(String name);
 }

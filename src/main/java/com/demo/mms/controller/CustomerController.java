@@ -335,9 +335,19 @@ public class CustomerController {
     }
 
     @RequestMapping("/search")
-    public String searchGoods(String name, ModelMap modelMap){
+    public String searchGoods(String name, ModelMap modelMap, HttpSession session){
         List<Goods> goods = goodsService.findGoodsByName(name);
         int size = goods.size();
+        Object temp = session.getAttribute("curr_customer");
+        if (temp == null || ((Customer) temp).getPrivilege() == false) {
+            for (int i = 0; i < size; i++) {
+                if (goods.get(i).getRestriction() == true) {
+                    goods.remove(i);
+                    size--;
+                    i--;
+                }
+            }
+        }
         int row_num = size/4;
         int last_col_num = size%4;
         modelMap.put("rownum", row_num);
