@@ -211,15 +211,16 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                     <div class="wish-list">
                         <ul>
                             <li class="wish"><button class="add-to item_add hvr-skew-backward btn_addwish"><span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span>Add to Wishlist</button></li>
+                            <button class="add-to item_add hvr-skew-backward btn_addcart">Add to cart</button>
                         </ul>
                     </div>
-                    <div class="quantity">
+                    <%--<div class="quantity">
                         <div class="quantity-select">
                             <div class="entry value-minus">&nbsp;</div>
                             <div class="entry value"><span>1</span></div>
                             <div class="entry value-plus active">&nbsp;</div>
                         </div>
-                    </div>
+                    </div>--%>
                     <!--quantity-->
                     <script>
                         $('.value-plus').on('click', function(){
@@ -234,7 +235,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                     </script>
                     <!--quantity-->
 
-                    <button class="add-to item_add hvr-skew-backward btn_addcart">Add to cart</button>
+
                     <div class="clearfix"> </div>
                 </div>
 

@@ -355,4 +355,9 @@ public class CustomerController {
         modelMap.put("goods",goods);
         return "searchresult";
     }
+
+    @RequestMapping("/contact")
+    public String contact() {
+        return "contact";
+    }
 }
