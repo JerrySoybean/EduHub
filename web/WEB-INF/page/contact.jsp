@@ -68,7 +68,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                     <img src="${pageContext.request.contextPath}/images/lcr.png" height="150" width="150">
                 </td>
                 <td>
-                    <img src="${pageContext.request.contextPath}/images/hmc.jpg" height="150" width="150">
+                    <img src="${pageContext.request.contextPath}/images/hmc.png" height="150" width="150">
                 </td>
                 <td>
                     <img src="${pageContext.request.contextPath}/images/jby.jpg" height="150" width="150">
