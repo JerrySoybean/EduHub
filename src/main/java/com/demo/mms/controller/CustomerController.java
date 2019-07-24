@@ -71,6 +71,16 @@ public class CustomerController {
         String name = customer.getName();
         String tel = customer.getTel();
         String email = customer.getEmail();
+        if (customer.getName() == "") {
+            msg = "Name cannot be empty";
+            modelMap.put("msg", msg);
+            return "customerRegister";
+        }
+        if (customer.getPassword() == "") {
+            msg = "Password cannot be empty";
+            modelMap.put("msg", msg);
+            return "customerRegister";
+        }
         Customer customer_db = customerService.findCustomerByName(name);
         if (customer_db != null) {
             if (email.equals(customer_db.getEmail())) {
